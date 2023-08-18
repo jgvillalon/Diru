@@ -56,6 +56,7 @@ namespace DIRU.Views.Common
                 //Redes
                 if (MainWindow.currentProject.InversionLotes.Redes.Any()){
                     rBCRSi.IsChecked = true;
+                    var f = true;
 
                     foreach (var red in MainWindow.currentProject.InversionLotes.Redes)
                     {
