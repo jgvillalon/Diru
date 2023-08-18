@@ -1,0 +1,48 @@
+﻿<Window x:Class="DIRU.Views.Loggin.InstallDatabase"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DIRU.Views.Loggin"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+       WindowStartupLocation="CenterScreen"
+        WindowStyle="None" Width="730.144"
+        >
+    <Grid  Background="White">
+        <StackPanel Margin="0,0,-0.2,-0.2">
+            <Grid Margin="0,0,-0.4,0" Background="#1565c0" Height="63">
+                <TextBlock Margin="10" Text="Configuración de Base de Datos" FontSize="20" FontFamily="Open Sans" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"  />
+                <StackPanel HorizontalAlignment="Right" Margin="0,5,5,0"  VerticalAlignment="Center" Grid.Column="1">
+                    <Button x:Name="btnClose" Click="btnClose_Click" Width="35" Height="35"  Background="White" Foreground="{DynamicResource PrimaryHueDarkBrush}" Style="{StaticResource MaterialDesignFloatingActionDarkButton}">
+                        <materialDesign:PackIcon Kind="Close" />
+                    </Button>
+                </StackPanel>
+            </Grid>
+            <StackPanel Orientation="Horizontal" Margin="0,0,57.6,0">
+                <StackPanel Width="373">
+                    <Label Margin="22,10,-2.2,10" FontSize="12" Content="Nombre de base de datos:" />
+                    <TextBox x:Name="txt_bdname" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35" Margin="22,10,0,10" TextWrapping="Wrap"  VerticalAlignment="Top" Width="266"/>
+                    <Label   Margin="22,10,-2.2,10" FontSize="12" Content="Host:" />
+                    <TextBox x:Name="txt_host" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="22,10,0,10" TextWrapping="Wrap"  VerticalAlignment="Top" Width="266"/>
+                    <Label   Margin="22,10,-2.2,10" FontSize="12" Content="Puerto:" />
+                    <TextBox x:Name="txt_port" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="22,10,0,10" TextWrapping="Wrap"  VerticalAlignment="Top" Width="266"/>
+                </StackPanel>
+                <StackPanel Width="331">
+                    <Label Margin="3,10,17,10" FontSize="12" Content="Usuario:" />
+                    <TextBox x:Name="txt_userp" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35" Margin="10" TextWrapping="Wrap"  VerticalAlignment="Top" Width="266"/>
+                    <Label   Margin="3,10,17,10" FontSize="12" Content="Contraseña:" />
+                    <PasswordBox x:Name="txt_passp" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="10"  VerticalAlignment="Top" Width="266"/>
+                </StackPanel>
+            </StackPanel>
+
+        </StackPanel>
+        <Grid   Background="LightGray" VerticalAlignment="Bottom">
+
+            <Button x:Name="BtnTest" Background="Gray" BorderBrush="Gray" FontSize="12" Margin="0,10,192.6,10" Content="Probar Conexión" HorizontalAlignment="Right" VerticalAlignment="Center" Width="161" Click="BtnTest_Click"/>
+            <Button x:Name="BtnSave" FontSize="12" Margin="0,10,100,10" Content="Aceptar" HorizontalAlignment="Right" VerticalAlignment="Center" Click="BtnSave_Click"/>
+            <Button x:Name="BtnCancel" BorderBrush="Red" FontSize="12" Margin="10" Background="Red" Foreground="White" Content="Cancelar" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BtnCancel_Click"  />
+
+        </Grid>
+    </Grid>
+</Window>

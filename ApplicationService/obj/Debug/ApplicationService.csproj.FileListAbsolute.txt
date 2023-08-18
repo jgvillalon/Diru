@@ -1,0 +1,96 @@
+D:\source\repos\ApplicationService\bin\Debug\ApplicationService.dll.config
+D:\source\repos\ApplicationService\bin\Debug\ApplicationService.dll
+D:\source\repos\ApplicationService\bin\Debug\ApplicationService.pdb
+D:\source\repos\ApplicationService\bin\Debug\AutoMapper.dll
+D:\source\repos\ApplicationService\bin\Debug\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\source\repos\ApplicationService\bin\Debug\Entity.dll
+D:\source\repos\ApplicationService\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\source\repos\ApplicationService\bin\Debug\Microsoft.Extensions.Options.dll
+D:\source\repos\ApplicationService\bin\Debug\Microsoft.Extensions.Primitives.dll
+D:\source\repos\ApplicationService\bin\Debug\Repository.dll
+D:\source\repos\ApplicationService\bin\Debug\System.Buffers.dll
+D:\source\repos\ApplicationService\bin\Debug\System.ComponentModel.Annotations.dll
+D:\source\repos\ApplicationService\bin\Debug\System.Management.dll
+D:\source\repos\ApplicationService\bin\Debug\System.Memory.dll
+D:\source\repos\ApplicationService\bin\Debug\System.Numerics.Vectors.dll
+D:\source\repos\ApplicationService\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\source\repos\ApplicationService\bin\Debug\NHibernate.dll
+D:\source\repos\ApplicationService\bin\Debug\FluentNHibernate.dll
+D:\source\repos\ApplicationService\bin\Debug\Remotion.Linq.dll
+D:\source\repos\ApplicationService\bin\Debug\Remotion.Linq.EagerFetching.dll
+D:\source\repos\ApplicationService\bin\Debug\Antlr3.Runtime.dll
+D:\source\repos\ApplicationService\bin\Debug\Iesi.Collections.dll
+D:\source\repos\ApplicationService\bin\Debug\Entity.pdb
+D:\source\repos\ApplicationService\bin\Debug\Repository.pdb
+D:\source\repos\ApplicationService\bin\Debug\AutoMapper.xml
+D:\source\repos\ApplicationService\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\source\repos\ApplicationService\bin\Debug\Microsoft.Extensions.Options.xml
+D:\source\repos\ApplicationService\bin\Debug\Microsoft.Extensions.Primitives.xml
+D:\source\repos\ApplicationService\bin\Debug\System.Buffers.xml
+D:\source\repos\ApplicationService\bin\Debug\System.Memory.xml
+D:\source\repos\ApplicationService\bin\Debug\System.Numerics.Vectors.xml
+D:\source\repos\ApplicationService\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\source\repos\ApplicationService\obj\Debug\ApplicationService.csproj.AssemblyReference.cache
+D:\source\repos\ApplicationService\obj\Debug\ApplicationService.csproj.CoreCompileInputs.cache
+D:\source\repos\ApplicationService\obj\Debug\ApplicationService.csproj.CopyComplete
+D:\source\repos\ApplicationService\obj\Debug\ApplicationService.dll
+D:\source\repos\ApplicationService\obj\Debug\ApplicationService.pdb
+D:\source\repos\ApplicationService\bin\Debug\BouncyCastle.Crypto.dll
+D:\source\repos\ApplicationService\bin\Debug\itextsharp.dll
+D:\source\repos\ApplicationService\bin\Debug\itextsharp.xml
+D:\source\repos\ApplicationService\bin\Debug\System.Drawing.Common.dll
+D:\source\repos\ApplicationService\bin\Debug\System.Drawing.Common.xml
+E:\Personal\Proyecto Arquitectura\REPO\Diru Development\ApplicationService\bin\Debug\ApplicationService.dll.config
+E:\Personal\Proyecto Arquitectura\REPO\Diru Development\ApplicationService\bin\Debug\ApplicationService.dll
+E:\Personal\Proyecto Arquitectura\REPO\Diru Development\ApplicationService\bin\Debug\ApplicationService.pdb
+E:\Personal\Proyecto Arquitectura\REPO\Diru Development\ApplicationService\bin\Debug\Entity.dll
+E:\Personal\Proyecto Arquitectura\REPO\Diru Development\ApplicationService\bin\Debug\Repository.dll
+E:\Personal\Proyecto Arquitectura\REPO\Diru Development\ApplicationService\bin\Debug\NHibernate.dll
+E:\Personal\Proyecto Arquitectura\REPO\Diru Development\ApplicationService\bin\Debug\FluentNHibernate.dll
+E:\Personal\Proyecto Arquitectura\REPO\Diru Development\ApplicationService\bin\Debug\Remotion.Linq.dll
+E:\Personal\Proyecto Arquitectura\REPO\Diru Development\ApplicationService\bin\Debug\Remotion.Linq.EagerFetching.dll
+E:\Personal\Proyecto Arquitectura\REPO\Diru Development\ApplicationService\bin\Debug\Antlr3.Runtime.dll
+E:\Personal\Proyecto Arquitectura\REPO\Diru Development\ApplicationService\bin\Debug\Iesi.Collections.dll
+E:\Personal\Proyecto Arquitectura\REPO\Diru Development\ApplicationService\bin\Debug\Entity.pdb
+E:\Personal\Proyecto Arquitectura\REPO\Diru Development\ApplicationService\bin\Debug\Repository.pdb
+E:\Personal\Proyecto Arquitectura\REPO\Diru Development\ApplicationService\obj\Debug\ApplicationService.csproj.AssemblyReference.cache
+E:\Personal\Proyecto Arquitectura\REPO\Diru Development\ApplicationService\obj\Debug\ApplicationService.csproj.CoreCompileInputs.cache
+E:\Personal\Proyecto Arquitectura\REPO\Diru Development\ApplicationService\obj\Debug\ApplicationService.csproj.CopyComplete
+E:\Personal\Proyecto Arquitectura\REPO\Diru Development\ApplicationService\obj\Debug\ApplicationService.dll
+E:\Personal\Proyecto Arquitectura\REPO\Diru Development\ApplicationService\obj\Debug\ApplicationService.pdb
+D:\Works\Proyecto Felix\Diru Development\ApplicationService\bin\Debug\ApplicationService.dll.config
+D:\Works\Proyecto Felix\Diru Development\ApplicationService\bin\Debug\ApplicationService.dll
+D:\Works\Proyecto Felix\Diru Development\ApplicationService\bin\Debug\ApplicationService.pdb
+D:\Works\Proyecto Felix\Diru Development\ApplicationService\bin\Debug\Entity.dll
+D:\Works\Proyecto Felix\Diru Development\ApplicationService\bin\Debug\Repository.dll
+D:\Works\Proyecto Felix\Diru Development\ApplicationService\bin\Debug\NHibernate.dll
+D:\Works\Proyecto Felix\Diru Development\ApplicationService\bin\Debug\FluentNHibernate.dll
+D:\Works\Proyecto Felix\Diru Development\ApplicationService\bin\Debug\Remotion.Linq.dll
+D:\Works\Proyecto Felix\Diru Development\ApplicationService\bin\Debug\Remotion.Linq.EagerFetching.dll
+D:\Works\Proyecto Felix\Diru Development\ApplicationService\bin\Debug\Antlr3.Runtime.dll
+D:\Works\Proyecto Felix\Diru Development\ApplicationService\bin\Debug\Iesi.Collections.dll
+D:\Works\Proyecto Felix\Diru Development\ApplicationService\bin\Debug\Entity.pdb
+D:\Works\Proyecto Felix\Diru Development\ApplicationService\bin\Debug\Repository.pdb
+D:\Works\Proyecto Felix\Diru Development\ApplicationService\obj\Debug\ApplicationService.csproj.AssemblyReference.cache
+D:\Works\Proyecto Felix\Diru Development\ApplicationService\obj\Debug\ApplicationService.csproj.CoreCompileInputs.cache
+D:\Works\Proyecto Felix\Diru Development\ApplicationService\obj\Debug\ApplicationService.csproj.CopyComplete
+D:\Works\Proyecto Felix\Diru Development\ApplicationService\obj\Debug\ApplicationService.dll
+D:\Works\Proyecto Felix\Diru Development\ApplicationService\obj\Debug\ApplicationService.pdb
+D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\bin\Debug\ApplicationService.dll.config
+D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\bin\Debug\ApplicationService.dll
+D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\bin\Debug\ApplicationService.pdb
+D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\bin\Debug\Entity.dll
+D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\bin\Debug\Repository.dll
+D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\bin\Debug\NHibernate.dll
+D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\bin\Debug\FluentNHibernate.dll
+D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\bin\Debug\Remotion.Linq.dll
+D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\bin\Debug\Remotion.Linq.EagerFetching.dll
+D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\bin\Debug\Antlr3.Runtime.dll
+D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\bin\Debug\Iesi.Collections.dll
+D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\bin\Debug\Entity.pdb
+D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\bin\Debug\Repository.pdb
+D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\obj\Debug\ApplicationService.csproj.AssemblyReference.cache
+D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\obj\Debug\ApplicationService.csproj.CoreCompileInputs.cache
+D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\obj\Debug\ApplicationService.csproj.CopyComplete
+D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\obj\Debug\ApplicationService.dll
+D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\obj\Debug\ApplicationService.pdb

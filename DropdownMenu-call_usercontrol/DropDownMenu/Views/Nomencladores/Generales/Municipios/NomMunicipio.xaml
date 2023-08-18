@@ -1,0 +1,69 @@
+﻿<UserControl x:Class="DIRU.Views.Nomencladores.Generales.Municipios.NomMunicipio"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DIRU.Views.Nomencladores.Generales.Municipios"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/Common.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <BooleanToVisibilityConverter x:Key="BoolToVis"/>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <StackPanel>
+            <Grid Margin="10,10,10,0" Background="#1565c0">
+                <TextBlock Margin="10" Text="Municipio" FontSize="20" FontFamily="Open Sans" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"  />
+            </Grid>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="AddMunicipio" Background="LightGray" BorderBrush="Transparent" Foreground="Black" Margin="10,10,5,0" Content="Adicionar"  Width="100" Click="AddMunicipio_Click"/>
+                <Button  x:Name="EditMunicipio" Background="LightGray" BorderBrush="Transparent" Foreground="Black" Margin="5,10,5,0" Content="Editar"  Width="100"  Click="EditMunicipio_Click" IsEnabled="False"/>
+                <Button x:Name="DeleteMunicipio" Background="Red" BorderBrush="Transparent" Foreground="White" Margin="5,10,5,0" Content="Eliminar"  Width="100" IsEnabled="False" Click="DeleteMunicipio_Click"/>
+                <ComboBox x:Name="comboFilter" SelectionChanged="comboFilter_SelectionChanged" HorizontalAlignment="Right" VerticalAlignment="Center" Width="150" SelectedIndex="0" Margin="350 0 5 0"  Text="Filtro">
+                    <ListBoxItem Content="Nombre"/>
+                    <ListBoxItem Content="Provincia"/>
+                </ComboBox>
+                <Grid Width="300" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10,10,0,0">
+
+                    <TextBlock Margin="20 0" VerticalAlignment="Center" Foreground="#b8b9c6" IsHitTestVisible="False"
+                                           Panel.ZIndex="1" Text="Buscar..."
+                                           Visibility="{Binding ElementName=txtSearch,Path=Text.IsEmpty,Converter={StaticResource BoolToVis}}"
+                                           />
+
+                    <TextBox x:Name="txtSearch" Style="{StaticResource Filter}" KeyUp="TxtSearch_KeyUp" />
+                    <materialDesign:PackIcon Kind="Magnify" Width="15" Height="15"
+                                                         VerticalAlignment="Center" Margin="0 0 15 0" Foreground="#b0b9c6" HorizontalAlignment="Right"/>
+                </Grid>
+            </StackPanel>
+            <DataGrid Margin="10" 
+                                  x:Name="dgMunicipio"
+                                  AutoGenerateColumns="False" 
+                                  CanUserAddRows="False"
+                                  CanUserResizeColumns="True"
+                                  CanUserResizeRows="False"
+                                     IsReadOnly ="True"     
+                                  SelectionChanged="dgMunicipio_SelectionChanged"
+                                  >
+                <DataGrid.Columns>
+                   
+                    <DataGridTextColumn Header="Nombre"
+                                        Width="*"
+                                         Binding="{Binding Nombre}"/>
+                    <DataGridTextColumn Header="Provincia"
+                                        Width="*"
+                                         Binding="{Binding Provincia.Nombre}"/>
+
+                    <DataGridCheckBoxColumn  IsReadOnly="True" Header="Activo" 
+                                        Width="100"
+                                        Binding="{Binding Active}" />
+
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</UserControl>

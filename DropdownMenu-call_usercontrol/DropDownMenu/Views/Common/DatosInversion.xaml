@@ -1,0 +1,212 @@
+﻿<UserControl x:Class="DIRU.Views.Common.DatosInversion"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DIRU.Views.Common"
+            xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+              xmlns:v="clr-namespace:DIRU.ViewModel"
+             mc:Ignorable="d" 
+                     Height="700" Width="1200">
+    <UserControl.DataContext>
+        <v:RegistrationVM/>
+    </UserControl.DataContext>
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/Common.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <BooleanToVisibilityConverter x:Key="BoolToVis"/>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid Background="White" >
+        <StackPanel>
+            <Grid Margin="10,10,10,0" Background="#1565c0">
+                <TextBlock x:Name="Title" Margin="10" Text="Datos Inversión" FontSize="20" FontFamily="Open Sans" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"  />
+            </Grid>
+            <ScrollViewer VerticalScrollBarVisibility="Visible"  Height="450">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel>
+                            <Label Margin="20 10" FontSize="12" Content="Nombre Inversión:" />
+                            <TextBox x:Name="txtnombreInv" 
+                             Padding="2"  TextAlignment="Right" 
+                             BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,0,0"  VerticalAlignment="Top" Width="200"
+                              Text="{Binding Textfield2, ValidatesOnDataErrors=True,
+                UpdateSourceTrigger=PropertyChanged}"
+                     ToolTip="{Binding ErrorCollection[Textfield2]}"
+                             />
+                        </StackPanel>
+                        <StackPanel>
+                            <Label Margin="20 10" FontSize="12" Content="Nombre Obra:" />
+                            <TextBox x:Name="txtNombreObra" 
+                             Padding="2"  TextAlignment="Right" 
+                             BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,0,0"  VerticalAlignment="Top" Width="200"
+                              Text="{Binding Textfield3, ValidatesOnDataErrors=True,
+                UpdateSourceTrigger=PropertyChanged}"
+                     ToolTip="{Binding ErrorCollection[Textfield3]}"
+                             />
+                        </StackPanel>
+
+
+                    </StackPanel>
+                    <Separator Margin="20" Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" BorderBrush="LightGray" BorderThickness="1"/>
+                    <TextBlock Text="Dirección:" FontSize="15" Margin="20 0"/>
+                    <WrapPanel Orientation="Horizontal">
+                       
+                            <StackPanel>
+                                <Label Margin="20 10" FontSize="12" Content="NoCalle:" />
+                                <TextBox x:Name="txtCalle" 
+                             Padding="2"  TextAlignment="Right" 
+                             BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,0,0"  VerticalAlignment="Top" Width="200"
+                              Text="{Binding Textfield4, ValidatesOnDataErrors=True,
+                UpdateSourceTrigger=PropertyChanged}"
+                     ToolTip="{Binding ErrorCollection[Textfield4]}"
+                             />
+                            </StackPanel>
+                        <StackPanel>
+                        <Label  Margin="20 10" FontSize="12" Content="E|Calles:" />
+                        <TextBox x:Name="txtECalle" 
+                             Padding="2"  TextAlignment="Right" 
+                             BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,0,0"  VerticalAlignment="Top" Width="200"
+                              Text="{Binding Textfield5, ValidatesOnDataErrors=True,
+                UpdateSourceTrigger=PropertyChanged}"
+                     ToolTip="{Binding ErrorCollection[Textfield5]}"
+                             />
+                    </StackPanel>
+                    <StackPanel>
+                        <Label  Margin="20 10" FontSize="12" Content="Reparto o Pueblo:" />
+                        <TextBox x:Name="txtReparto" 
+                             Padding="2"  TextAlignment="Right" 
+                             BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,0,0"  VerticalAlignment="Top" Width="200"
+                              Text="{Binding Textfield6, ValidatesOnDataErrors=True,
+                UpdateSourceTrigger=PropertyChanged}"
+                     ToolTip="{Binding ErrorCollection[Textfield6]}"
+                             />
+                    </StackPanel>
+                
+                      
+                            <StackPanel>
+                                <Label Margin="20 10" FontSize="12" Content="Consejo Popular:" />
+                                <TextBox x:Name="txtConsejo" 
+                             Padding="2"  TextAlignment="Right" 
+                             BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,0,0"  VerticalAlignment="Top" Width="200"
+                              Text="{Binding Textfield7, 
+                UpdateSourceTrigger=PropertyChanged}"
+                     ToolTip="{Binding ErrorCollection[Textfield7]}"
+                             />
+                            </StackPanel>
+                            <StackPanel>
+                                <Label  Margin="20 10" FontSize="12" Content="Zona, Sub Zona:" />
+                                <StackPanel Orientation="Horizontal">
+                                    <ComboBox x:Name="comboZona"  DisplayMemberPath="Nombre" SelectedValuePath="Id" IsTextSearchEnabled="True" IsEditable="True" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,0,10"  VerticalAlignment="Top" Width="200"
+                             Text="{Binding Textfield8, 
+                UpdateSourceTrigger=PropertyChanged}"
+                     ToolTip="{Binding ErrorCollection[Textfield8]}"   
+                              />
+                                    <Button Content="+" Click="AddZona_Click" VerticalAlignment="Bottom" Height="25" Margin="5" Background="Gray" BorderBrush="Gray"/>
+
+                                </StackPanel>
+                            </StackPanel>
+                            <StackPanel>
+                                <Label Margin="20 10" FontSize="12" Content="Manzana:" />
+                                <TextBox x:Name="txtManzana" 
+                             Padding="2"  TextAlignment="Right" 
+                             BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,0,0"  VerticalAlignment="Top" Width="200"
+                              Text="{Binding Textfield9, 
+                UpdateSourceTrigger=PropertyChanged}"
+                     ToolTip="{Binding ErrorCollection[Textfield9]}"
+                             />
+                            </StackPanel>
+                       
+                        
+                            <StackPanel>
+                                <Label Margin="20 10" FontSize="12" Content="Circunscripción:" />
+                                <TextBox x:Name="txtCircunscripcion" 
+                             Padding="2"  TextAlignment="Right" 
+                             BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,0,0"  VerticalAlignment="Top" Width="200"
+                              Text="{Binding Textfield10,
+                UpdateSourceTrigger=PropertyChanged}"
+                     ToolTip="{Binding ErrorCollection[Textfield10]}"
+                             />
+                            </StackPanel>
+                            <StackPanel>
+                                <Label   Margin="20 10" FontSize="12" Content="Provincia:" />
+                                <StackPanel Orientation="Horizontal">
+                                <ComboBox x:Name="comboProvincia"  DisplayMemberPath="Nombre" SelectionChanged="comboProvincia_SelectionChanged" SelectedValuePath="Id" IsTextSearchEnabled="True" IsEditable="True" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,0,10"  VerticalAlignment="Top" Width="200"
+                             Text="{Binding Textfield11, ValidatesOnDataErrors=True,
+                UpdateSourceTrigger=PropertyChanged}"
+                     ToolTip="{Binding ErrorCollection[Textfield11]}"   
+                              />
+                                    <Button Content="+" Click="AddProvincia_Click" VerticalAlignment="Bottom" Height="25" Margin="5" Background="Gray" BorderBrush="Gray"/>
+
+                                </StackPanel>
+                            </StackPanel>
+                            <StackPanel>
+                                <Label Margin="20 10" FontSize="12" Content="Municipio:" />
+                                <StackPanel Orientation="Horizontal">
+                                    <ComboBox  x:Name="comboMunicipio" DisplayMemberPath="Nombre" SelectedValuePath="Id" IsTextSearchEnabled="True" IsEditable="True" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,0,0"  VerticalAlignment="Top" Width="200"
+                            Text="{Binding Textfield12, ValidatesOnDataErrors=True,
+                UpdateSourceTrigger=PropertyChanged}"
+                     ToolTip="{Binding ErrorCollection[Textfield12]}"   
+                               />
+                                    <Button Content="+" Click="AddMunicipio_Click" VerticalAlignment="Bottom" Height="25" Margin="5" Background="Gray" BorderBrush="Gray"/>
+
+                                </StackPanel>
+                            </StackPanel>
+                      
+                    </WrapPanel>
+                    <Separator Margin="20" Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" BorderBrush="LightGray" BorderThickness="1"/>
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel >
+
+                            <Label Margin="20 10" FontSize="12" Content="Valor Estimado:" />
+                            <xctk:DecimalUpDown x:Name="ValorEstim"  Minimum="0.1"  Value="0.1" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,0,0"  VerticalAlignment="Top" Width="200"/>
+
+                           
+                            <Label Margin="20 10" FontSize="12" Content="Valor Estimado Aprobado:" />
+                            <xctk:DecimalUpDown x:Name="ValorEstimAprobado"  Minimum="0.1"  Value="0.1" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,0,0"  VerticalAlignment="Top" Width="200"/>
+
+
+                        </StackPanel>
+                        <StackPanel >
+
+                            <Label Margin="20 10" FontSize="12" Content="Construcción y Montaje:" />
+                            <RichTextBox x:Name="txtConstruccion" 
+                              Padding="2" 
+                             BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="60" Margin="20,5,0,0"  VerticalAlignment="Top" Width="300"
+                            />
+
+                            <Label Margin="20 10" FontSize="12" Content="Equipos:" />
+                           
+                            <RichTextBox  x:Name="txtEquipos" 
+                             Padding="2" 
+                             BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="60" Margin="20,5,0,0"  VerticalAlignment="Top" Width="300"
+                             />
+
+                        </StackPanel>
+                        <StackPanel >
+
+                            <Label Margin="20 10" FontSize="12" Content="Otros:" />
+                            <RichTextBox x:Name="txtOtros" 
+                             Padding="2"  
+                             BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="60" Margin="20,5,0,0"  VerticalAlignment="Top" Width="300"
+                             
+                             />
+
+
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+            <Grid  Margin="10,30,10,0" Background="LightGray" VerticalAlignment="Bottom">
+
+                <Button x:Name="BtnSave" FontSize="12" Margin="0,10,100,10" Content="Aceptar" HorizontalAlignment="Right" VerticalAlignment="Center" Click="BtnSave_Click"/>
+                <Button x:Name="BtnCancel" FontSize="12" Margin="10" Background="Red" Foreground="White" Content="Cancelar" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BtnCancel_Click" />
+
+            </Grid>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

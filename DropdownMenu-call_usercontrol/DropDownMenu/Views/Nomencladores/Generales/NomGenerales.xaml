@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="DropDownMenu.Views.Nomencladores.NomGenerales"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DropDownMenu.Views.Nomencladores"
+             mc:Ignorable="d"
+             xmlns:ucEntidad="clr-namespace:DIRU.Views.Nomencladores.Generales.Entidades"
+             xmlns:ucOrganismo="clr-namespace:DIRU.Views.Nomencladores.Generales.Organismos"
+             xmlns:ucMunicipio="clr-namespace:DIRU.Views.Nomencladores.Generales.Municipios"
+             xmlns:ucProvincia="clr-namespace:DIRU.Views.Nomencladores.Generales.Provincias"
+             xmlns:ucCliente="clr-namespace:DIRU.Views.Nomencladores.Generales.Clientes"
+            
+             xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+            Height="700" Width="1200">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/Common.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <BooleanToVisibilityConverter x:Key="BoolToVis"/>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid Height="60" Background="#1565c0" VerticalAlignment="Top" >
+            <TextBlock Margin="10" Text="Nomencladores Generales" FontSize="20" FontFamily="Open Sans" Foreground="White"  HorizontalAlignment="Center" VerticalAlignment="Center"  />
+
+        </Grid>
+        <Grid Margin="0 60 0 0">
+            <dragablz:TabablzControl Margin="0,-15,0,0.4" FontSize="15">
+                <dragablz:TabablzControl.InterTabController>
+                    <dragablz:InterTabController/>
+                </dragablz:TabablzControl.InterTabController>
+                <TabItem Header="Cliente">
+                    <ucCliente:NomClientes/>
+                </TabItem>
+                <TabItem Header="Entidad">
+                    <ucEntidad:NomEntidad/>
+                </TabItem>
+                <TabItem Header="Organismo" Background="#FF0682FF">
+                    <ucOrganismo:NomOrganismo/>
+                </TabItem>
+                <TabItem Header="Municipio">
+                    <ucMunicipio:NomMunicipio/>
+                </TabItem>
+                <TabItem Header="Provincia">
+                <ucProvincia:NomProvincia/>
+                </TabItem>
+              
+              
+                   
+            </dragablz:TabablzControl>
+        </Grid>
+    </Grid>
+</UserControl>

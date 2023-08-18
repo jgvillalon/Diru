@@ -1,0 +1,60 @@
+﻿<UserControl x:Class="DIRU.Views.RegulacionesUrbanas.RegulacionUrbana"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DIRU.Views.RegulacionesUrbanas"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             Height="700" Width="1200">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/Common.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <BooleanToVisibilityConverter x:Key="BoolToVis"/>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid Background="White">
+        <StackPanel>
+            <Grid Height="60" VerticalAlignment="Top" Background="#1565c0">
+                <TextBlock Text="Regulaciones Urbanas" FontSize="20" FontFamily="Open Sans" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"  />
+
+            </Grid>
+            <Menu>
+
+                <MenuItem x:Name="menuProject" Header="Regulación Urbana">
+                    <MenuItem.Icon>
+                        <materialDesign:PackIcon x:Name="ProjectIcon" Kind="CreateNewFolder"/>
+                    </MenuItem.Icon>
+                   
+                    <MenuItem x:Name="menuEstructura" Header="Estructura de la manzana" Click="Estructura_Click"/>
+                    <MenuItem x:Name="menuAltura" Header="Altura" Click="Altura_Click"/>
+                    <MenuItem x:Name="menuEdificacion" Header="Datos Edificación">
+                        <MenuItem Header="Disposición" Click="Disposicion_Click" />
+                        <MenuItem Header="Alineación" Click="Alineacion_Click"/>
+                     
+                    </MenuItem>
+                    <MenuItem x:Name="menuFachada" Header="Fachada Principal" Click="Fachada_Click"/>
+                    <MenuItem x:Name="menuFunciones" Header="Usos y Funciones" Click="Funciones_Click"/>
+                    <MenuItem x:Name="menuComercio" Header="Comercio" Click="Comercio_Click"/>
+                    <MenuItem x:Name="menuAreas" Header="Áreas verdes y Espacios públicos" Click="Areas_Click"/>
+                    <MenuItem x:Name="menuPlantas" Header="Regular Plantas" Click="Plantas_Click"/>
+                </MenuItem>
+                <MenuItem Header="Informes">
+                    <MenuItem.Icon>
+                        <materialDesign:PackIcon Kind="ArrowDropDown"/>
+                    </MenuItem.Icon>
+                    <MenuItem  x:Name="menuAptitudPrimaria" Header="Informe Aptitudes Primarias"  Click="AptitudesPrimarias_Click" IsEnabled="False">
+                        <MenuItem.Icon>
+                            <materialDesign:PackIcon Kind="FileReport"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+                </MenuItem>
+            </Menu>
+            <Grid x:Name="Main" Height="592"/>
+
+        </StackPanel>
+    </Grid>
+</UserControl>

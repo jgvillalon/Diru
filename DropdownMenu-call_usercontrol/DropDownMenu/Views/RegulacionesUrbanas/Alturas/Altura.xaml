@@ -1,0 +1,118 @@
+﻿<UserControl x:Class="DIRU.Views.RegulacionesUrbanas.Alturas.Altura"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DIRU.Views.RegulacionesUrbanas.Alturas"
+             mc:Ignorable="d" 
+              xmlns:v="clr-namespace:DIRU.ViewModel"
+             Height="700" Width="1200">
+    <UserControl.DataContext>
+        <v:RegistrationVM/>
+    </UserControl.DataContext>
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/Common.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <BooleanToVisibilityConverter x:Key="BoolToVis"/>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid Background="White"  >
+
+        <StackPanel>
+            <Grid Margin="10,10,10,0" Background="#1565c0">
+                <TextBlock x:Name="Title" Margin="10" Text="Altura" FontSize="20" FontFamily="Open Sans" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"  />
+            </Grid>
+            <StackPanel Height="533">
+
+
+                <Border Margin="10 10" BorderBrush="LightGray" BorderThickness="1" Height="600">
+                    <StackPanel Margin="10">
+
+                        <WrapPanel  Orientation="Horizontal">
+                            <StackPanel>
+                                <Label   Margin="10 5" FontSize="12" Content="No. Máximo Níveles:" />
+                                <ComboBox x:Name="comboPlantaMaxNivel"  DisplayMemberPath="Nombre" SelectedValuePath="Id" IsTextSearchEnabled="True" IsEditable="True" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,20,10"  VerticalAlignment="Top" Width="366"
+                            
+                              />
+                            </StackPanel>
+                            <StackPanel>
+
+                                <Button Content="Observaciones" Margin="10 45 10 10" Click="ObservacionMaxNiveles_Click"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Button FontSize="12" Margin="10 30 10 10" Foreground="Black" BorderBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Name = "BrowseMaxNiveles" Click = "Browse_Click"  HorizontalAlignment="Left" Width="200" Content="Cargar imagen ..."/>
+                                <Image Name = "ImageViewer1" Width="100" Height="100"/>
+                            </StackPanel>
+
+                        </WrapPanel>
+                        <WrapPanel  Orientation="Horizontal">
+                            <StackPanel>
+                                <Label   Margin="10 5" FontSize="12" Content="No. Mínimo Níveles:" />
+                                <ComboBox x:Name="comboPlantaMinNivel"  DisplayMemberPath="Nombre" SelectedValuePath="Id" IsTextSearchEnabled="True" IsEditable="True" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,20,10"  VerticalAlignment="Top" Width="366"
+                            
+                              />
+                            </StackPanel>
+                            <StackPanel>
+
+                                <Button Content="Observaciones" Margin="10 45 10 10" Click="ObservacionMinNiveles_Click"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Button FontSize="12" Margin="10 30 10 10" Foreground="Black" BorderBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Name = "BrowseMinNiveles" Click = "Browse_Click"  HorizontalAlignment="Left" Width="200" Content="Cargar imagen ..."/>
+                                <Image Name = "ImageViewer2" Width="100" Height="100"/>
+                            </StackPanel>
+
+                        </WrapPanel>
+                        <WrapPanel  Orientation="Horizontal">
+                            <StackPanel Width="403">
+                                <Label   Margin="10 5" FontSize="12" Content="Puntal Mínimo Planta baja:" />
+                                <ComboBox x:Name="comboMetrosPuntalMinPB"  DisplayMemberPath="Cantidad" SelectedValuePath="Id" IsTextSearchEnabled="True" IsEditable="True" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,20,10" Width="355"
+                              
+                              />
+                            </StackPanel>
+                            <StackPanel>
+
+                                <Button Content="Observaciones" Margin="10 45 10 10" Click="ObservacionPuntalMinPB_Click"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Button FontSize="12" Margin="10 30 10 10" Foreground="Black" BorderBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Name = "BrowsePuntalMinPB" Click = "Browse_Click"  HorizontalAlignment="Left" Width="200" Content="Cargar imagen ..."/>
+                                <Image Name = "ImageViewer3" Width="100" Height="100"/>
+                            </StackPanel>
+
+                        </WrapPanel>
+                        <WrapPanel  Orientation="Horizontal">
+                            <StackPanel Width="402">
+                                <Label   Margin="10 5" FontSize="12" Content="Puntal Mínimo General:" />
+                                <ComboBox x:Name="comboMetrosPuntalMinGeneral"  DisplayMemberPath="Cantidad" SelectedValuePath="Id" IsTextSearchEnabled="True" IsEditable="True" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,20,10" Width="361"
+                            
+                              />
+                            </StackPanel>
+                            <StackPanel>
+
+                                <Button Content="Observaciones" Margin="10 45 10 10" Click="ObservacionPuntalMinGeneral_Click"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Button FontSize="12" Margin="10 30 10 10" Foreground="Black" BorderBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Name = "BrowsePuntalMinGeneral" Click = "Browse_Click"  HorizontalAlignment="Left" Width="200" Content="Cargar imagen ..."/>
+                                <Image Name = "ImageViewer4" Width="100" Height="100"/>
+                            </StackPanel>
+
+                        </WrapPanel>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+
+            <Grid  Margin="10,10,10,0" Background="LightGray" VerticalAlignment="Bottom">
+
+                <Button x:Name="BtnSave" FontSize="12" Margin="0,10,100,10" Content="Aceptar" HorizontalAlignment="Right" VerticalAlignment="Center" Click="BtnSave_Click" />
+                <Button x:Name="BtnCancel" FontSize="12" Margin="1091,0,0,10" Background="Red" Foreground="White" Content="Cancelar" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="BtnCancel_Click"  />
+
+            </Grid>
+        </StackPanel>
+
+    </Grid>
+
+</UserControl>
+
+

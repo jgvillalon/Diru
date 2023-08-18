@@ -1,0 +1,306 @@
+﻿<Window x:Class="DIRU.Views.InversionLotes.Evaluaciones.CapacidadForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DIRU.Views.InversionLotes.Evaluaciones"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+         xmlns:v="clr-namespace:DIRU.ViewModel"
+         WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        Title="MunicipioForm" Height="850" Width="1000">
+    <Window.DataContext>
+        <v:RegistrationVM/>
+    </Window.DataContext>
+    <Grid  Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="622*"/>
+            <ColumnDefinition Width="171*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.ColumnSpan="2" Margin="0,0,-0.4,0">
+            <Grid Margin="0,0,-0.4,0" Background="#1565c0" Height="63">
+                <TextBlock Margin="10" Text="Evaluación de capacidad por zona" FontSize="20" FontFamily="Open Sans" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"  />
+                <StackPanel HorizontalAlignment="Right" Margin="0,5,5,0"  VerticalAlignment="Center" Grid.Column="1">
+                    <Button x:Name="btnClose" Click="btnClose_Click" Width="35" Height="35"  Background="White" Foreground="{DynamicResource PrimaryHueDarkBrush}" Style="{StaticResource MaterialDesignFloatingActionDarkButton}">
+                        <materialDesign:PackIcon Kind="Close" />
+                    </Button>
+                </StackPanel>
+            </Grid>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Margin="10,10,0,0">
+                    <TextBlock Background="LightGray" Text="Leyenda:" FontSize="20" FontFamily="Open Sans" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" Width="709" />
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Background="Green" Width="50"  Text="A" FontSize="20" FontFamily="Open Sans" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" TextAlignment="Center" />
+                        <Label Content="SIN LIMITACIONES" FontSize="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="Black" Width="50" Background="yellow"  Text="B" FontSize="20" FontFamily="Open Sans"  HorizontalAlignment="Left" VerticalAlignment="Center"  TextAlignment="Center" />
+                        <Label Content="EXISTEN LIMITACIONES A CAUSAS DIRECTAS O RIESGOS PERO SON TÉCNICAMENTE SUPERABLES" FontSize="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Background="Red" Width="50" Text="C" FontSize="20" FontFamily="Open Sans" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"  TextAlignment="Center"  />
+                        <Label Content="LA URBANIZACIÓN DE ESTA ZONA GENERA SITUACIONES DE RIESGOS CATASTRÓFICOS" FontSize="15"/>
+                    </StackPanel>
+                </StackPanel>
+                <Separator  Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" BorderBrush="LightGray" BorderThickness="1"/>
+                <StackPanel Margin="0,10,10,10">
+                    <TextBlock Background="LightGray" Text="Criterios:" FontSize="20" FontFamily="Open Sans" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center"  />
+                    <Label Content="(-)" FontSize="15"/>
+                    <Label Content="(X)" FontSize="15"/>
+                    <Label Content="(X)" FontSize="15"/>
+                </StackPanel>
+            </StackPanel>
+            <Separator Margin="5" Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" BorderBrush="LightGray" BorderThickness="1"/>
+            <ScrollViewer VerticalScrollBarVisibility="Visible"  Height="530">
+            <StackPanel>
+                <StackPanel>
+                    <TextBlock Margin="10" FontSize="15" Text="Urbanización"/>
+                    <WrapPanel Orientation="Horizontal" Height="82" Margin="0,0,0.4,0">
+                        <StackPanel  Margin="5" >
+                            <Label    FontSize="12" Content="Área Urbanizada:" />
+                            <ComboBox HorizontalContentAlignment="Center" x:Name="comboAreaUrbanizada"  IsTextSearchEnabled="True" IsEditable="True" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" 
+                       Text="{Binding Textfield2, ValidatesOnDataErrors=True,
+                UpdateSourceTrigger=PropertyChanged}"
+                     ToolTip="{Binding ErrorCollection[Textfield2]}" Width="209"
+                      >
+                                <ListBoxItem Content="(-)"/>
+                                <ListBoxItem Content="(X)"/>
+                            </ComboBox>
+                        </StackPanel>
+                        <StackPanel  Margin="5" >
+                            <Label    FontSize="12" Content="Uso Residencial:" />
+                            <ComboBox HorizontalContentAlignment="Center" x:Name="comboUsoResindecia"  IsTextSearchEnabled="True" IsEditable="True" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" 
+                       Text="{Binding Textfield3, ValidatesOnDataErrors=True,
+                UpdateSourceTrigger=PropertyChanged}"
+                     ToolTip="{Binding ErrorCollection[Textfield3]}" Width="209"
+                      >
+                                <ListBoxItem Content="(-)"/>
+                                <ListBoxItem Content="(X)"/>
+                            </ComboBox>
+                        </StackPanel>
+                        <StackPanel  Margin="5" >
+                            <Label    FontSize="12" Content="Uso Industrial y Empresarial:" />
+                            <ComboBox HorizontalContentAlignment="Center" x:Name="comboUsoIndustrial"  IsTextSearchEnabled="True" IsEditable="True" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" 
+                       Text="{Binding Textfield4, ValidatesOnDataErrors=True,
+                UpdateSourceTrigger=PropertyChanged}"
+                     ToolTip="{Binding ErrorCollection[Textfield4]}" Width="209"
+                      >
+                                <ListBoxItem Content="(-)"/>
+                                <ListBoxItem Content="(X)"/>
+                            </ComboBox>
+                        </StackPanel>
+                        <StackPanel  Margin="5" >
+                            <Label  FontSize="12" Content="Evaluación Urbanización:" />
+                            <ComboBox HorizontalContentAlignment="Center" x:Name="comboEvaluacionUrbanizacion"  IsTextSearchEnabled="True" IsEditable="True" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" 
+                       Text="{Binding Textfield5, ValidatesOnDataErrors=True,
+                UpdateSourceTrigger=PropertyChanged}"
+                     ToolTip="{Binding ErrorCollection[Textfield5]}" Width="209" SelectionChanged="ComboEvaluacionUrbanizacion_SelectionChanged"
+                      >
+                                <ListBoxItem Background="Green" Foreground="White" Content="A"/>
+                                <ListBoxItem Background="Yellow" Content="B"/>
+                                    <ListBoxItem Background="Red" Foreground="White" Content="C"/>
+                            </ComboBox>
+                        </StackPanel>
+                    </WrapPanel>
+                </StackPanel>
+                <Separator Margin="5" Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" BorderBrush="LightGray" BorderThickness="1"/>
+                <TextBlock Margin="10" FontSize="15" Text="CONTAMINACIÓN SONORA"/>
+                <WrapPanel Orientation="Horizontal" Height="82" Margin="0,0,0.4,0">
+                    <StackPanel  Margin="5" >
+                        <Label    FontSize="12" Content="Sector con contaminación sonora:" />
+                        <ComboBox HorizontalContentAlignment="Center" x:Name="comboContaminacionSonora"  IsTextSearchEnabled="True" IsEditable="True" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" 
+                       Text="{Binding Textfield6, ValidatesOnDataErrors=True,
+                UpdateSourceTrigger=PropertyChanged}"
+                     ToolTip="{Binding ErrorCollection[Textfield6]}" Width="209"
+                      >
+                            <ListBoxItem Content="(-)"/>
+                            <ListBoxItem Content="(X)"/>
+                        </ComboBox>
+                    </StackPanel>
+                    <StackPanel  Margin="5" >
+                        <Label  FontSize="12" Content="Evaluación Contaminación Sonora:" />
+                        <ComboBox HorizontalContentAlignment="Center"  x:Name="comboEvaluacionContaminacionSonora"  IsTextSearchEnabled="True" IsEditable="True" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" 
+                       Text="{Binding Textfield7, ValidatesOnDataErrors=True,
+                UpdateSourceTrigger=PropertyChanged}"
+                     ToolTip="{Binding ErrorCollection[Textfield7]}" Width="209" SelectionChanged="ComboEvaluacionContaminacionSonora_SelectionChanged"
+                      >
+                                <ListBoxItem Background="Green" Foreground="White" Content="A"/>
+                            <ListBoxItem Background="Yellow" Content="B"/>
+                                <ListBoxItem Background="Red" Foreground="White" Content="C"/>
+                        </ComboBox>
+                    </StackPanel>
+                </WrapPanel>
+
+                <Separator Margin="5" Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" BorderBrush="LightGray" BorderThickness="1"/>
+                <TextBlock Margin="10" FontSize="15" Text="DESLIZAMIENTO DE TIERRA"/>
+                <WrapPanel Orientation="Horizontal" Height="82" Margin="0,0,0.4,0">
+                    <StackPanel  Margin="5" >
+                        <Label    FontSize="12" Content="Posible deslizamiento:" />
+                        <ComboBox HorizontalContentAlignment="Center" x:Name="comboDeslizamiento"  IsTextSearchEnabled="True" IsEditable="True" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" 
+                       Text="{Binding Textfield8, ValidatesOnDataErrors=True,
+                UpdateSourceTrigger=PropertyChanged}"
+                     ToolTip="{Binding ErrorCollection[Textfield8]}" Width="209"
+                      >
+                            <ListBoxItem Content="(-)"/>
+                            <ListBoxItem Content="(X)"/>
+                        </ComboBox>
+                    </StackPanel>
+                    <StackPanel  Margin="5" >
+                        <Label  FontSize="12" Content="Evaluación Deslizamiento de  Tierra:" />
+                        <ComboBox HorizontalContentAlignment="Center" x:Name="comboEvaluacionDeslizamiento"  IsTextSearchEnabled="True" IsEditable="True" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" 
+                       Text="{Binding Textfield9, ValidatesOnDataErrors=True,
+                UpdateSourceTrigger=PropertyChanged}"
+                     ToolTip="{Binding ErrorCollection[Textfield9]}" Width="209" SelectionChanged="ComboEvaluacionDeslizamiento_SelectionChanged"
+                      >
+                                <ListBoxItem Background="Green" Foreground="White" Content="A"/>
+                            <ListBoxItem Background="Yellow"  Content="B"/>
+                                <ListBoxItem Background="Red" Foreground="White" Content="C"/>
+                        </ComboBox>
+                    </StackPanel>
+                </WrapPanel>
+
+                <Separator Margin="5" Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" BorderBrush="LightGray" BorderThickness="1"/>
+                <TextBlock Margin="10" FontSize="15" Text="INUNDACIONES"/>
+                <WrapPanel Orientation="Horizontal" Height="82" Margin="0,0,0.4,0">
+                    <StackPanel  Margin="5" >
+                        <Label    FontSize="12" Content="Sector susceptible a inundaciones:" />
+                        <ComboBox HorizontalContentAlignment="Center" x:Name="comboInundaciones"  IsTextSearchEnabled="True" IsEditable="True" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" 
+                       Text="{Binding Textfield10, ValidatesOnDataErrors=True,
+                UpdateSourceTrigger=PropertyChanged}"
+                     ToolTip="{Binding ErrorCollection[Textfield10]}" Width="209"
+                      >
+                            <ListBoxItem Content="(-)"/>
+                            <ListBoxItem Content="(X)"/>
+                        </ComboBox>
+                    </StackPanel>
+                    <StackPanel  Margin="5" >
+                        <Label  FontSize="12" Content="Evaluación Inundaciones:" />
+                        <ComboBox HorizontalContentAlignment="Center" x:Name="comboEvaluacionInundaciones"  IsTextSearchEnabled="True" IsEditable="True" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" 
+                       Text="{Binding Textfield11, ValidatesOnDataErrors=True,
+                UpdateSourceTrigger=PropertyChanged}"
+                     ToolTip="{Binding ErrorCollection[Textfield11]}" Width="209" SelectionChanged="ComboEvaluacionInundaciones_SelectionChanged"
+                      >
+                                <ListBoxItem Background="Green" Foreground="White" Content="A"/>
+                            <ListBoxItem Background="Yellow" Content="B"/>
+                                <ListBoxItem Background="Red" Foreground="White" Content="C"/>
+                        </ComboBox>
+                    </StackPanel>
+                </WrapPanel>
+
+                <Separator Margin="5" Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" BorderBrush="LightGray" BorderThickness="1"/>
+                <TextBlock Margin="10" FontSize="15" Text="INCENDIOS"/>
+                <WrapPanel Orientation="Horizontal" Height="82" Margin="0,0,0.4,0">
+                    <StackPanel  Margin="5" >
+                        <Label    FontSize="12" Content="Sector susceptible a incendios:" />
+                        <ComboBox HorizontalContentAlignment="Center" x:Name="comboIncendios"  IsTextSearchEnabled="True" IsEditable="True" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" 
+                       Text="{Binding Textfield12, ValidatesOnDataErrors=True,
+                UpdateSourceTrigger=PropertyChanged}"
+                     ToolTip="{Binding ErrorCollection[Textfield12]}" Width="209"
+                      >
+                            <ListBoxItem Content="(-)"/>
+                            <ListBoxItem Content="(X)"/>
+                        </ComboBox>
+                    </StackPanel>
+                    <StackPanel  Margin="5" >
+                        <Label  FontSize="12" Content="Evaluación Incendio:" />
+                        <ComboBox HorizontalContentAlignment="Center" x:Name="comboEvaluacionIncendio"  IsTextSearchEnabled="True" IsEditable="True" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" 
+                       Text="{Binding Textfield13, ValidatesOnDataErrors=True,
+                UpdateSourceTrigger=PropertyChanged}"
+                     ToolTip="{Binding ErrorCollection[Textfield13]}" Width="209" SelectionChanged="ComboEvaluacionIncendio_SelectionChanged"
+                      >
+                                <ListBoxItem Background="Green" Foreground="White" Content="A"/>
+                            <ListBoxItem Background="Yellow" Content="B"/>
+                                <ListBoxItem Background="Red" Foreground="White" Content="C"/>
+                        </ComboBox>
+                    </StackPanel>
+                </WrapPanel>
+
+                <Separator Margin="5" Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" BorderBrush="LightGray" BorderThickness="1"/>
+                <TextBlock Margin="10" FontSize="15" Text="CONTAMINACIÓN ACUÍFERA"/>
+                <WrapPanel Orientation="Horizontal" Height="82" Margin="0,0,0.4,0">
+                    <StackPanel  Margin="5" >
+                        <Label    FontSize="12" Content="Sector contaminado por acuíferos:" />
+                        <ComboBox HorizontalContentAlignment="Center" x:Name="comboContaminacionAcuifera"  IsTextSearchEnabled="True" IsEditable="True" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" 
+                       Text="{Binding Textfield14, ValidatesOnDataErrors=True,
+                UpdateSourceTrigger=PropertyChanged}"
+                     ToolTip="{Binding ErrorCollection[Textfield14]}" Width="209"
+                      >
+                            <ListBoxItem Content="(-)"/>
+                            <ListBoxItem Content="(X)"/>
+                        </ComboBox>
+                    </StackPanel>
+                    <StackPanel  Margin="5" >
+                        <Label  FontSize="12" Content="Evaluación Acuífera:" />
+                        <ComboBox HorizontalContentAlignment="Center" x:Name="comboEvaluacionAcuifera"  IsTextSearchEnabled="True" IsEditable="True" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" 
+                       Text="{Binding Textfield15, ValidatesOnDataErrors=True,
+                UpdateSourceTrigger=PropertyChanged}"
+                     ToolTip="{Binding ErrorCollection[Textfield15]}" Width="209" SelectionChanged="ComboEvaluacionAcuifera_SelectionChanged"
+                      >
+                                <ListBoxItem Background="Green" Foreground="White" Content="A"/>
+                            <ListBoxItem Background="Yellow"  Content="B"/>
+                                <ListBoxItem Background="Red" Foreground="White" Content="C"/>
+                        </ComboBox>
+                    </StackPanel>
+                </WrapPanel>
+
+                <Separator Margin="5" Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" BorderBrush="LightGray" BorderThickness="1"/>
+                <TextBlock Margin="10" FontSize="15" Text="Totales"/>
+                <Grid Height="100">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"/>
+
+                    </Grid.RowDefinitions>
+                    <Border Margin="5" Grid.Column="0" Background="Green" Height="50" VerticalAlignment="Stretch" CornerRadius="12">
+                        <StackPanel>
+                                <TextBlock Text="A" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
+                                <TextBlock x:Name="CA" Foreground="White" Text="{Binding CountA, Mode = TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
+                        </StackPanel>
+                    </Border>
+                        <Border Margin="5" Grid.Column="1" Background="Yellow" Height="50" VerticalAlignment="Stretch" CornerRadius="12">
+                        <StackPanel>
+                            <TextBlock Text="B" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
+                                <TextBlock x:Name="CB" Text="{Binding CountB, Mode =TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
+                        </StackPanel>
+                    </Border>
+                        <Border Margin="5" Grid.Column="2" Background="Red" Height="50" VerticalAlignment="Stretch" CornerRadius="12">
+                        <StackPanel>
+                                <TextBlock Text="C" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
+                                <TextBlock x:Name="CC" Foreground="White" Text="{Binding CountC, Mode = TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
+                        </StackPanel>
+                    </Border>
+                        <Border x:Name="EGBorder" Margin="5" Height="50" Grid.Column="3" Background="{Binding Background, Mode=TwoWay}" VerticalAlignment="Stretch" CornerRadius="12">
+                            <StackPanel>
+                                <TextBlock Text="Evaluación General" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="15"/>
+                                <ComboBox HorizontalContentAlignment="Center" VerticalAlignment="Top" x:Name="EG" IsTextSearchEnabled="True" IsEditable="True" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" 
+                       Text="{Binding Textfield16, ValidatesOnDataErrors=True,
+                UpdateSourceTrigger=PropertyChanged}"
+                     ToolTip="{Binding ErrorCollection[Textfield15]}" Width="209" SelectionChanged="ComboEG_SelectionChanged"
+                      >
+                                    <ListBoxItem Background="Green" Foreground="White" Content="A"/>
+                                    <ListBoxItem Background="Yellow" Content="B"/>
+                                    <ListBoxItem Background="Red" Foreground="White" Content="C"/>
+                                </ComboBox>
+                            </StackPanel>
+                        </Border>
+
+                    </Grid>
+            </StackPanel>
+            </ScrollViewer>
+        </StackPanel>
+        <Grid   Background="LightGray" VerticalAlignment="Bottom" Grid.ColumnSpan="2" Margin="0,0,-0.4,-0.4">
+
+            <Button x:Name="BtnSave" FontSize="12" Margin="0,10,100,10" Content="Aceptar" HorizontalAlignment="Right" VerticalAlignment="Center" Click="BtnSave_Click"/>
+            <Button x:Name="BtnCancel" FontSize="12" Margin="10" Background="Red" Foreground="White" Content="Cancelar" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BtnCancel_Click" />
+
+        </Grid>
+    </Grid>
+</Window>
+

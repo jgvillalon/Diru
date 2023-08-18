@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="DIRU.Views.RegulacionesUrbanas.DatosEntradaDiseño.DatosEntradaDiseño"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DIRU.Views.RegulacionesUrbanas.DatosEntradaDiseño"
+              mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/Common.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <BooleanToVisibilityConverter x:Key="BoolToVis"/>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <StackPanel>
+            <Grid Margin="10,10,10,0" Background="#1565c0">
+                <TextBlock Margin="10" Text="Datos Inmueble Construido" FontSize="20" FontFamily="Open Sans" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"  />
+            </Grid>
+            
+            <DataGrid Margin="10" 
+                                  x:Name="dgPlanta"
+                                  AutoGenerateColumns="False" 
+                                  CanUserAddRows="False"
+                                  CanUserResizeColumns="True"
+                                  CanUserResizeRows="False"
+                                  IsReadOnly ="True"     
+                                  >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Descripción"
+                                        Width="300"
+                                         Binding="{Binding Descripcion}"/>
+                    <DataGridTextColumn Header="Área Ocupada (m2)"
+                                        Width="150"
+                                         Binding="{Binding Area}"/>
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Gestionar"  Margin="2" VerticalAlignment="Top" Background="Gray" BorderBrush="Gray" Foreground="WhiteSmoke" Height="30" Click="GestionarPlanta_Click">
+                 
+                                    </Button>
+                               
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                </DataGrid.Columns>
+            </DataGrid>
+
+        </StackPanel>
+    </Grid>
+</UserControl>

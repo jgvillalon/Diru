@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DC073E22-D394-4A2A-9CE0-1E1E66FB3598}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Repository</RootNamespace>
+    <AssemblyName>Repository</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\WpfApp2\packages\Antlr3.Runtime.3.5.1\lib\net40-client\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentNHibernate, Version=3.1.0.0, Culture=neutral, PublicKeyToken=8aa435e3cb308880, processorArchitecture=MSIL">
+      <HintPath>..\WpfApp2\packages\FluentNHibernate.3.1.0\lib\net461\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\WpfApp2\packages\Iesi.Collections.4.0.4\lib\net461\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=5.3.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\WpfApp2\packages\NHibernate.5.3.14\lib\net461\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\WpfApp2\packages\Remotion.Linq.2.2.0\lib\net45\Remotion.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq.EagerFetching, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\WpfApp2\packages\Remotion.Linq.EagerFetching.2.2.0\lib\net45\Remotion.Linq.EagerFetching.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\DateFilter.cs" />
+    <Compile Include="Common\DateOperator.cs" />
+    <Compile Include="Common\StatusResponse.cs" />
+    <Compile Include="InversionesLotes\IRepository\ILocalPlantaRepository.cs" />
+    <Compile Include="InversionesLotes\Options\LocalPlantaSearchOptions.cs" />
+    <Compile Include="InversionesLotes\Repository\LocalPlantaRepository.cs" />
+    <Compile Include="Nomencladores\Generales\IRepository\IClienteRepository.cs" />
+    <Compile Include="Nomencladores\Generales\IRepository\IEntidadRepository.cs" />
+    <Compile Include="Nomencladores\Generales\IRepository\ILocalRepository.cs" />
+    <Compile Include="Nomencladores\Generales\IRepository\IMunicipioRepository.cs" />
+    <Compile Include="Nomencladores\Generales\IRepository\IOrganismoRepository.cs" />
+    <Compile Include="Nomencladores\Generales\IRepository\IPaisRepository.cs" />
+    <Compile Include="Nomencladores\Generales\IRepository\IProvinciaRepository.cs" />
+    <Compile Include="Nomencladores\Generales\Options\ClienteSearchOptions.cs" />
+    <Compile Include="Nomencladores\Generales\Options\EntidadSearchOptions.cs" />
+    <Compile Include="Nomencladores\Generales\Options\LocalSearchOptions.cs" />
+    <Compile Include="Nomencladores\Generales\Options\MunicipioSearchOptions.cs" />
+    <Compile Include="Nomencladores\Generales\Options\OrganismoSearchOptions.cs" />
+    <Compile Include="Nomencladores\Generales\Options\PaisSearchOptions.cs" />
+    <Compile Include="Nomencladores\Generales\Options\ProvinciaSearchOptions.cs" />
+    <Compile Include="Nomencladores\Generales\Repository\ClienteRepository.cs" />
+    <Compile Include="Nomencladores\Generales\Repository\EntidadRepository.cs" />
+    <Compile Include="Nomencladores\Generales\Repository\LocalRepository.cs" />
+    <Compile Include="Nomencladores\Generales\Repository\MunicipioRepository.cs" />
+    <Compile Include="Nomencladores\Generales\Repository\OrganismoRepository.cs" />
+    <Compile Include="Nomencladores\Generales\Repository\PaisRepository.cs" />
+    <Compile Include="Nomencladores\Generales\Repository\ProvinciaRepository.cs" />
+    <Compile Include="Nomencladores\Geograficos\IRepository\IUbicacionGeograficaRepository.cs" />
+    <Compile Include="Nomencladores\Geograficos\IRepository\IZonaUbicacionRepository.cs" />
+    <Compile Include="Nomencladores\Geograficos\Options\UbicacionGeograficaSearchOptions.cs" />
+    <Compile Include="Nomencladores\Geograficos\Options\ZonaUbicacionSearchOptions.cs" />
+    <Compile Include="Nomencladores\Geograficos\Repository\UbicacionGeograficaRepository.cs" />
+    <Compile Include="Nomencladores\Geograficos\Repository\ZonaUbicacionRepository.cs" />
+    <Compile Include="Nomencladores\Otros\IRepository\IEstadoTecnicoRepository.cs" />
+    <Compile Include="Nomencladores\Otros\IRepository\IMetrosRepository.cs" />
+    <Compile Include="Nomencladores\Otros\IRepository\IPlantaRepository.cs" />
+    <Compile Include="Nomencladores\Otros\Options\EstadoTecniccoSearchOptions.cs" />
+    <Compile Include="Nomencladores\Otros\Options\MetrosSearchOptions.cs" />
+    <Compile Include="Nomencladores\Otros\Options\PlantaSearchOptions.cs" />
+    <Compile Include="Nomencladores\Otros\Repository\EstadoTecnicoRepository.cs" />
+    <Compile Include="Nomencladores\Otros\Repository\MetrosRepository.cs" />
+    <Compile Include="Nomencladores\Otros\Repository\PlantaRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proyectos\IRepository\ICapacidadRepository.cs" />
+    <Compile Include="Proyectos\IRepository\IInversionRepository.cs" />
+    <Compile Include="Proyectos\IRepository\IProyectoRepository.cs" />
+    <Compile Include="Proyectos\Options\CapacidadSearchOptions.cs" />
+    <Compile Include="Proyectos\Options\InversionSearchOptions.cs" />
+    <Compile Include="Proyectos\Options\ProyectoSearchOptions.cs" />
+    <Compile Include="Proyectos\Repository\CapacidadRepository.cs" />
+    <Compile Include="Proyectos\Repository\InversionRepository.cs" />
+    <Compile Include="Proyectos\Repository\ProyectoRepository.cs" />
+    <Compile Include="TRepository.cs" />
+    <Compile Include="Seguridad\IRepository\ILicenseRepository.cs" />
+    <Compile Include="Seguridad\IRepository\IUserRepository.cs" />
+    <Compile Include="Seguridad\Options\UserSearchOptions.cs" />
+    <Compile Include="Seguridad\Repository\LicenseRepository.cs" />
+    <Compile Include="Seguridad\Repository\UserRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entity\Entity.csproj">
+      <Project>{CF599EE3-0369-440E-B618-1B41D2259552}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

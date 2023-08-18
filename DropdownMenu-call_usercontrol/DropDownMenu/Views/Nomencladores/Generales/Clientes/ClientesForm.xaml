@@ -1,0 +1,121 @@
+﻿<Window x:Class="DIRU.Views.Nomencladores.Generales.Clientes.ClientesForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DIRU.Views.Nomencladores.Generales.Clientes"
+        xmlns:v="clr-namespace:DIRU.ViewModel"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="EntidadForm" Height="600" Width="1200"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        >
+    <Window.DataContext>
+        <v:RegistrationVM/>
+    </Window.DataContext>
+    <Grid  Background="White">
+        <StackPanel>
+            <Grid Margin="0,0,-0.4,0" Background="#1565c0" Height="63">
+                <TextBlock Margin="10" Text="Datos Clientes" FontSize="20" FontFamily="Open Sans" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"  />
+                <StackPanel HorizontalAlignment="Right" Margin="0,5,5,0"  VerticalAlignment="Center" Grid.Column="1">
+                    <Button x:Name="btnClose" Click="btnClose_Click" Width="35" Height="35"  Background="White" Foreground="{DynamicResource PrimaryHueDarkBrush}" Style="{StaticResource MaterialDesignFloatingActionDarkButton}">
+                        <materialDesign:PackIcon Kind="Close" />
+                    </Button>
+                </StackPanel>
+            </Grid>
+            <StackPanel>
+                <StackPanel >
+                    <TextBlock Margin="20,10,0,5" FontSize="12" HorizontalAlignment="Center" Text="Tipo de Cliente:"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+                        <RadioButton x:Name="Empresa"  Margin="20 10"  Content="Empresa" IsChecked="True" FontSize="12" VerticalAlignment="Center" Checked="Empresa_Check"/>
+                        <RadioButton x:Name="Persona" Margin="20 10" Content="Individuo" FontSize="12" VerticalAlignment="Center" Checked="Individuo_Check"/>
+
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Height="372" Margin="0,0,-0.4,0">
+                    <StackPanel>
+                        <Label x:Name="lblEntidad" Margin="20,20,0,5" FontSize="12" Content="Entidad:" />
+                        <ComboBox  x:Name="comboEndtidad" SelectionChanged="comboEndtidad_SelectionChanged" DisplayMemberPath="Nombre" SelectedValuePath="Id" IsTextSearchEnabled="True" IsEditable="True" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,0,0"  VerticalAlignment="Top" Width="364"
+                               Text="{Binding Textfield, ValidatesOnDataErrors=True,
+                UpdateSourceTrigger=PropertyChanged}"
+                     ToolTip="{Binding ErrorCollection[Textfield]}"
+                               />
+
+                        <Label Margin="20,10,0,5" FontSize="12" Content="Dirección:" />
+                        <TextBox x:Name="txtdireccion" 
+                             Padding="2"  TextAlignment="Right" 
+                             BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,0,0" Width="270"
+                              Text="{Binding Textfield2, ValidatesOnDataErrors=True,
+                UpdateSourceTrigger=PropertyChanged}"
+                     ToolTip="{Binding ErrorCollection[Textfield2]}"
+                             />
+                        <Label   Margin="20,20,20,5" FontSize="12" Content="Provincia:" />
+                        <ComboBox x:Name="comboProvincia"  DisplayMemberPath="Nombre" SelectedValuePath="Id" SelectionChanged="comboProvincia_SelectionChanged" IsTextSearchEnabled="True" IsEditable="True" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,20,10"  VerticalAlignment="Top" Width="250"
+                            
+                              />
+                        <Label Margin="20,10,0,5" FontSize="12" Content="Municipio:" />
+                        <ComboBox  x:Name="comboMunicipio" DisplayMemberPath="Nombre" SelectedValuePath="Id" IsTextSearchEnabled="True" IsEditable="True" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,0,0"  VerticalAlignment="Top" Width="250"
+                           
+                               />
+                    </StackPanel>
+                    <StackPanel>
+
+                        <Label  x:Name="lblOrganismo"  Margin="20,20,20,5" FontSize="12" Content="Organismo:" />
+                        <ComboBox x:Name="comboOrganismo"  DisplayMemberPath="Nombre" SelectedValuePath="Id" IsTextSearchEnabled="True" IsEditable="True" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,20,10"  VerticalAlignment="Top" Width="250"
+                            
+                              />
+                        <Label x:Name="lblCodigo"  Margin="20,10,20,5" FontSize="12" Content="Código REUP, NIT:" />
+                        <TextBox x:Name="txtCodigo" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,20,10"  VerticalAlignment="Top" Width="200"
+                             Padding="2"  TextAlignment="Right" 
+                             Text="{Binding Textfield3, ValidatesOnDataErrors=True,
+                UpdateSourceTrigger=PropertyChanged}"
+                     ToolTip="{Binding ErrorCollection[Textfield3]}"
+                             />
+                        <Label Margin="20,10,0,5" FontSize="12" Content="Responsable:" />
+                        <TextBox x:Name="txtResponsable" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,20,10"  VerticalAlignment="Top" Width="334"
+                              Padding="2"  TextAlignment="Right"
+                             Text="{Binding Textfield4, ValidatesOnDataErrors=True,
+                UpdateSourceTrigger=PropertyChanged}"
+                     ToolTip="{Binding ErrorCollection[Textfield4]}"
+                             />
+                    </StackPanel>
+
+                    <StackPanel Width="305">
+
+                        <Label   Margin="20,20,20,5" FontSize="12" Content="CI/Pasaporte:" />
+                        <TextBox x:Name="txtCI" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,20,10"  VerticalAlignment="Top" Width="200"
+                             Padding="2"  TextAlignment="Right" 
+                             Text="{Binding Textfield5, ValidatesOnDataErrors=True,
+                UpdateSourceTrigger=PropertyChanged}"
+                     ToolTip="{Binding ErrorCollection[Textfield5]}"
+                             />
+                        <Label   Margin="20,10,20,5" FontSize="12" Content="Teléfono:" />
+                        <TextBox x:Name="txtTelefono" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,20,10"  VerticalAlignment="Top" Width="200"
+                             Padding="2"  TextAlignment="Right" PreviewTextInput="NumericOnly"
+                             Text="{Binding Textfield6, ValidatesOnDataErrors=True,
+                UpdateSourceTrigger=PropertyChanged}"
+                     ToolTip="{Binding ErrorCollection[Textfield6]}"
+                             />
+                        <Label Margin="20,10,0,5" FontSize="12" Content="Correo:" />
+                        <TextBox x:Name="txtCorreo" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,0,10"  VerticalAlignment="Top" Width="265"
+                             Padding="2"  TextAlignment="Right" 
+                             Text="{Binding Textfield7, ValidatesOnDataErrors=True,
+                UpdateSourceTrigger=PropertyChanged}"
+                     ToolTip="{Binding ErrorCollection[Textfield7]}"
+                             />
+                        </StackPanel>
+
+                </StackPanel>
+
+            </StackPanel>
+        </StackPanel>
+        <Grid   Background="LightGray" VerticalAlignment="Bottom">
+
+            <Button x:Name="BtnSave" FontSize="12" Margin="0,10,100,10" Content="Aceptar" HorizontalAlignment="Right" VerticalAlignment="Center" Click="BtnSave_Click"/>
+            <Button x:Name="BtnCancel" FontSize="12" Margin="10" Background="Red" Foreground="White" Content="Cancelar" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BtnCancel_Click" />
+
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,35 @@
+﻿<Window x:Class="DIRU.Views.Common.MyUserAcount"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DIRU.Views.Common"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="MyUserAcount" Height="450" Width="500"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        >
+    <Grid  Background="White">
+        <StackPanel>
+            <Grid Margin="0,0,-0.4,0" Background="#1565c0" Height="63">
+                <TextBlock Margin="10" Text="Mi Cuenta" FontSize="20" FontFamily="Open Sans" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"  />
+                <StackPanel HorizontalAlignment="Right" Margin="0,5,5,0"  VerticalAlignment="Center" Grid.Column="1">
+                    <Button x:Name="btnClose" Click="btnClose_Click" Width="35" Height="35"  Background="White" Foreground="{DynamicResource PrimaryHueDarkBrush}" Style="{StaticResource MaterialDesignFloatingActionDarkButton}">
+                        <materialDesign:PackIcon Kind="Close" />
+                    </Button>
+                </StackPanel>
+            </Grid>
+            <materialDesign:PackIcon Margin="10" Foreground="LightGray" Kind="UserCircle" Height="100" Width="100" HorizontalAlignment="Center"/>
+            <Label x:Name="Username" Margin="0" FontSize="20" Content="My Count" HorizontalAlignment="Center" />
+            <Label x:Name="Fullname" Margin="0" FontSize="15" Content="User User User" HorizontalAlignment="Center" />
+            <Label x:Name="Correo" Margin="0" FontSize="10" Content="user@gamil.com" HorizontalAlignment="Center"  />
+            <Label x:Name="Phone" FontSize="10" Content="+53 58089878" HorizontalAlignment="Center" RenderTransformOrigin="0.81,-0.103" />
+            <Button x:Name="BtnChangePassword" Margin="50" Width="300" ToolTip="Cambiar Contraseña" Click="BtnChangePassword_Click" >
+                <materialDesign:PackIcon Kind="Key" Width="50" Height="25"  />
+
+            </Button>
+        </StackPanel>
+
+    </Grid>
+</Window>

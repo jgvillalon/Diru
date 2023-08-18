@@ -1,0 +1,49 @@
+C:\Users\ALE\source\repos\Repository\bin\Debug\Repository.dll
+C:\Users\ALE\source\repos\Repository\bin\Debug\Repository.pdb
+C:\Users\ALE\source\repos\Repository\bin\Debug\Antlr3.Runtime.dll
+C:\Users\ALE\source\repos\Repository\bin\Debug\Entity.dll
+C:\Users\ALE\source\repos\Repository\bin\Debug\FluentNHibernate.dll
+C:\Users\ALE\source\repos\Repository\bin\Debug\Iesi.Collections.dll
+C:\Users\ALE\source\repos\Repository\bin\Debug\NHibernate.dll
+C:\Users\ALE\source\repos\Repository\bin\Debug\Remotion.Linq.dll
+C:\Users\ALE\source\repos\Repository\bin\Debug\Remotion.Linq.EagerFetching.dll
+C:\Users\ALE\source\repos\Repository\bin\Debug\Entity.pdb
+C:\Users\ALE\source\repos\Repository\bin\Debug\Antlr3.Runtime.xml
+C:\Users\ALE\source\repos\Repository\bin\Debug\FluentNHibernate.pdb
+C:\Users\ALE\source\repos\Repository\bin\Debug\FluentNHibernate.xml
+C:\Users\ALE\source\repos\Repository\bin\Debug\Iesi.Collections.xml
+C:\Users\ALE\source\repos\Repository\bin\Debug\NHibernate.xml
+C:\Users\ALE\source\repos\Repository\bin\Debug\Remotion.Linq.xml
+C:\Users\ALE\source\repos\Repository\bin\Debug\Remotion.Linq.EagerFetching.xml
+C:\Users\ALE\source\repos\Repository\obj\Debug\Repository.csprojAssemblyReference.cache
+C:\Users\ALE\source\repos\Repository\obj\Debug\Repository.csproj.CoreCompileInputs.cache
+C:\Users\ALE\source\repos\Repository\obj\Debug\Repository.csproj.CopyComplete
+C:\Users\ALE\source\repos\Repository\obj\Debug\Repository.dll
+C:\Users\ALE\source\repos\Repository\obj\Debug\Repository.pdb
+D:\source\repos\Repository\bin\Debug\Repository.dll
+D:\source\repos\Repository\bin\Debug\Repository.pdb
+D:\source\repos\Repository\bin\Debug\Entity.dll
+D:\source\repos\Repository\bin\Debug\Entity.pdb
+D:\source\repos\Repository\obj\Debug\Repository.csproj.AssemblyReference.cache
+D:\source\repos\Repository\obj\Debug\Repository.csproj.CoreCompileInputs.cache
+D:\source\repos\Repository\obj\Debug\Repository.csproj.CopyComplete
+D:\source\repos\Repository\obj\Debug\Repository.dll
+D:\source\repos\Repository\obj\Debug\Repository.pdb
+E:\Personal\Proyecto Arquitectura\REPO\Diru Development\Repository\bin\Debug\Repository.dll
+E:\Personal\Proyecto Arquitectura\REPO\Diru Development\Repository\bin\Debug\Repository.pdb
+E:\Personal\Proyecto Arquitectura\REPO\Diru Development\Repository\bin\Debug\Entity.dll
+E:\Personal\Proyecto Arquitectura\REPO\Diru Development\Repository\bin\Debug\Entity.pdb
+E:\Personal\Proyecto Arquitectura\REPO\Diru Development\Repository\obj\Debug\Repository.csproj.AssemblyReference.cache
+E:\Personal\Proyecto Arquitectura\REPO\Diru Development\Repository\obj\Debug\Repository.csproj.CoreCompileInputs.cache
+E:\Personal\Proyecto Arquitectura\REPO\Diru Development\Repository\obj\Debug\Repository.csproj.CopyComplete
+E:\Personal\Proyecto Arquitectura\REPO\Diru Development\Repository\obj\Debug\Repository.dll
+E:\Personal\Proyecto Arquitectura\REPO\Diru Development\Repository\obj\Debug\Repository.pdb
+D:\Works\Proyecto Felix\Diru Development\Repository\bin\Debug\Repository.dll
+D:\Works\Proyecto Felix\Diru Development\Repository\bin\Debug\Repository.pdb
+D:\Works\Proyecto Felix\Diru Development\Repository\bin\Debug\Entity.dll
+D:\Works\Proyecto Felix\Diru Development\Repository\bin\Debug\Entity.pdb
+D:\Works\Proyecto Felix\Diru Development\Repository\obj\Debug\Repository.csproj.AssemblyReference.cache
+D:\Works\Proyecto Felix\Diru Development\Repository\obj\Debug\Repository.csproj.CoreCompileInputs.cache
+D:\Works\Proyecto Felix\Diru Development\Repository\obj\Debug\Repository.csproj.CopyComplete
+D:\Works\Proyecto Felix\Diru Development\Repository\obj\Debug\Repository.dll
+D:\Works\Proyecto Felix\Diru Development\Repository\obj\Debug\Repository.pdb
