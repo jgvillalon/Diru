@@ -16,7 +16,13 @@ namespace Entity.Entitys.Nomencladores.Otros.ClassMap
 
             Map(x => x.Nombre);
 
-            References(x => x.InversionLote).Not.Nullable().Cascade.None();
+            HasManyToMany(x => x.InversionLotes)
+           .Table("InversionLoteRed")
+           .ParentKeyColumn("RedId")
+           .ChildKeyColumn("InversionLoteId")
+           .Inverse();
+
+            //References(x => x.InversionLote).Not.Nullable().Cascade.None();
 
             Table("Red");
 

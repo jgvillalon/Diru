@@ -23,6 +23,8 @@ using System.Globalization;
 using Entity.Entitys.Nomencladores.Generales;
 using NHibernate.Engine;
 using DropDownMenu.Views.Loggin;
+using Entity.Entitys.Seguridad;
+using Entity.Entitys.Proyectos.InversionesLotes;
 
 namespace DIRU.Views.Loggin
 {
@@ -156,7 +158,23 @@ namespace DIRU.Views.Loggin
                             isInsert = DependencyRegister._paisService.InsertPais(country).Status.Equals(StatusResponse.OK) ? true : false;
                         }
 
-                    }
+
+                        //Agregar Redes
+                        
+                        isInsert = DependencyRegister._redService.InsertRed(new Red { Nombre = "Red Sanitaria" }).Status.Equals(StatusResponse.OK) ? true : false;
+                        
+                        isInsert = DependencyRegister._redService.InsertRed(new Red { Nombre = "Red Drenaje" }).Status.Equals(StatusResponse.OK) ? true : false;
+                         
+                        isInsert = DependencyRegister._redService.InsertRed(new Red { Nombre = "Red Eléctrica" }).Status.Equals(StatusResponse.OK) ? true : false;
+                        
+                        isInsert = DependencyRegister._redService.InsertRed(new Red { Nombre = "Red Telefónica" }).Status.Equals(StatusResponse.OK) ? true : false;
+                        
+                        isInsert = DependencyRegister._redService.InsertRed(new Red { Nombre = "Red Hidraúlica" }).Status.Equals(StatusResponse.OK) ? true : false;
+                        
+                        isInsert = DependencyRegister._redService.InsertRed(new Red { Nombre = "Red Gas" }).Status.Equals(StatusResponse.OK) ? true : false;
+                    
+
+                }
                     //Insertar por defecto la AppVersion
 
 

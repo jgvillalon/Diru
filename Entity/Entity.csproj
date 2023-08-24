@@ -93,6 +93,7 @@
     <Compile Include="Entitys\Nomencladores\Otros\Permisos.cs" />
     <Compile Include="Entitys\Proyectos\AlineacionEdificacionRU.cs" />
     <Compile Include="Entitys\Proyectos\Capacidad.cs" />
+    <Compile Include="Entitys\Proyectos\ClassMap\EstructuraMap.cs" />
     <Compile Include="Entitys\Proyectos\ClassMap\CapacidadMap.cs" />
     <Compile Include="Entitys\Proyectos\ClassMap\EstadoTecnicoProyectoMap.cs" />
     <Compile Include="Entitys\Proyectos\ClassMap\InversionLoteMap.cs" />
@@ -104,12 +105,14 @@
     <Compile Include="Entitys\Proyectos\EstadoProyecto.cs" />
     <Compile Include="Entitys\Proyectos\EstadoTecnicoProyecto.cs" />
     <Compile Include="Entitys\Proyectos\Inversion.cs" />
+    <Compile Include="Entitys\Proyectos\InversionesLotes\InversionLoteRed.cs" />
     <Compile Include="Entitys\Proyectos\InversionesLotes\InversionLote.cs" />
     <Compile Include="Entitys\Proyectos\InversionesLotes\LocalPlanta.cs" />
     <Compile Include="Entitys\Proyectos\InversionesLotes\Planta.cs" />
     <Compile Include="Entitys\Proyectos\Permiso.cs" />
     <Compile Include="Entitys\Proyectos\Proyecto.cs" />
     <Compile Include="Entitys\Proyectos\AlturaRU.cs" />
+    <Compile Include="Entitys\Proyectos\RegulacionesUrbanas\Estructura.cs" />
     <Compile Include="Entitys\Proyectos\Subproyecto.cs" />
     <Compile Include="Entitys\Proyectos\TipoProyecto.cs" />
     <Compile Include="Entitys\Seguridad\AppVersion.cs" />
@@ -122,9 +125,7 @@
     <Compile Include="Entitys\Seguridad\UserRole.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Entitys\Proyectos\RegulacionesUrbanas\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>

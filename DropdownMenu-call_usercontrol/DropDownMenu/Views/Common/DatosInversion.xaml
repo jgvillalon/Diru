@@ -31,7 +31,7 @@
                         <StackPanel>
                             <Label Margin="20 10" FontSize="12" Content="Nombre Inversión:" />
                             <TextBox x:Name="txtnombreInv" 
-                             Padding="2"  TextAlignment="Right" 
+                             Padding="2"  TextAlignment="Left" 
                              BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,0,0"  VerticalAlignment="Top" Width="200"
                               Text="{Binding Textfield2, ValidatesOnDataErrors=True,
                 UpdateSourceTrigger=PropertyChanged}"
@@ -41,7 +41,7 @@
                         <StackPanel>
                             <Label Margin="20 10" FontSize="12" Content="Nombre Obra:" />
                             <TextBox x:Name="txtNombreObra" 
-                             Padding="2"  TextAlignment="Right" 
+                             Padding="2"  TextAlignment="Left" 
                              BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,0,0"  VerticalAlignment="Top" Width="200"
                               Text="{Binding Textfield3, ValidatesOnDataErrors=True,
                 UpdateSourceTrigger=PropertyChanged}"
@@ -58,7 +58,7 @@
                             <StackPanel>
                                 <Label Margin="20 10" FontSize="12" Content="NoCalle:" />
                                 <TextBox x:Name="txtCalle" 
-                             Padding="2"  TextAlignment="Right" 
+                             Padding="2"  TextAlignment="Left" 
                              BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,0,0"  VerticalAlignment="Top" Width="200"
                               Text="{Binding Textfield4, ValidatesOnDataErrors=True,
                 UpdateSourceTrigger=PropertyChanged}"
@@ -68,7 +68,7 @@
                         <StackPanel>
                         <Label  Margin="20 10" FontSize="12" Content="E|Calles:" />
                         <TextBox x:Name="txtECalle" 
-                             Padding="2"  TextAlignment="Right" 
+                             Padding="2"  TextAlignment="Left" 
                              BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,0,0"  VerticalAlignment="Top" Width="200"
                               Text="{Binding Textfield5, ValidatesOnDataErrors=True,
                 UpdateSourceTrigger=PropertyChanged}"
@@ -78,7 +78,7 @@
                     <StackPanel>
                         <Label  Margin="20 10" FontSize="12" Content="Reparto o Pueblo:" />
                         <TextBox x:Name="txtReparto" 
-                             Padding="2"  TextAlignment="Right" 
+                             Padding="2"  TextAlignment="Left" 
                              BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,0,0"  VerticalAlignment="Top" Width="200"
                               Text="{Binding Textfield6, ValidatesOnDataErrors=True,
                 UpdateSourceTrigger=PropertyChanged}"
@@ -90,7 +90,7 @@
                             <StackPanel>
                                 <Label Margin="20 10" FontSize="12" Content="Consejo Popular:" />
                                 <TextBox x:Name="txtConsejo" 
-                             Padding="2"  TextAlignment="Right" 
+                             Padding="2"  TextAlignment="Left" 
                              BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,0,0"  VerticalAlignment="Top" Width="200"
                               Text="{Binding Textfield7, 
                 UpdateSourceTrigger=PropertyChanged}"
@@ -112,7 +112,7 @@
                             <StackPanel>
                                 <Label Margin="20 10" FontSize="12" Content="Manzana:" />
                                 <TextBox x:Name="txtManzana" 
-                             Padding="2"  TextAlignment="Right" 
+                             Padding="2"  TextAlignment="Left" 
                              BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,0,0"  VerticalAlignment="Top" Width="200"
                               Text="{Binding Textfield9, 
                 UpdateSourceTrigger=PropertyChanged}"
@@ -124,7 +124,7 @@
                             <StackPanel>
                                 <Label Margin="20 10" FontSize="12" Content="Circunscripción:" />
                                 <TextBox x:Name="txtCircunscripcion" 
-                             Padding="2"  TextAlignment="Right" 
+                             Padding="2"  TextAlignment="Left" 
                              BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,0,0"  VerticalAlignment="Top" Width="200"
                               Text="{Binding Textfield10,
                 UpdateSourceTrigger=PropertyChanged}"
@@ -158,43 +158,47 @@
                       
                     </WrapPanel>
                     <Separator Margin="20" Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" BorderBrush="LightGray" BorderThickness="1"/>
+                    <TextBlock Text="Valor Estimado:" FontSize="15" Margin="20 0"/>
                     <StackPanel Orientation="Horizontal">
                         <StackPanel >
 
-                            <Label Margin="20 10" FontSize="12" Content="Valor Estimado:" />
-                            <xctk:DecimalUpDown x:Name="ValorEstim"  Minimum="0.1"  Value="0.1" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,0,0"  VerticalAlignment="Top" Width="200"/>
-
-                           
-                            <Label Margin="20 10" FontSize="12" Content="Valor Estimado Aprobado:" />
-                            <xctk:DecimalUpDown x:Name="ValorEstimAprobado"  Minimum="0.1"  Value="0.1" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,0,0"  VerticalAlignment="Top" Width="200"/>
-
+                            <Label Margin="20 10" FontSize="12" Content="Valor Estimado Construcción:" />
+                            <xctk:DecimalUpDown x:Name="ValorEstimConstruccion"  Minimum="0.1"  Value="0.1" TextAlignment="Left"  BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,0,0"  VerticalAlignment="Top" Width="200"/>
 
                         </StackPanel>
                         <StackPanel >
 
-                            <Label Margin="20 10" FontSize="12" Content="Construcción y Montaje:" />
-                            <RichTextBox x:Name="txtConstruccion" 
-                              Padding="2" 
-                             BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="60" Margin="20,5,0,0"  VerticalAlignment="Top" Width="300"
-                            />
+                            <Label Margin="20 10" FontSize="12" Content="Valor Estimado Equipos:" />
+                            <xctk:DecimalUpDown x:Name="ValorEstimEquipos"  Minimum="0.1"  Value="0.1" TextAlignment="Left"  BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,0,0"  VerticalAlignment="Top" Width="200"/>
+                            
+                        </StackPanel>
+                        <StackPanel >
 
-                            <Label Margin="20 10" FontSize="12" Content="Equipos:" />
-                           
-                            <RichTextBox  x:Name="txtEquipos" 
-                             Padding="2" 
-                             BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="60" Margin="20,5,0,0"  VerticalAlignment="Top" Width="300"
-                             />
+                            <Label Margin="20 10" FontSize="12" Content="Valor Estimado Otros:" />
+                            <xctk:DecimalUpDown x:Name="ValorEstimOtros"  Minimum="0.1"  Value="0.1" TextAlignment="Left"  BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,0,0"  VerticalAlignment="Top" Width="200"/>
+
+                        </StackPanel>
+                    </StackPanel>
+
+                    <Separator Margin="20" Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" BorderBrush="LightGray" BorderThickness="1"/>
+                    <TextBlock Text="Valor Estimado Aprobado:" FontSize="15" Margin="20 0"/>
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel >
+
+                            <Label Margin="20 10" FontSize="12" Content="Valor Estimado Construcción:" />
+                            <xctk:DecimalUpDown x:Name="ValorEstimAprobadoConstruccion"  Minimum="0.1"  Value="0.1" TextAlignment="Left"  BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,0,0"  VerticalAlignment="Top" Width="200"/>
 
                         </StackPanel>
                         <StackPanel >
 
-                            <Label Margin="20 10" FontSize="12" Content="Otros:" />
-                            <RichTextBox x:Name="txtOtros" 
-                             Padding="2"  
-                             BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="60" Margin="20,5,0,0"  VerticalAlignment="Top" Width="300"
-                             
-                             />
+                            <Label Margin="20 10" FontSize="12" Content="Valor Estimado Equipos:" />
+                            <xctk:DecimalUpDown x:Name="ValorEstimAprobadoEquipos"  Minimum="0.1"  Value="0.1" TextAlignment="Left"  BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,0,0"  VerticalAlignment="Top" Width="200"/>
 
+                        </StackPanel>
+                        <StackPanel >
+
+                            <Label Margin="20 10" FontSize="12" Content="Valor Estimado Otros:" />
+                            <xctk:DecimalUpDown x:Name="ValorEstimAprobadoOtros"  Minimum="0.1"  Value="0.1" TextAlignment="Left"  BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,0,0"  VerticalAlignment="Top" Width="200"/>
 
                         </StackPanel>
                     </StackPanel>

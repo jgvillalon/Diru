@@ -32,12 +32,12 @@
                         <StackPanel>
 
                             <Label Margin="20,10,0,5" FontSize="12" Content="Superficie Total  (m2):" />
-                            <xctk:DecimalUpDown x:Name="CantSuperficie"  Minimum="0.1"  Value="0.1" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,20,10"  VerticalAlignment="Top" Width="200"/>
+                            <xctk:DecimalUpDown x:Name="CantSuperficie"  Minimum="0.1"  Value="0.1" BorderThickness="2" TextAlignment="Left"  BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,20,10"  VerticalAlignment="Top" Width="200"/>
                             <Label   Margin="20,20,20,5" FontSize="12" Content="Área Ocupada (m2):" />
-                            <xctk:DecimalUpDown x:Name="CantArea"  Minimum="0.1"  Value="0.1" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,20,10"  VerticalAlignment="Top" Width="200"/>
+                            <xctk:DecimalUpDown x:Name="CantArea"  Minimum="0.1"  Value="0.1" BorderThickness="2" TextAlignment="Left"  BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,20,10"  VerticalAlignment="Top" Width="200"/>
 
                             <Label   Margin="20,20,20,5" FontSize="12" Content="Cantidad de Plantas:" />
-                            <xctk:IntegerUpDown x:Name="CantPlantas"  Minimum="1"  Value="1" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,20,10"  VerticalAlignment="Top" Width="200"/>
+                            <xctk:IntegerUpDown x:Name="CantPlantas"  Minimum="1"  Value="1" BorderThickness="2" TextAlignment="Left"  BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,20,10"  VerticalAlignment="Top" Width="200"/>
 
                         </StackPanel>
                         <StackPanel>

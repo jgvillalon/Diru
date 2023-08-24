@@ -13,6 +13,8 @@ using ApplicationService.Nomencladores.Otros.IService;
 using ApplicationService.Nomencladores.Otros.Service;
 using ApplicationService.Proyectos.IService;
 using ApplicationService.Proyectos.Service;
+using ApplicationService.RegulacionesUrbanas.IService;
+using ApplicationService.RegulacionesUrbanas.Service;
 using ApplicationService.Seguridad.IServices;
 using ApplicationService.Seguridad.Service;
 using ApplicationService.Service;
@@ -31,6 +33,8 @@ using Repository.Nomencladores.Otros.IRepository;
 using Repository.Nomencladores.Otros.Repository;
 using Repository.Proyectos.IRepository;
 using Repository.Proyectos.Repository;
+using Repository.RegulacionesUrbanas.IRepository;
+using Repository.RegulacionesUrbanas.Repository;
 using Repository.Repository;
 using Repository.Seguridad.IRepository;
 using Repository.Seguridad.Repository;
@@ -84,6 +88,8 @@ namespace DIRU.Dependencies
         public static IPlantaService _plantaService;
         public static IEstadoTecnicoRepository _estadoTecnicoRepo;
         public static IEstadoTecnicoService _estadoTecnicoService;
+        public static IRedRepository _redRepo;
+        public static IRedService _redService;
         #endregion
         #endregion
 
@@ -99,6 +105,11 @@ namespace DIRU.Dependencies
         #region InversionLotes
         public static ILocalPlantaRepository _localPlantaRepo;
         public static ILocalPlantaService _localPlantaService;
+        #endregion
+
+        #region RegulacionesUrbanas
+        public static IEstructuraRepository _EstructuraRepo;
+        public static IEstructuraService _EstructuraService;
         #endregion
 
         #region Informes
@@ -146,6 +157,8 @@ namespace DIRU.Dependencies
             _plantaService = new PlantaService(_plantaRepo);
             _estadoTecnicoRepo = new EstadoTecnicoRepository(session);
             _estadoTecnicoService = new EstadoTecnicoService(_estadoTecnicoRepo);
+            _redRepo = new RedRepository(session);
+            _redService = new RedService(_redRepo);
             #endregion
 
             #region  Proyectos
@@ -155,6 +168,11 @@ namespace DIRU.Dependencies
             _inversionService = new InversionService(_inversionRepo);
             _capacidadRepo = new CapacidadRepository(session);
             _capacidadService = new CapacidadService(_capacidadRepo);
+            #endregion
+
+            #region RegulacionesUrbanas
+            _EstructuraRepo = new EstructuraRepository(session);
+            _EstructuraService = new EstructuraService(_EstructuraRepo);
             #endregion
 
             #region InversionLotes

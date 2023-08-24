@@ -6,7 +6,7 @@ using DIRU.Views.RegulacionesUrbanas.Alturas;
 using DIRU.Views.RegulacionesUrbanas.DatosEntradaDiseño;
 using DIRU.Views.RegulacionesUrbanas.Edificacion;
 using DIRU.Views.RegulacionesUrbanas.EstadosTecnico;
-using DIRU.Views.RegulacionesUrbanas.Estructuras;
+using DIRU.Views.RegulacionesUrbanas.Estructura;
 using DIRU.Views.RegulacionesUrbanas.Fachada;
 using DIRU.Views.RegulacionesUrbanas.Indicadores;
 using DIRU.Views.RegulacionesUrbanas.NuevoDiseño;

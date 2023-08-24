@@ -20,11 +20,12 @@ namespace Entity.Entitys.Proyectos.ClassMap
             Map(x => x.ECalle);
             Map(x => x.Circunscripcion);
             Map(x => x.ConsejoPopular);
-            Map(x => x.Equipos);
-            Map(x => x.Otros);
-            Map(x => x.ValorEstimado).Precision(18).Scale(2);
-            Map(x => x.ValorEstimadoAprobado).Precision(18).Scale(2);
-            Map(x => x.ConstruccionMontaje);
+            Map(x => x.ValorEstimadoConstruccion).Precision(18).Scale(2);
+            Map(x => x.ValorEstimadoEquipos).Precision(18).Scale(2);
+            Map(x => x.ValorEstimadoOtros).Precision(18).Scale(2);
+            Map(x => x.ValorEstimadoAprobadoConstruccion).Precision(18).Scale(2);
+            Map(x => x.ValorEstimadoAprobadoEquipos).Precision(18).Scale(2);
+            Map(x => x.ValorEstimadoAprobadoOtros).Precision(18).Scale(2);
             References(x => x.Proyecto);
             References(x => x.Zona);
             References(x => x.Provincia);

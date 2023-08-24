@@ -1,7 +1,7 @@
 ﻿using DIRU.Views.Common;
 using DIRU.Views.RegulacionesUrbanas.Alturas;
 using DIRU.Views.RegulacionesUrbanas.Edificacion;
-using DIRU.Views.RegulacionesUrbanas.Estructuras;
+using DIRU.Views.RegulacionesUrbanas.Estructura;
 using DropDownMenu;
 using Entity.Entitys.Proyectos;
 using System;

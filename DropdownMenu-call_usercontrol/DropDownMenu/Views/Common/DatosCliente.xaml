@@ -38,7 +38,7 @@
 
                     <Label Margin="20,10,0,5" FontSize="12" Content="Dirección:" />
                     <TextBox x:Name="txtdireccion" 
-                            IsReadOnly="True"  Padding="2"  TextAlignment="Right" PreviewTextInput="NumericOnly"
+                            IsReadOnly="True"  Padding="2"  TextAlignment="Left" PreviewTextInput="NumericOnly"
                              BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,0,0"  VerticalAlignment="Top" Width="200"
                              
                              />
@@ -59,12 +59,12 @@
                               />
                     <Label   Margin="20,10,20,5" FontSize="12" Content="Código REUP, NIT:" />
                     <TextBox x:Name="txtCodigo" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,20,10"  VerticalAlignment="Top" Width="200"
-                          IsReadOnly="True"    Padding="2"  TextAlignment="Right" PreviewTextInput="NumericOnly"
+                          IsReadOnly="True"    Padding="2"  TextAlignment="Left" PreviewTextInput="NumericOnly"
                              
                              />
                     <Label Margin="20,10,0,5" FontSize="12" Content="Responsable:" />
                     <TextBox x:Name="txtResponsable" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,20,10"  VerticalAlignment="Top" Width="334"
-                         IsReadOnly="True"     Padding="2"  TextAlignment="Right" PreviewTextInput="NumericOnly"
+                         IsReadOnly="True"     Padding="2"  TextAlignment="Left" PreviewTextInput="NumericOnly"
                             
                              />
                 </StackPanel>
@@ -73,17 +73,17 @@
 
                     <Label   Margin="20,20,20,5" FontSize="12" Content="CI:" />
                     <TextBox x:Name="txtCI" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,20,10"  VerticalAlignment="Top" Width="200"
-                         IsReadOnly="True"     Padding="2"  TextAlignment="Right" PreviewTextInput="NumericOnly"
+                         IsReadOnly="True"     Padding="2"  TextAlignment="Left" PreviewTextInput="NumericOnly"
                             
                              />
                     <Label   Margin="20,10,20,5" FontSize="12" Content="Teléfono:" />
                     <TextBox x:Name="txtTelefono" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,20,10"  VerticalAlignment="Top" Width="200"
-                         IsReadOnly="True"     Padding="2"  TextAlignment="Right" PreviewTextInput="NumericOnly"
+                         IsReadOnly="True"     Padding="2"  TextAlignment="Left" PreviewTextInput="NumericOnly"
                             
                              />
                     <Label Margin="20,10,0,5" FontSize="12" Content="Correo:" />
                     <TextBox x:Name="txtCorreo" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,0,10"  VerticalAlignment="Top" Width="265"
-                          IsReadOnly="True"    Padding="2"  TextAlignment="Right" PreviewTextInput="NumericOnly"
+                          IsReadOnly="True"    Padding="2"  TextAlignment="Left" PreviewTextInput="NumericOnly"
                              
                              />
                    

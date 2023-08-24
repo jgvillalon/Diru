@@ -31,7 +31,7 @@
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="{Binding Elementos}" Margin="5" VerticalAlignment="Center" FontWeight="Medium" FontSize="12"/>
 
-                                    <xctk:IntegerUpDown x:Name="Valor"  Text="{Binding Valor}" Minimum="0"  Value="0" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="5"  VerticalAlignment="Center" Width="200"/>
+                                    <xctk:IntegerUpDown x:Name="Valor" TextAlignment="Left"  Text="{Binding Valor}" Minimum="0"  Value="0" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="5"  VerticalAlignment="Center" Width="200"/>
                                     <TextBlock  Text="{Binding Path=RangoBueno, StringFormat={}Bueno ({0})}"  Margin="5" VerticalAlignment="Center" FontSize="10"/>
                                     <TextBlock Text="{Binding Path=RangoRegular, StringFormat={}Regular ({0})}" Margin="5" VerticalAlignment="Center" FontSize="10"/>
                                     <TextBlock  Text="{Binding Path=RangoMalo, StringFormat={}Malo ({0})}" Margin="5" VerticalAlignment="Center" FontSize="10"/>
