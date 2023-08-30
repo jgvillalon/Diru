@@ -53,14 +53,8 @@
                           
                                   >
                     <DataGrid.Columns>
-                        <DataGridTemplateColumn Header="No">
-                            <DataGridTemplateColumn.CellTemplate>
-                                <DataTemplate>
-                                    <xctk:DecimalUpDown  Value="{Binding NoLocal}" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75"/>
-                                </DataTemplate>
-                            </DataGridTemplateColumn.CellTemplate>
-                        </DataGridTemplateColumn>
-                        <DataGridTextColumn Header="Locales" Binding="{Binding Local, Mode=TwoWay}" Width="200"/>
+                        <DataGridTextColumn Header="No" Binding="{Binding NoLocal, Mode=TwoWay}"  Width="75"/>
+                         <DataGridTextColumn Header="Locales" Binding="{Binding Local, Mode=TwoWay}" Width="200"/>
                         <DataGridTemplateColumn Header="Área">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
@@ -68,7 +62,15 @@
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
-                        <DataGridComboBoxColumn Width="200" x:Name="estadoColumn" Header="Estado" SelectedItemBinding="{Binding Estado}"/>
+                        <DataGridComboBoxColumn Width="150" x:Name="estadoColumn" Header="Estado" SelectedItemBinding="{Binding Estado}"/>
+                        <DataGridComboBoxColumn Width="150" x:Name="accionColumn" Header="Acción" SelectedItemBinding="{Binding Accion}"/>
+                        <DataGridTemplateColumn Header="Precio">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <xctk:DecimalUpDown  Value="{Binding AccionPrecio}" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
                     </DataGrid.Columns>
                 </DataGrid>
             </StackPanel>

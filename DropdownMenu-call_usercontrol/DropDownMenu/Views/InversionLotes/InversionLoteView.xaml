@@ -52,8 +52,10 @@
                    
                     <MenuItem x:Name="menuDatosDiseño" Header="Datos de Diseño" IsEnabled="False">
                        
-                        <MenuItem x:Name="menuInmueble" Header="Estado Tecnico" Click="EstadoTecnico_Click"/>
+                        
                         <MenuItem x:Name="menuInmuebleConstruido" Header="Inmueble Construido"  Click="DatosEntrada_Click"/>
+                        <MenuItem x:Name="menuEstadosTecnicos" Header="Estado Tecnico" Click="EstadoTecnico_Click">
+                        </MenuItem>
                         <MenuItem x:Name="menuInmuebleNuevo" Header="Inmueble Nuevo"  Click="InmuebleNuevo_Click"/>
                        
                     </MenuItem>

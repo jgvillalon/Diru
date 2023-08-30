@@ -39,7 +39,7 @@
                                          Binding="{Binding Descripcion}"/>
                     <DataGridTextColumn Header="Área Ocupada (m2)"
                                          Width="150"
-                                         Binding="{Binding Area}"/>
+                                         Binding="{Binding AreaNueva}"/>
                     <DataGridTemplateColumn>
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>

@@ -15,6 +15,7 @@ namespace Entity.Entitys.Proyectos.ClassMap
             Id(x => x.Id);
             Map(x => x.Descripcion);
             Map(x => x.Area).Precision(18).Scale(2);
+            Map(x => x.AreaNueva).Precision(18).Scale(2);
             Map(x => x.Nuevo);
            
             HasMany(x => x.Locales)

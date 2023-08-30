@@ -82,6 +82,8 @@
     <Compile Include="Entitys\Nomencladores\Geograficos\ClassMap\ZonaUbicacionMap.cs" />
     <Compile Include="Entitys\Nomencladores\Geograficos\UbicacionGeografica.cs" />
     <Compile Include="Entitys\Nomencladores\Geograficos\ZonaUbicacion.cs" />
+    <Compile Include="Entitys\Nomencladores\Otros\AccionPrecio.cs" />
+    <Compile Include="Entitys\Nomencladores\Otros\ClassMap\AccionPrecioMap.cs" />
     <Compile Include="Entitys\Nomencladores\Otros\ClassMap\EstadoTecnicoMap.cs" />
     <Compile Include="Entitys\Nomencladores\Otros\ClassMap\MetrosMap.cs" />
     <Compile Include="Entitys\Nomencladores\Otros\ClassMap\RedMap.cs" />
@@ -104,6 +106,7 @@
     <Compile Include="Entitys\Proyectos\EstadoProyecto.cs" />
     <Compile Include="Entitys\Proyectos\EstadoTecnicoProyecto.cs" />
     <Compile Include="Entitys\Proyectos\Inversion.cs" />
+    <Compile Include="Entitys\Proyectos\InversionesLotes\AccionLocal.cs" />
     <Compile Include="Entitys\Proyectos\InversionesLotes\InversionLote.cs" />
     <Compile Include="Entitys\Proyectos\InversionesLotes\LocalPlanta.cs" />
     <Compile Include="Entitys\Proyectos\InversionesLotes\Planta.cs" />

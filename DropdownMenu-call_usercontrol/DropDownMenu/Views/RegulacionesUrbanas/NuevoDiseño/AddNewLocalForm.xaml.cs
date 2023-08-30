@@ -20,6 +20,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Xceed.Wpf.Toolkit;
 
 namespace DIRU.Views.RegulacionesUrbanas.NuevoDiseño
 {
@@ -30,7 +31,7 @@ namespace DIRU.Views.RegulacionesUrbanas.NuevoDiseño
     {
         private readonly IPlantaService _plantaService;
         private readonly Planta _planta;
-       // private decimal areaTotal = 0;
+        private decimal areaTotal = 0;
 
 
         private List<LocalPlanta> newlocale = new List<LocalPlanta>();
@@ -47,7 +48,10 @@ namespace DIRU.Views.RegulacionesUrbanas.NuevoDiseño
             }
             newlocale = planta.Locales.Where(l => l.Nuevo == true).ToList();
             dgPlanta.ItemsSource = newlocale;
-           
+
+           // var acciones = Enum.GetValues(typeof(AccionLocal)).Cast<AccionLocal>().ToList();
+          //  accionColumn.ItemsSource = acciones;
+
         }
         private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
@@ -61,7 +65,7 @@ namespace DIRU.Views.RegulacionesUrbanas.NuevoDiseño
                 
                 _planta.RemoveLocales(_planta.Locales.Where(l => l.Nuevo == true).ToList());
                 _planta.AddLocales(newlocale);
-                _planta.Area = _planta.Locales.Where(l => l.Nuevo).Sum(l => l.AreaOcupada);
+                _planta.AreaNueva = _planta.Locales.Where(l => l.Nuevo).Sum(l => l.AreaOcupada);
                 var response = _plantaService.UpdatePlanta(_planta);
 
                 if (response.Status.Equals(StatusResponse.OK))
@@ -117,6 +121,39 @@ namespace DIRU.Views.RegulacionesUrbanas.NuevoDiseño
                 DeleteLocal.IsEnabled = false;
 
             }
+        }
+
+        private void Area_Changed(object sender, RoutedPropertyChangedEventArgs<object> e)
+        {
+
+
+            var decimalUpDown = sender as DecimalUpDown;
+            var value = decimalUpDown.Value;
+
+            var selected = dgPlanta.SelectedItem as LocalPlanta;
+
+            if (value.HasValue)
+            {
+                decimal nuevoValor = value.Value;
+
+                // Restar el valor anterior y sumar el nuevo valor a la variable sumaArea
+                if (e.OldValue != null)
+                    areaTotal -= (decimal)e.OldValue;
+                if (areaTotal + nuevoValor <= CantArea.Value) 
+                {
+                    areaTotal += nuevoValor;
+                    txtAreaTotal.Text = "Área Total: " + areaTotal.ToString() + " m2";
+                }
+                else
+                {
+                  
+                    decimalUpDown.Value = (decimal)e.OldValue;
+                    new MessageBoxCustom("No puede exceder el área total", MessageType.Error, MessageButtons.Ok).ShowDialog();
+                }
+
+            }
+
+
         }
     }
 

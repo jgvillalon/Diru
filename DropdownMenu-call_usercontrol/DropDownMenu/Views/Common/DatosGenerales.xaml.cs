@@ -54,7 +54,7 @@ namespace DIRU.Views.Common
 
 
                 //Redes
-                if (MainWindow.currentProject.InversionLotes.Redes.Any()){
+                if (MainWindow.currentProject.InversionLotes != null && MainWindow.currentProject.InversionLotes.Redes.Any()){
                     rBCRSi.IsChecked = true;
 
                     foreach (var red in MainWindow.currentProject.InversionLotes.Redes)
@@ -159,6 +159,15 @@ namespace DIRU.Views.Common
                                     Descripcion = i == 0 ? "Planta Baja" : "Planta No." + i
                                 });
                             }
+
+                            //for (int i = 0; i < currentProject.InversionLotes.CantidadPlantas; i++)
+                            //{
+                            //    currentProject.InversionLotes.AddPlanta(new Planta
+                            //    {
+                            //        Descripcion = i == 0 ? "Planta Baja" : "Planta No." + i,
+                            //        Nuevo = true
+                            //    });
+                            //}
                         }
 
                         else

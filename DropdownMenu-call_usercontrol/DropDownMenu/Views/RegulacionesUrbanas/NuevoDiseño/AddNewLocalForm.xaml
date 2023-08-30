@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DIRU.Views.RegulacionesUrbanas.NuevoDiseño"
          xmlns:v="clr-namespace:DIRU.ViewModel"
+         xmlns:converter="clr-namespace:DIRU.Converters"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
@@ -14,7 +15,12 @@
     <Window.DataContext>
         <v:RegistrationVM/>
     </Window.DataContext>
-   
+    <Window.Resources>
+        <ResourceDictionary>
+            <converter:AccionVisibilityConverter x:Key="AccionVisibilityConverter" />
+            <BooleanToVisibilityConverter x:Key="BoolToVis"/>
+        </ResourceDictionary>
+    </Window.Resources>
     <Grid  Background="White">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="622*"/>
@@ -39,7 +45,8 @@
                     <Button Content="+ Local" Width="100" Margin="5" HorizontalAlignment="Left" Background="Gray" BorderBrush="Gray" Click="AddLocal_Click"/>
                     <Button x:Name="DeleteLocal" Content="Demoler" Width="100" Margin="5" HorizontalAlignment="Left" Background="Red" BorderBrush="Red" IsEnabled="False" Click="DeleteLocal_Click"/>
                 </WrapPanel>
-                <DataGrid Margin="10" 
+                <TextBlock x:Name="txtAreaTotal" Margin="300 0" Text="Área Total (m2):"/>
+                       <DataGrid Margin="10" 
                                   x:Name="dgPlanta"
                                   AutoGenerateColumns="False" 
                                   CanUserAddRows="True"
@@ -52,13 +59,14 @@
                                   
                                   >
                     <DataGrid.Columns>
+                        <DataGridTextColumn Header="No" Binding="{Binding NoLocal, Mode=TwoWay}"  Width="75"/>
                         <DataGridTextColumn Header="Locales" Binding="{Binding Local, Mode=TwoWay}" Width="200"/>
 
 
                         <DataGridTemplateColumn Header="Área">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <xctk:DecimalUpDown  Value="{Binding AreaOcupada, Mode=TwoWay}" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left"   VerticalAlignment="Top" Width="75"/>
+                                    <xctk:DecimalUpDown x:Name="areaLocal" Value="{Binding AreaOcupada, Mode=TwoWay}" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" ValueChanged="Area_Changed"   VerticalAlignment="Top" Width="75"/>
 
 
                                 </DataTemplate>
@@ -68,7 +76,11 @@
                                         Width="150"
                                             IsReadOnly="True"
                                          Binding="{Binding Estado}"/>
-
+                        <DataGridTextColumn Header="Acción"
+                                        Width="150"
+                                            IsReadOnly="True"
+                                         Binding="{Binding Accion}"/>
+                        <!--<DataGridComboBoxColumn  Width="150" x:Name="accionColumn" Visibility="{Binding Accion, Converter={StaticResource AccionVisibilityConverter}}" Header="Acción" SelectedItemBinding="{Binding Accion}"/>-->
                     </DataGrid.Columns>
                 </DataGrid>
             </StackPanel>

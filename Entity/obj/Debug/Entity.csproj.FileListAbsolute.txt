@@ -39,3 +39,10 @@ D:\Works\Proyecto Felix\Diru Development\Entity\obj\Debug\Entity.csproj.CoreComp
 D:\Works\Proyecto Felix\Diru Development\Entity\obj\Debug\Entity.csproj.CopyComplete
 D:\Works\Proyecto Felix\Diru Development\Entity\obj\Debug\Entity.dll
 D:\Works\Proyecto Felix\Diru Development\Entity\obj\Debug\Entity.pdb
+D:\Apis\felix\Github\Entity\bin\Debug\Entity.dll
+D:\Apis\felix\Github\Entity\bin\Debug\Entity.pdb
+D:\Apis\felix\Github\Entity\obj\Debug\Entity.csproj.AssemblyReference.cache
+D:\Apis\felix\Github\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+D:\Apis\felix\Github\Entity\obj\Debug\Entity.csproj.CopyComplete
+D:\Apis\felix\Github\Entity\obj\Debug\Entity.dll
+D:\Apis\felix\Github\Entity\obj\Debug\Entity.pdb

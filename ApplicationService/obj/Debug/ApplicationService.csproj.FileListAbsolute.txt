@@ -94,3 +94,21 @@ D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\obj\Debug\ApplicationServ
 D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\obj\Debug\ApplicationService.csproj.CopyComplete
 D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\obj\Debug\ApplicationService.dll
 D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\obj\Debug\ApplicationService.pdb
+D:\Apis\felix\Github\ApplicationService\bin\Debug\ApplicationService.dll.config
+D:\Apis\felix\Github\ApplicationService\bin\Debug\ApplicationService.dll
+D:\Apis\felix\Github\ApplicationService\bin\Debug\ApplicationService.pdb
+D:\Apis\felix\Github\ApplicationService\bin\Debug\Entity.dll
+D:\Apis\felix\Github\ApplicationService\bin\Debug\Repository.dll
+D:\Apis\felix\Github\ApplicationService\bin\Debug\NHibernate.dll
+D:\Apis\felix\Github\ApplicationService\bin\Debug\FluentNHibernate.dll
+D:\Apis\felix\Github\ApplicationService\bin\Debug\Remotion.Linq.dll
+D:\Apis\felix\Github\ApplicationService\bin\Debug\Remotion.Linq.EagerFetching.dll
+D:\Apis\felix\Github\ApplicationService\bin\Debug\Antlr3.Runtime.dll
+D:\Apis\felix\Github\ApplicationService\bin\Debug\Iesi.Collections.dll
+D:\Apis\felix\Github\ApplicationService\bin\Debug\Entity.pdb
+D:\Apis\felix\Github\ApplicationService\bin\Debug\Repository.pdb
+D:\Apis\felix\Github\ApplicationService\obj\Debug\ApplicationService.csproj.AssemblyReference.cache
+D:\Apis\felix\Github\ApplicationService\obj\Debug\ApplicationService.csproj.CoreCompileInputs.cache
+D:\Apis\felix\Github\ApplicationService\obj\Debug\ApplicationService.csproj.CopyComplete
+D:\Apis\felix\Github\ApplicationService\obj\Debug\ApplicationService.dll
+D:\Apis\felix\Github\ApplicationService\obj\Debug\ApplicationService.pdb

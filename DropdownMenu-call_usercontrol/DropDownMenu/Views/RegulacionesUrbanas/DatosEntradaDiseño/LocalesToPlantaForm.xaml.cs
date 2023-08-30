@@ -56,9 +56,12 @@ namespace DIRU.Views.RegulacionesUrbanas.DatosEntradaDiseño
             dgPlanta.ItemsSource = oldLocales;
 
             var estados = Enum.GetValues(typeof(ElementoEstado)).Cast<ElementoEstado>().ToList();
+            var acciones = Enum.GetValues(typeof(AccionLocal)).Cast<AccionLocal>().ToList();
+            
 
             // Establecer el ItemsSource del ComboBox en la columna
             estadoColumn.ItemsSource = estados;
+            accionColumn.ItemsSource = acciones;
 
 
 
@@ -75,12 +78,13 @@ namespace DIRU.Views.RegulacionesUrbanas.DatosEntradaDiseño
                 List<LocalPlanta> newlocales = new List<LocalPlanta>();
 
                 foreach (var local in oldLocales) {
-                    newlocales.Add(new LocalPlanta { Local = local.Local, AreaOcupada = local.AreaOcupada, Nuevo = true,Estado = local.Estado, NoLocal = local.NoLocal });
+                    newlocales.Add(new LocalPlanta { Local = local.Local, AreaOcupada = local.AreaOcupada, Nuevo = true,Estado = local.Estado, NoLocal = local.NoLocal, Accion = local.Accion });
                 }
 
                 _planta.AddLocales(oldLocales);
                 _planta.AddLocales(newlocales);
                 _planta.Area = _planta.Locales.Where(l => !l.Nuevo).Sum(l => l.AreaOcupada);
+                _planta.AreaNueva = _planta.Locales.Where(l => !l.Nuevo).Sum(l => l.AreaOcupada);
                 var response = _plantaService.UpdatePlanta(_planta);
                
                 if (response.Status.Equals(StatusResponse.OK))
@@ -138,6 +142,8 @@ namespace DIRU.Views.RegulacionesUrbanas.DatosEntradaDiseño
 
         private void Area_Changed(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
+
+          
             var decimalUpDown = sender as DecimalUpDown;
             var value = decimalUpDown.Value;
            
@@ -145,7 +151,13 @@ namespace DIRU.Views.RegulacionesUrbanas.DatosEntradaDiseño
 
             if (value.HasValue)
             {
-                areaTotal += value.Value;
+                decimal nuevoValor = value.Value;
+
+                // Restar el valor anterior y sumar el nuevo valor a la variable sumaArea
+                if(e.OldValue != null)
+                areaTotal -= (decimal)e.OldValue;
+                
+                areaTotal += (decimal)nuevoValor;
                 txtAreaTotal.Text = "Área Total: " + areaTotal.ToString() + " m2";
             }
 

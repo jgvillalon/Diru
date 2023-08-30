@@ -17,6 +17,8 @@ namespace Entity.Entitys.Proyectos.ClassMap
             Map(x => x.AreaOcupada).Precision(18).Scale(2);
             Map(x => x.Nuevo);
             Map(x => x.Estado);
+            Map(x => x.Accion);
+            Map(x => x.AccionPrecio).Precision(18).Scale(2);
             References(x => x.Planta).Not.Nullable().Cascade.None();
             Map(x => x.NoLocal);
             //References(x => x.Local).Not.Nullable().Cascade.SaveUpdate();

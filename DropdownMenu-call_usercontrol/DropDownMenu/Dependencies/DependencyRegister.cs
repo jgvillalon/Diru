@@ -83,7 +83,9 @@ namespace DIRU.Dependencies
         public static IPlantaRepository _plantaRepo;
         public static IPlantaService _plantaService;
         public static IEstadoTecnicoRepository _estadoTecnicoRepo;
-        public static IEstadoTecnicoService _estadoTecnicoService;
+        public static IEstadoTecnicoService _estadoTecnicoService; 
+        public static IAccionPrecioRepository _accionPrecioRepo;
+        public static IAccionPrecioService _accionPrecioService;
         #endregion
         #endregion
 
@@ -145,7 +147,9 @@ namespace DIRU.Dependencies
             _plantaRepo = new PlantaRepository(session);
             _plantaService = new PlantaService(_plantaRepo);
             _estadoTecnicoRepo = new EstadoTecnicoRepository(session);
-            _estadoTecnicoService = new EstadoTecnicoService(_estadoTecnicoRepo);
+            _estadoTecnicoService = new EstadoTecnicoService(_estadoTecnicoRepo); 
+            _accionPrecioRepo = new AccionPrecioRepository(session);
+            _accionPrecioService = new AccionPrecioService(_accionPrecioRepo);
             #endregion
 
             #region  Proyectos

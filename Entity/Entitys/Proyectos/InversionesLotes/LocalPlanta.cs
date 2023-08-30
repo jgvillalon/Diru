@@ -16,7 +16,9 @@ namespace Entity.Entitys.Proyectos.InversionesLotes
         public virtual decimal AreaOcupada { get; set; }
         public virtual bool Nuevo { get; set; }
         public virtual ElementoEstado Estado { get; set; }
-        public virtual int NoLocal { get; set; }
+        public virtual AccionLocal Accion { get; set; }
+        public virtual decimal AccionPrecio { get; set; }
+        public virtual string NoLocal { get; set; }
 
     }
 }

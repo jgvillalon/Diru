@@ -7,6 +7,7 @@
              xmlns:dragablz="http://dragablz.net/winfx/xaml/dragablz"
              xmlns:ucMetros="clr-namespace:DIRU.Views.Nomencladores.Otros.Metro"
              xmlns:ucEstadoTecnico="clr-namespace:DIRU.Views.Nomencladores.Otros.EstadosTecnico"
+             xmlns:ucAccionPrecio="clr-namespace:DIRU.Views.Nomencladores.Otros.AccionPrecioEstandar"
             mc:Ignorable="d" 
              Height="700" Width="1200">
     <UserControl.Resources>
@@ -32,6 +33,9 @@
                 </TabItem>
                 <TabItem Header="Estado Tecnico">
                     <ucEstadoTecnico:NomEstadoTecnica/>
+                </TabItem>
+                <TabItem Header="Precios por Acciones">
+                    <ucAccionPrecio:NomAccionPrecio/>
                 </TabItem>
 
 
