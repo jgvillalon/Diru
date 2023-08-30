@@ -93,6 +93,7 @@
     <Compile Include="Entitys\Nomencladores\Otros\Permisos.cs" />
     <Compile Include="Entitys\Proyectos\AlineacionEdificacionRU.cs" />
     <Compile Include="Entitys\Proyectos\Capacidad.cs" />
+    <Compile Include="Entitys\Proyectos\ClassMap\AlturaRUMap.cs" />
     <Compile Include="Entitys\Proyectos\ClassMap\EstructuraMap.cs" />
     <Compile Include="Entitys\Proyectos\ClassMap\CapacidadMap.cs" />
     <Compile Include="Entitys\Proyectos\ClassMap\EstadoTecnicoProyectoMap.cs" />
@@ -111,7 +112,7 @@
     <Compile Include="Entitys\Proyectos\InversionesLotes\Planta.cs" />
     <Compile Include="Entitys\Proyectos\Permiso.cs" />
     <Compile Include="Entitys\Proyectos\Proyecto.cs" />
-    <Compile Include="Entitys\Proyectos\AlturaRU.cs" />
+    <Compile Include="Entitys\Proyectos\RegulacionesUrbanas\AlturaRU.cs" />
     <Compile Include="Entitys\Proyectos\RegulacionesUrbanas\Estructura.cs" />
     <Compile Include="Entitys\Proyectos\Subproyecto.cs" />
     <Compile Include="Entitys\Proyectos\TipoProyecto.cs" />

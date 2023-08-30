@@ -14,21 +14,21 @@ using System.Threading.Tasks;
 
 namespace Repository.RegulacionesUrbanas.Repository
 {
-   public class EstructuraRepository : TRepository, IEstructuraRepository
+   public class AlturaRURepository : TRepository, IAlturaRURepository
     {
         private readonly ISession _session;
-        public EstructuraRepository(ISession session) : base(session)
+        public AlturaRURepository(ISession session) : base(session)
         {
             _session = session;
         }
 
-        public StatusResponse DeleteEstructura(Estructuras Estructura)
+        public StatusResponse DeleteAlturaRU(AlturaRU AlturaRU)
         {
             try
             {
                 using (ITransaction transaction = _session.BeginTransaction())
                 {
-                    _session.Delete(Estructura);
+                    _session.Delete(AlturaRU);
                     transaction.Commit();
 
                 }
@@ -44,9 +44,9 @@ namespace Repository.RegulacionesUrbanas.Repository
             }
         }
 
-        public List<Estructuras> FindAllEstructuras(EstructuraSearchOptions options = null)
+        public List<AlturaRU> FindAllAlturaRUs(AlturaRUSearchOptions options = null)
         {
-            var query = _session.Query<Estructuras>();
+            var query = _session.Query<AlturaRU>();
             if (options != null)
             {
                 if (options.InversionLoteId > 0)
@@ -56,20 +56,20 @@ namespace Repository.RegulacionesUrbanas.Repository
             return query.OrderByDescending(p => p.Id).ToList();
         }
 
-        public Estructuras GetEstructurabyId(int EstructuraId)
+        public AlturaRU GetAlturaRUbyId(int AlturaRUId)
         {
-            return _session.Query<Estructuras>().FirstOrDefault(u => u.Id.Equals(EstructuraId));
+            return _session.Query<AlturaRU>().FirstOrDefault(u => u.Id.Equals(AlturaRUId));
         }
 
 
 
-        public StatusResponse InsertEstructura(Estructuras Estructura)
+        public StatusResponse InsertAlturaRU(AlturaRU AlturaRU)
         {
             try
             {
                 using (ITransaction transaction = _session.BeginTransaction())
                 {
-                    _session.Save(Estructura);
+                    _session.Save(AlturaRU);
                     transaction.Commit();
 
                 }
@@ -87,14 +87,14 @@ namespace Repository.RegulacionesUrbanas.Repository
             }
         }
 
-        public StatusResponse UpdateEstructura(Estructuras Estructura)
+        public StatusResponse UpdateAlturaRU(AlturaRU AlturaRU)
         {
             try
             {
                 _session.Clear();
                 using (ITransaction transaction = _session.BeginTransaction())
                 {
-                    _session.Update(Estructura);
+                    _session.Update(AlturaRU);
                     transaction.Commit();
 
                 }

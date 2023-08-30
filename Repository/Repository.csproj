@@ -117,8 +117,11 @@
     <Compile Include="Proyectos\Repository\CapacidadRepository.cs" />
     <Compile Include="Proyectos\Repository\InversionRepository.cs" />
     <Compile Include="Proyectos\Repository\ProyectoRepository.cs" />
+    <Compile Include="RegulacionesUrbanas\IRepository\IAlturaRURepository.cs" />
     <Compile Include="RegulacionesUrbanas\IRepository\IEstructuraRepository.cs" />
+    <Compile Include="RegulacionesUrbanas\Options\AlturaRUSearchOptions.cs" />
     <Compile Include="RegulacionesUrbanas\Options\EstructuraSearchOptions.cs" />
+    <Compile Include="RegulacionesUrbanas\Repository\AlturaRURepository.cs" />
     <Compile Include="RegulacionesUrbanas\Repository\EstructuraRepository.cs" />
     <Compile Include="TRepository.cs" />
     <Compile Include="Seguridad\IRepository\ILicenseRepository.cs" />

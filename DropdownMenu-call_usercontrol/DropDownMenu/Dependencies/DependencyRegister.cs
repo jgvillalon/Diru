@@ -110,6 +110,8 @@ namespace DIRU.Dependencies
         #region RegulacionesUrbanas
         public static IEstructuraRepository _EstructuraRepo;
         public static IEstructuraService _EstructuraService;
+        public static IAlturaRURepository _AlturaRURepo;
+        public static IAlturaRUService _AlturaRUService;
         #endregion
 
         #region Informes
@@ -173,6 +175,8 @@ namespace DIRU.Dependencies
             #region RegulacionesUrbanas
             _EstructuraRepo = new EstructuraRepository(session);
             _EstructuraService = new EstructuraService(_EstructuraRepo);
+            _AlturaRURepo = new AlturaRURepository(session);
+            _AlturaRUService = new AlturaRUService(_AlturaRURepo);
             #endregion
 
             #region InversionLotes
