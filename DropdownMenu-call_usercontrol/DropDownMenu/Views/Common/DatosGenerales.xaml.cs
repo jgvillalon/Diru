@@ -23,6 +23,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Entity.Entitys.Proyectos.InversionesLotes;
 using Entity.Entitys.Nomencladores.Otros;
+using ApplicationService.Nomencladores.Otros.IService;
+using Repository.Nomencladores.Otros.Options;
 
 namespace DIRU.Views.Common
 {
@@ -32,11 +34,13 @@ namespace DIRU.Views.Common
     public partial class DatosGenerales : UserControl
     {
         private readonly IProyectoService _proyectoService;
+        private readonly IRedService _redService;
         private Proyecto currentProject = null;
         public DatosGenerales()
         {
             InitializeComponent();
             _proyectoService = DependencyRegister._proyectoService;
+            _redService = DependencyRegister._redService;
              comboUbicacion.ItemsSource = DependencyRegister._ubicacionGeograficaService.FindAllUbicacionGeograficas();
              comboZona.ItemsSource = DependencyRegister._zonaUbicacionService.FindAllZonaUbicacions();
             if (MainWindow.currentProject != null) {
@@ -69,6 +73,8 @@ namespace DIRU.Views.Common
                             RTelefonica.IsChecked = true;
                         else if (red.Nombre == "Red Hidraúlica")
                             RHidraulica.IsChecked = true;
+                        else if (red.Nombre == "Red Gas")
+                            RGas.IsChecked = true;
                     }
                 }
                 else
@@ -110,42 +116,48 @@ namespace DIRU.Views.Common
                         {
                             currentProject.InversionLotes.RemoveAllRedes();
 
-                            if (RSanitaria.IsChecked == true)
-                                currentProject.InversionLotes.AddRed(new Red
-                                {
-                                    Nombre = RSanitaria.Content.ToString(),
-                                    InversionLote = currentProject.InversionLotes
-                                });
-                            if (RDrenaje.IsChecked == true)
-                                currentProject.InversionLotes.AddRed(new Red
-                                {
-                                    Nombre = RDrenaje.Content.ToString(),
-                                    InversionLote = currentProject.InversionLotes
-                                });
-                            if (RElectrica.IsChecked == true)
-                                currentProject.InversionLotes.AddRed(new Red
-                                {
-                                    Nombre = RElectrica.Content.ToString(),
-                                    InversionLote = currentProject.InversionLotes
-                                });
-                            if (RTelefonica.IsChecked == true)
-                                currentProject.InversionLotes.AddRed(new Red
-                                {
-                                    Nombre = RTelefonica.Content.ToString(),
-                                    InversionLote = currentProject.InversionLotes
-                                });
+                            RedSearchOptions RedSearchOption = new RedSearchOptions();
+
+                            if (RSanitaria.IsChecked == true) {
+                                RedSearchOption.Nombre = RSanitaria.Content.ToString();
+                                var red = _redService.FindAllReds(RedSearchOption).FirstOrDefault();
+
+                                currentProject.InversionLotes.AddRed(red);
+                            }
+                            if (RDrenaje.IsChecked == true) {
+                                RedSearchOption.Nombre = RDrenaje.Content.ToString();
+                                var red = _redService.FindAllReds(RedSearchOption).FirstOrDefault();
+
+                                currentProject.InversionLotes.AddRed(red);
+                            }
+
+                            if (RElectrica.IsChecked == true) {
+                                RedSearchOption.Nombre = RElectrica.Content.ToString();
+                                var red = _redService.FindAllReds(RedSearchOption).FirstOrDefault();
+
+                                currentProject.InversionLotes.AddRed(red);
+                            }
+
+                            if (RTelefonica.IsChecked == true) {
+                                RedSearchOption.Nombre = RTelefonica.Content.ToString();
+                                var red = _redService.FindAllReds(RedSearchOption).FirstOrDefault();
+
+                                currentProject.InversionLotes.AddRed(red);
+                            }
+
                             if (RHidraulica.IsChecked == true)
-                                currentProject.InversionLotes.AddRed(new Red
-                                {
-                                    Nombre = RHidraulica.Content.ToString(),
-                                    InversionLote = currentProject.InversionLotes
-                                });
-                            if (RGas.IsChecked == true)
-                                currentProject.InversionLotes.AddRed(new Red
-                                {
-                                    Nombre = RGas.Content.ToString(),
-                                    InversionLote = currentProject.InversionLotes
-                                });
+                            {
+                                RedSearchOption.Nombre = RHidraulica.Content.ToString();
+                                var red = _redService.FindAllReds(RedSearchOption).FirstOrDefault();
+
+                                currentProject.InversionLotes.AddRed(red);
+                            }
+                            if (RGas.IsChecked == true) {
+                                RedSearchOption.Nombre = RGas.Content.ToString();
+                                var red = _redService.FindAllReds(RedSearchOption).FirstOrDefault();
+
+                                currentProject.InversionLotes.AddRed(red);
+                            }
                         }
 
                         //plantas

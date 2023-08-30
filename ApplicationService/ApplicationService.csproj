@@ -114,10 +114,12 @@
     <Compile Include="Nomencladores\Geograficos\Service\UbicacionGeograficaService.cs" />
     <Compile Include="Nomencladores\Geograficos\Service\ZonaUbicacionService.cs" />
     <Compile Include="Nomencladores\Otros\IService\IAccionPrecioService.cs" />
+    <Compile Include="Nomencladores\Otros\IService\IRedService.cs" />
     <Compile Include="Nomencladores\Otros\IService\IEstadoTecnicoService.cs" />
     <Compile Include="Nomencladores\Otros\IService\IMetrosService.cs" />
     <Compile Include="Nomencladores\Otros\IService\IPlantaService.cs" />
     <Compile Include="Nomencladores\Otros\Service\AccionPrecioService.cs" />
+    <Compile Include="Nomencladores\Otros\Service\RedService.cs" />
     <Compile Include="Nomencladores\Otros\Service\EstadoTecnicoService.cs" />
     <Compile Include="Nomencladores\Otros\Service\MetrosService.cs" />
     <Compile Include="Nomencladores\Otros\Service\PlantaService.cs" />
@@ -128,6 +130,10 @@
     <Compile Include="Proyectos\Service\CapacidadService.cs" />
     <Compile Include="Proyectos\Service\InversionService.cs" />
     <Compile Include="Proyectos\Service\ProyectoService.cs" />
+    <Compile Include="RegulacionesUrbanas\IService\IAlturaRUService.cs" />
+    <Compile Include="RegulacionesUrbanas\IService\IEstructuraService.cs" />
+    <Compile Include="RegulacionesUrbanas\Service\AlturaRUService.cs" />
+    <Compile Include="RegulacionesUrbanas\Service\EstructuraService.cs" />
     <Compile Include="Seguridad\IServices\ILicenseService.cs" />
     <Compile Include="Seguridad\IServices\IUserService.cs" />
     <Compile Include="Seguridad\Maps\Mapping.cs" />

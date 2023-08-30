@@ -20,28 +20,28 @@
             <BooleanToVisibilityConverter x:Key="BoolToVis"/>
         </ResourceDictionary>
     </UserControl.Resources>
-    
-        <Grid Background="White"  >
-       
-            <StackPanel>
+
+    <Grid Background="White"  >
+
+        <StackPanel Margin="0,0,0,-91">
             <Grid Margin="10,10,10,0" Background="#1565c0">
                 <TextBlock x:Name="Title" Margin="10" Text="Diagnóstico" FontSize="20" FontFamily="Open Sans" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"  />
             </Grid>
             <ScrollViewer VerticalScrollBarVisibility="Visible"  Height="450">
                 <StackPanel>
-                  
+
                     <Border Margin="10 0" BorderBrush="LightGray" BorderThickness="1" Height="154">
                         <StackPanel>
                             <TextBlock Margin="10" FontSize="15" Text="Información del Terreno:"/>
                             <WrapPanel  Orientation="Horizontal">
                                 <StackPanel>
                                     <Label   Margin="10 5" FontSize="12" Content="No. Terreno:" />
-                                    <xctk:IntegerUpDown x:Name="NoTerreno"  Minimum="1"  Value="1" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="10"  VerticalAlignment="Top" Width="200"/>
+                                    <xctk:IntegerUpDown x:Name="NoTerreno"  Minimum="1"  Value="1" TextAlignment="Left"  BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="10"  VerticalAlignment="Top" Width="200"/>
 
                                 </StackPanel>
                                 <StackPanel>
                                     <Label   Margin="10 5" FontSize="12" Content="Superficie Total:" />
-                                    <xctk:DecimalUpDown x:Name="SuperficieTotal" IsReadOnly="True"  Minimum="0.1"  Value="0.1" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="10"  VerticalAlignment="Top" Width="200"/>
+                                    <xctk:DecimalUpDown x:Name="SuperficieTotal" IsReadOnly="True"  TextAlignment="Left"  Minimum="0.1"  Value="0.1" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="10"  VerticalAlignment="Top" Width="200"/>
 
 
                                 </StackPanel>
@@ -54,27 +54,27 @@
                             <WrapPanel  Orientation="Horizontal">
                                 <StackPanel>
                                     <Label   Margin="10 5" FontSize="12" Content="Superficie Verde(M2):" />
-                                    <xctk:DecimalUpDown x:Name="SuperficieVerde"  Minimum="0.1"  Value="0.1" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="10"  VerticalAlignment="Top" Width="200"/>
+                                    <xctk:DecimalUpDown x:Name="SuperficieVerde"  Minimum="0.1"  Value="0.1" TextAlignment="Left"  BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="10"  VerticalAlignment="Top" Width="200"/>
 
                                 </StackPanel>
                                 <StackPanel>
                                     <Label   Margin="10 5" FontSize="12" Content="Superficie Hídrica(V):" />
-                                    <xctk:DecimalUpDown x:Name="SuperficieHidrica"  Minimum="0.1"  Value="0.1" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="10"  VerticalAlignment="Top" Width="200"/>
+                                    <xctk:DecimalUpDown x:Name="SuperficieHidrica"  Minimum="0.1"  Value="0.1" TextAlignment="Left"  BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="10"  VerticalAlignment="Top" Width="200"/>
 
                                 </StackPanel>
                                 <StackPanel>
                                     <Label   Margin="10 5" FontSize="12" Content="Profundidad Manto Freático(M):" />
-                                    <xctk:DecimalUpDown x:Name="ProfundidadManto"  Minimum="0.1"  Value="0.1" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="10"  VerticalAlignment="Top" Width="200"/>
+                                    <xctk:DecimalUpDown x:Name="ProfundidadManto"  Minimum="0.1"  Value="0.1" TextAlignment="Left"  BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="10"  VerticalAlignment="Top" Width="200"/>
 
                                 </StackPanel>
                                 <StackPanel>
                                     <Label   Margin="10 5" FontSize="12" Content="Topografía Pendientes:" />
-                                    <xctk:DecimalUpDown x:Name="TopografiaPendientes"  Minimum="0.1"  Value="0.1" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="10"  VerticalAlignment="Top" Width="200"/>
+                                    <xctk:DecimalUpDown x:Name="TopografiaPendientes"  Minimum="0.1"  Value="0.1" TextAlignment="Left"  BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="10"  VerticalAlignment="Top" Width="200"/>
 
                                 </StackPanel>
                                 <StackPanel>
                                     <Label   Margin="10 5" FontSize="12" Content="Valores Paisajísticos:" />
-                                    <TextBox Margin="10" x:Name="ValoresPaisajisticos" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35"   VerticalAlignment="Top" Width="200"/>
+                                    <TextBox Margin="10" x:Name="ValoresPaisajisticos" AcceptsReturn="True"  TextWrapping="Wrap" BorderThickness="2" TextAlignment="Left"  BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="70"   VerticalAlignment="Top" Width="200"/>
 
                                 </StackPanel>
                             </WrapPanel>
@@ -87,7 +87,7 @@
                                 <WrapPanel  Orientation="Horizontal" HorizontalAlignment="Center" >
                                     <StackPanel Width="350" Height="105">
                                         <Label   Margin="10,5,10.4,5" FontSize="12" Content="Cantidad de habitantes:"  />
-                                        <xctk:IntegerUpDown x:Name="CantHabitantes"  Minimum="0"  Value="0" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="10"  VerticalAlignment="Top" Width="200"/>
+                                        <xctk:IntegerUpDown x:Name="CantHabitantes"  Minimum="0"  Value="0" TextAlignment="Left"  BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="10"  VerticalAlignment="Top" Width="200"/>
 
                                     </StackPanel>
 
@@ -97,9 +97,9 @@
                             <StackPanel  Width="485">
                                 <TextBlock Margin="10" FontSize="15" Text="Información Accesibilidad:"/>
                                 <WrapPanel  Orientation="Horizontal" HorizontalAlignment="Center">
-                                    <StackPanel Width="350" Height="105">
+                                    <StackPanel Width="350" Height="150">
                                         <Label   Margin="10 5" FontSize="12" Content="Vías de transporte:"  />
-                                        <TextBox Margin="10" x:Name="txtviasTransporte" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35"   VerticalAlignment="Top" Width="288"/>
+                                        <TextBox x:Name="txtviasTransporte" AcceptsReturn="True" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" Height="71" Width="288" TextWrapping="Wrap"/>
                                     </StackPanel>
 
                                 </WrapPanel>
@@ -108,17 +108,17 @@
                     </Border>
 
 
-                   
+
                 </StackPanel>
             </ScrollViewer>
-            <Grid  Margin="10,10,10,0" Background="LightGray" VerticalAlignment="Bottom">
+            <Grid Background="LightGray" RenderTransformOrigin="0.503,2.699" Height="59">
 
                 <Button x:Name="BtnSave" FontSize="12" Margin="0,10,100,10" Content="Aceptar" HorizontalAlignment="Right" VerticalAlignment="Center" Click="BtnSave_Click" />
                 <Button x:Name="BtnCancel" FontSize="12" Margin="10" Background="Red" Foreground="White" Content="Cancelar" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BtnCancel_Click"  />
 
             </Grid>
         </StackPanel>
-       
+
     </Grid>
-    
+
 </UserControl>

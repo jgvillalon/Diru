@@ -1,9 +1,9 @@
-﻿<UserControl x:Class="DIRU.Views.RegulacionesUrbanas.Estructuras.EstructuraManzana"
+﻿<UserControl x:Class="DIRU.Views.RegulacionesUrbanas.Estructura.EstructuraManzana"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:DIRU.Views.RegulacionesUrbanas.Estructuras"
+             xmlns:local="clr-namespace:DIRU.Views.RegulacionesUrbanas.Estructura"
              mc:Ignorable="d" 
              xmlns:v="clr-namespace:DIRU.ViewModel"
              Height="700" Width="1200">
@@ -34,7 +34,7 @@
                             <StackPanel>
                                 <Label   Margin="10 5" FontSize="12" Content="No:" />
                                 <TextBox Margin="10" x:Name="txtNoZona" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35"   VerticalAlignment="Top" Width="288"
-                      Padding="2"  TextAlignment="Right" PreviewTextInput="NumericOnly"
+                      Padding="2"  TextAlignment="Left" PreviewTextInput="NumericOnly"
                                              Text="{Binding Textfield, ValidatesOnDataErrors=True,
                 UpdateSourceTrigger=PropertyChanged}"
                      ToolTip="{Binding ErrorCollection[Textfield]}"/>
@@ -50,18 +50,22 @@
                             <StackPanel>
                                 <Label   Margin="10 5" FontSize="12" Content="Máxima Ocupación:" />
                                 <TextBox Margin="10" x:Name="txtMaxOcupacion" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35"   VerticalAlignment="Top" Width="288"
-                      Padding="2"  TextAlignment="Right" PreviewTextInput="NumericOnly"
+                      Padding="2"  TextAlignment="Left" PreviewTextInput="NumericOnly"
                                              Text="{Binding Textfield3, ValidatesOnDataErrors=True,
                 UpdateSourceTrigger=PropertyChanged}"
                      ToolTip="{Binding ErrorCollection[Textfield3]}"/>
                             </StackPanel>
                             <StackPanel>
-
                                 <Button Content="Observaciones" Margin="10 45 10 10" Click="ObservacionMax_Click"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal">
-                                <Button FontSize="12" Margin="10 30 10 10" Foreground="Black" BorderBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Name = "BrowseMaxOcupacion" Click = "Browse_Click"  HorizontalAlignment="Left" Width="200" Content="Cargar imagen ..."/>
-                                <Image Name = "ImageViewer1" Width="100" Height="100"/>
+                                <Button FontSize="12" Margin="10 30 10 10" Foreground="Black" BorderBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Name = "BrowseMaxOcupacion"  HorizontalAlignment="Left" Width="200" Content="Cargar imagen ..." Click="Browse_Click_Max"/>
+                                <Image Name = "ImageViewer1" Margin="0 0 0 0"  Width="100" Height="50"/>
+                            </StackPanel>
+                            <StackPanel x:Name="ObservacionesMax" Visibility="Hidden">
+                                <Label   Margin="10 5" FontSize="12" Content="Observaciones:" />
+                                <TextBox Margin="10" x:Name="txtMOObservaciones" AcceptsReturn="True"  TextWrapping="Wrap" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="50"   VerticalAlignment="Top" Width="288"
+                                Padding="2"  TextAlignment="Left" />
                             </StackPanel>
 
                         </WrapPanel>
@@ -69,20 +73,23 @@
                             <StackPanel>
                                 <Label   Margin="10 5" FontSize="12" Content="Mínima Ocupación:" />
                                 <TextBox Margin="10" x:Name="txtMinOcupacion" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35"   VerticalAlignment="Top" Width="288"
-                      Padding="2"  TextAlignment="Right" PreviewTextInput="NumericOnly"
+                                Padding="2"  TextAlignment="Left" PreviewTextInput="NumericOnly"
                                              Text="{Binding Textfield3, ValidatesOnDataErrors=True,
-                UpdateSourceTrigger=PropertyChanged}"
-                     ToolTip="{Binding ErrorCollection[Textfield3]}"/>
+                                UpdateSourceTrigger=PropertyChanged}"
+                                ToolTip="{Binding ErrorCollection[Textfield3]}"/>
                             </StackPanel>
                             <StackPanel>
-
                                 <Button Content="Observaciones" Margin="10 45 10 10" Click="ObservacionMin_Click"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal">
-                                <Button FontSize="12" Margin="10 30 10 10" Foreground="Black" BorderBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Name = "BrowseMinOcupacion" Click = "Browse_Click"  HorizontalAlignment="Left" Width="200" Content="Cargar imagen ..."/>
+                                <Button FontSize="12" Margin="10 30 10 10" Foreground="Black" BorderBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Name = "BrowseMinOcupacion" HorizontalAlignment="Left" Width="200" Content="Cargar imagen ..." Click="Browse_Click_Min"/>
                                 <Image Name = "ImageViewer2" Width="100" Height="100"/>
                             </StackPanel>
-
+                            <StackPanel x:Name="ObservacionesMin" Visibility="Hidden">
+                                <Label   Margin="10 5" FontSize="12" Content="Observaciones:" />
+                                <TextBox Margin="10" x:Name="txtMinOObservaciones" BorderThickness="2" AcceptsReturn="True"  TextWrapping="Wrap" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="50"   VerticalAlignment="Top" Width="288"
+                                Padding="2"  TextAlignment="Left" />
+                            </StackPanel>
                         </WrapPanel>
                     </StackPanel>
                 </Border>

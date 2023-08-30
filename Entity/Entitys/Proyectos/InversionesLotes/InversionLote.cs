@@ -68,7 +68,7 @@ namespace Entity.Entitys.Proyectos.InversionesLotes
         #region Red
         public virtual void AddRed(Red red)
         {
-            red.InversionLote = this;
+            //red.InversionLote = this;
             Redes.Add(red);
         }
         public virtual void AddRedes(IEnumerable<Red> redes)

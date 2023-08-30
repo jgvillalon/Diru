@@ -39,6 +39,7 @@ D:\Works\Proyecto Felix\Diru Development\Entity\obj\Debug\Entity.csproj.CoreComp
 D:\Works\Proyecto Felix\Diru Development\Entity\obj\Debug\Entity.csproj.CopyComplete
 D:\Works\Proyecto Felix\Diru Development\Entity\obj\Debug\Entity.dll
 D:\Works\Proyecto Felix\Diru Development\Entity\obj\Debug\Entity.pdb
+<<<<<<< HEAD
 D:\Apis\felix\Github\Entity\bin\Debug\Entity.dll
 D:\Apis\felix\Github\Entity\bin\Debug\Entity.pdb
 D:\Apis\felix\Github\Entity\obj\Debug\Entity.csproj.AssemblyReference.cache
@@ -46,3 +47,12 @@ D:\Apis\felix\Github\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
 D:\Apis\felix\Github\Entity\obj\Debug\Entity.csproj.CopyComplete
 D:\Apis\felix\Github\Entity\obj\Debug\Entity.dll
 D:\Apis\felix\Github\Entity\obj\Debug\Entity.pdb
+=======
+D:\Works\Proyecto Felix GitHub\Diru\Entity\bin\Debug\Entity.dll
+D:\Works\Proyecto Felix GitHub\Diru\Entity\bin\Debug\Entity.pdb
+D:\Works\Proyecto Felix GitHub\Diru\Entity\obj\Debug\Entity.csproj.AssemblyReference.cache
+D:\Works\Proyecto Felix GitHub\Diru\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+D:\Works\Proyecto Felix GitHub\Diru\Entity\obj\Debug\Entity.csproj.CopyComplete
+D:\Works\Proyecto Felix GitHub\Diru\Entity\obj\Debug\Entity.dll
+D:\Works\Proyecto Felix GitHub\Diru\Entity\obj\Debug\Entity.pdb
+>>>>>>> fc6725eb8bb9abfb5e3aa4254f4d385c40de89f9

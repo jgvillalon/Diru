@@ -143,9 +143,9 @@ namespace ApplicationService.Informes.Service
                 document.Add(inversionOtros);
                 Paragraph inversionConstruccion = new Paragraph("Construcción y Montaje : " + project.Inversion.ConstruccionMontaje);
                 document.Add(inversionConstruccion);
-                Paragraph inversionValorEstimado = new Paragraph("Valor Estimado : " + project.Inversion.ValorEstimado.ToString("0.00"));
+                Paragraph inversionValorEstimado = new Paragraph("Valor Estimado : " + project.Inversion.ValorEstimadoConstruccion.ToString("0.00"));
                 document.Add(inversionValorEstimado);
-                Paragraph inversionValorAprobado = new Paragraph("Valor Aprobado : " + project.Inversion.ValorEstimadoAprobado.ToString("0.00"));
+                Paragraph inversionValorAprobado = new Paragraph("Valor Aprobado : " + project.Inversion.ValorEstimadoAprobadoConstruccion.ToString("0.00"));
                 document.Add(inversionValorAprobado);
 
                 document.Add(new Paragraph(" "));

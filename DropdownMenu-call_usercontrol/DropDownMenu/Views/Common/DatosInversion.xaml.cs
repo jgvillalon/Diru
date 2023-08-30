@@ -61,16 +61,20 @@ namespace DIRU.Views.Common
                 txtCircunscripcion.Text = currentProject.Inversion.Circunscripcion;
                 txtCalle.Text = currentProject.Inversion.NoCalle;
                 txtConsejo.Text = currentProject.Inversion.ConsejoPopular;
-                txtConstruccion.AppendText(currentProject.Inversion.ConstruccionMontaje);
+                //txtConstruccion.AppendText(currentProject.Inversion.ConstruccionMontaje);
                 txtECalle.Text = currentProject.Inversion.ECalle;
-                txtEquipos.AppendText(currentProject.Inversion.Equipos);
-                txtOtros.AppendText(currentProject.Inversion.Otros);
+                //txtEquipos.AppendText(currentProject.Inversion.Equipos);
+                //txtOtros.AppendText(currentProject.Inversion.Otros);
                 txtManzana.Text = currentProject.Inversion.Manzana;
                 txtnombreInv.Text = currentProject.Inversion.NombreInversion;
                 txtNombreObra.Text = currentProject.Inversion.NombreObra;
                 txtReparto.Text = currentProject.Inversion.Reparto;
-               ValorEstim.Value = currentProject.Inversion.ValorEstimado;
-                ValorEstimAprobado.Value = currentProject.Inversion.ValorEstimadoAprobado;
+                ValorEstimConstruccion.Value = currentProject.Inversion.ValorEstimadoAprobadoConstruccion;
+                ValorEstimEquipos.Value = currentProject.Inversion.ValorEstimadoAprobadoEquipos;
+                ValorEstimOtros.Value = currentProject.Inversion.ValorEstimadoAprobadoOtros;
+                ValorEstimAprobadoConstruccion.Value = currentProject.Inversion.ValorEstimadoAprobadoConstruccion;
+                ValorEstimAprobadoEquipos.Value = currentProject.Inversion.ValorEstimadoAprobadoEquipos;
+                ValorEstimAprobadoOtros.Value = currentProject.Inversion.ValorEstimadoAprobadoOtros;
                 comboMunicipio.SelectedItem = currentProject.Inversion.Municipio; 
                 comboProvincia.SelectedItem = currentProject.Inversion.Provincia; 
                 comboZona.SelectedItem = currentProject.Inversion.Zona; 
@@ -98,14 +102,17 @@ namespace DIRU.Views.Common
                         NombreInversion = txtnombreInv.Text,
                         NombreObra = txtNombreObra.Text,
                         Reparto = txtReparto.Text,
-                        ValorEstimado = ValorEstim.Value.HasValue? ValorEstim.Value.Value : 0,
-                        ValorEstimadoAprobado = ValorEstimAprobado.Value.HasValue ? ValorEstimAprobado.Value.Value : 0,
                         Provincia = (Provincia)comboProvincia.SelectedItem,
                         Municipio = (Municipio)comboMunicipio.SelectedItem,
                         Zona = (ZonaUbicacion)comboZona.SelectedItem,
-                        Equipos = new TextRange(txtEquipos.Document.ContentStart, txtEquipos.Document.ContentEnd).Text.Trim(saltosDeLinea),
-                        ConstruccionMontaje = new TextRange(txtConstruccion.Document.ContentStart, txtConstruccion.Document.ContentEnd).Text.Trim(saltosDeLinea),
-                        Otros = new TextRange(txtOtros.Document.ContentStart, txtOtros.Document.ContentEnd).Text.Trim(saltosDeLinea),
+
+                        ValorEstimadoConstruccion = ValorEstimConstruccion.Value.HasValue ? ValorEstimConstruccion.Value.Value : 0,
+                        ValorEstimadoEquipos = ValorEstimEquipos.Value.HasValue ? ValorEstimEquipos.Value.Value : 0,
+                        ValorEstimadoOtros = ValorEstimOtros.Value.HasValue ? ValorEstimOtros.Value.Value : 0,
+                        ValorEstimadoAprobadoConstruccion = ValorEstimAprobadoConstruccion.Value.HasValue ? ValorEstimAprobadoConstruccion.Value.Value : 0,
+                        ValorEstimadoAprobadoEquipos = ValorEstimAprobadoEquipos.Value.HasValue ? ValorEstimAprobadoEquipos.Value.Value : 0,
+                        ValorEstimadoAprobadoOtros = ValorEstimAprobadoOtros.Value.HasValue ? ValorEstimAprobadoOtros.Value.Value : 0,
+                        
                 };
                     var response = _inversionService.InsertInversion(inversion);
                     if (response.Status.Equals(StatusResponse.OK))
@@ -152,14 +159,20 @@ namespace DIRU.Views.Common
                         inversion.NombreInversion = txtnombreInv.Text;
                         inversion.NombreObra = txtNombreObra.Text;
                         inversion.Reparto = txtReparto.Text;
-                        inversion.ValorEstimado = ValorEstim.Value.HasValue ? ValorEstim.Value.Value : 0;
-                        inversion.ValorEstimadoAprobado = ValorEstimAprobado.Value.HasValue ? ValorEstimAprobado.Value.Value : 0;
+                        //inversion.ValorEstimado = ValorEstim.Value.HasValue ? ValorEstim.Value.Value : 0;
+                        //inversion.ValorEstimadoAprobado = ValorEstimAprobado.Value.HasValue ? ValorEstimAprobado.Value.Value : 0;
                         inversion.Provincia = (Provincia)comboProvincia.SelectedItem;
                         inversion.Municipio = (Municipio)comboMunicipio.SelectedItem;
                         inversion.Zona = (ZonaUbicacion)comboZona.SelectedItem;
-                        inversion.Equipos = new TextRange(txtEquipos.Document.ContentStart, txtEquipos.Document.ContentEnd).Text.Trim(saltosDeLinea);
-                        inversion.ConstruccionMontaje = new TextRange(txtConstruccion.Document.ContentStart, txtConstruccion.Document.ContentEnd).Text.Trim(saltosDeLinea);
-                        inversion.Otros = new TextRange(txtOtros.Document.ContentStart, txtOtros.Document.ContentEnd).Text.Trim(saltosDeLinea);
+                    //inversion.Equipos = new TextRange(txtEquipos.Document.ContentStart, txtEquipos.Document.ContentEnd).Text.Trim(saltosDeLinea);
+                    //inversion.ConstruccionMontaje = new TextRange(txtConstruccion.Document.ContentStart, txtConstruccion.Document.ContentEnd).Text.Trim(saltosDeLinea);
+                    //inversion.Otros = new TextRange(txtOtros.Document.ContentStart, txtOtros.Document.ContentEnd).Text.Trim(saltosDeLinea);
+                        inversion.ValorEstimadoConstruccion = ValorEstimConstruccion.Value.HasValue ? ValorEstimConstruccion.Value.Value : 0;
+                        inversion.ValorEstimadoEquipos = ValorEstimEquipos.Value.HasValue ? ValorEstimEquipos.Value.Value : 0;
+                        inversion.ValorEstimadoOtros = ValorEstimOtros.Value.HasValue ? ValorEstimOtros.Value.Value : 0;
+                        inversion.ValorEstimadoAprobadoConstruccion = ValorEstimAprobadoConstruccion.Value.HasValue ? ValorEstimAprobadoConstruccion.Value.Value : 0;
+                        inversion.ValorEstimadoAprobadoEquipos = ValorEstimAprobadoEquipos.Value.HasValue ? ValorEstimAprobadoEquipos.Value.Value : 0;
+                        inversion.ValorEstimadoAprobadoOtros = ValorEstimAprobadoOtros.Value.HasValue ? ValorEstimAprobadoOtros.Value.Value : 0;
               
                         currentProject.Inversion = inversion;
                     var response = _proyectoService.UpdateProyecto(currentProject);
@@ -211,7 +224,8 @@ namespace DIRU.Views.Common
             if (!string.IsNullOrWhiteSpace(txtCalle.Text) /*&& !string.IsNullOrWhiteSpace(txtCircunscripcion.Text)*/
                 /*&& !string.IsNullOrWhiteSpace(txtConsejo.Text)*/ && !string.IsNullOrWhiteSpace(txtECalle.Text) /*&& !string.IsNullOrWhiteSpace(txtManzana.Text)*/ &&
                 !string.IsNullOrWhiteSpace(txtnombreInv.Text) && !string.IsNullOrWhiteSpace(txtNombreObra.Text) && !string.IsNullOrWhiteSpace(txtReparto.Text) &&
-                ValorEstimAprobado.Value.HasValue && ValorEstim.Value.HasValue &&
+                ValorEstimAprobadoConstruccion.Value.HasValue && ValorEstimConstruccion.Value.HasValue && ValorEstimAprobadoEquipos.Value.HasValue && ValorEstimEquipos.Value.HasValue &&
+                ValorEstimAprobadoOtros.Value.HasValue && ValorEstimOtros.Value.HasValue &&
                 comboMunicipio.SelectedItem != null /*&& comboZona.SelectedItem != null*/ && comboProvincia.SelectedItem != null)
                 return true;
 

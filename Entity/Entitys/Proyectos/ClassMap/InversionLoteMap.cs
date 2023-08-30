@@ -31,19 +31,13 @@ namespace Entity.Entitys.Proyectos.ClassMap
             .Cascade.AllDeleteOrphan()
             .Fetch.Subselect();
 
-            HasMany(x => x.Redes)
-            .Inverse()
-            .Cascade.AllDeleteOrphan()
-            .Fetch.Subselect();
 
+            HasManyToMany(x => x.Redes)
+           .Table("InversionLoteRed")
+           .ParentKeyColumn("InversionLoteId")
+           .ChildKeyColumn("RedId")
+           .Cascade.All();
 
-           // HasManyToMany(x => x.Redes)
-           //.Table("InversionLoteRed")
-           //.ParentKeyColumn("InversionLoteId")
-           //.ChildKeyColumn("RedId")
-           //.Inverse()
-           //.Cascade.All();
-            
             References(x => x.Proyecto);
 
             Table("InversionLote");
