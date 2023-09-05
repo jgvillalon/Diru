@@ -75,6 +75,9 @@
     <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
+    <Reference Include="De.TorstenMandelkow.MetroChart">
+      <HintPath>..\packages\De.TorstenMandelkow.MetroChart.dll</HintPath>
+    </Reference>
     <Reference Include="Dragablz, Version=0.0.3.234, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dragablz.0.0.3.234\lib\net45\Dragablz.dll</HintPath>
     </Reference>
@@ -214,6 +217,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Converters\AccionVisibilityConverter.cs" />
+    <Compile Include="Converters\PrecioTotalConverter.cs" />
     <Compile Include="Dependencies\DependencyRegister.cs" />
     <Compile Include="UserControlCustomers.xaml.cs">
       <DependentUpon>UserControlCustomers.xaml</DependentUpon>
@@ -572,12 +576,12 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Nomencladores\Otros\AccionPrecioEstandar\AccionPrecioForm.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Nomencladores\Otros\AccionPrecioEstandar\NomAccionPrecio.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Nomencladores\Otros\EstadosTecnico\EstadoTecnicoForm.xaml">
       <SubType>Designer</SubType>
@@ -601,7 +605,7 @@
     </Page>
     <Page Include="Views\RegulacionesUrbanas\Alturas\Altura.xaml">
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
     </Page>
     <Page Include="Views\RegulacionesUrbanas\DatosEntradaDiseño\DatosEntradaDiseño.xaml">
       <SubType>Designer</SubType>
@@ -718,6 +722,7 @@
     <Resource Include="Assets\icons8-cerrar-ventana-30.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Assets\Projects\" />
     <Folder Include="Views\Nomencladores\Generales\Inmuebles\" />
     <Folder Include="Views\Nomencladores\Generales\Locales\" />
     <Folder Include="Views\Nomencladores\Generales\Pais\" />
@@ -755,11 +760,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Projects\readme.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />

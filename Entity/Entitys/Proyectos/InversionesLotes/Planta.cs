@@ -17,6 +17,8 @@ namespace Entity.Entitys.Proyectos.InversionesLotes
         public virtual string Descripcion { get; set; }
         public virtual decimal Area { get; set; }
         public virtual decimal AreaNueva { get; set; }
+        public virtual decimal Altura { get; set; }
+        public virtual decimal AlturaNueva { get; set; }
         public virtual IList<LocalPlanta> Locales { get; set; }
      
         public virtual InversionLote InversionLote { get; set; }

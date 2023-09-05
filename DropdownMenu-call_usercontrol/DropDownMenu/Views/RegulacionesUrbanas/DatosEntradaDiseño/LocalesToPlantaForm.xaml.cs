@@ -37,6 +37,7 @@ namespace DIRU.Views.RegulacionesUrbanas.DatosEntradaDiseño
         private readonly IPlantaService _plantaService;
         private readonly Planta _planta;
         private decimal areaTotal = 0;
+        private decimal areaLibreTotal = 0;
         
        
         private List<LocalPlanta> oldLocales = new List<LocalPlanta>();
@@ -49,6 +50,7 @@ namespace DIRU.Views.RegulacionesUrbanas.DatosEntradaDiseño
             {
                 lblPlanta.Text = _planta.Descripcion;
                 CantArea.Value = MainWindow.currentProject.AreaOcupada;
+                CantAltura.Value = _planta.Altura;
 
             }
             
@@ -80,7 +82,8 @@ namespace DIRU.Views.RegulacionesUrbanas.DatosEntradaDiseño
                 foreach (var local in oldLocales) {
                     newlocales.Add(new LocalPlanta { Local = local.Local, AreaOcupada = local.AreaOcupada, Nuevo = true,Estado = local.Estado, NoLocal = local.NoLocal, Accion = local.Accion });
                 }
-
+                _planta.Altura = CantAltura.Value?? 0;
+                _planta.AlturaNueva = CantAltura.Value ?? 0;
                 _planta.AddLocales(oldLocales);
                 _planta.AddLocales(newlocales);
                 _planta.Area = _planta.Locales.Where(l => !l.Nuevo).Sum(l => l.AreaOcupada);
@@ -114,8 +117,15 @@ namespace DIRU.Views.RegulacionesUrbanas.DatosEntradaDiseño
 
         private void AddLocal_Click(object sender, RoutedEventArgs e)
         {
+            var locales = dgPlanta.ItemsSource as List<LocalPlanta>;
+            locales.Add(new LocalPlanta());
+            dgPlanta.ItemsSource = locales;
+            textcolumn.IsReadOnly = false;
+            dgPlanta.Items.Refresh();
+            areaTotal = 0;
 
-           
+
+
         }
 
         private void dgPlanta_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -124,6 +134,11 @@ namespace DIRU.Views.RegulacionesUrbanas.DatosEntradaDiseño
             if (localPlanta != null)
             {
                 DeleteLocal.IsEnabled = true;
+               
+                if(localPlanta.Libre)
+                    textcolumn.IsReadOnly = true;
+                else   
+                textcolumn.IsReadOnly = false;
             }
         }
 
@@ -164,6 +179,36 @@ namespace DIRU.Views.RegulacionesUrbanas.DatosEntradaDiseño
            
         }
 
-      
+        private void AddAreaLibre_Click(object sender, RoutedEventArgs e)
+        {
+            var locales = dgPlanta.ItemsSource as List<LocalPlanta>;
+            locales.Add(new LocalPlanta { Local = "Área Libre", Libre = true });
+            dgPlanta.ItemsSource = locales;
+            textcolumn.IsReadOnly= true;
+            dgPlanta.Items.Refresh();
+            areaTotal = 0;
+        }
+
+        private void Accion_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var comboBox = sender as ComboBox;
+            var selectedValue = comboBox.SelectedItem; // Obtener elemento seleccionado
+
+            // Realizar las modificaciones necesarias en la columna2
+            if (selectedValue != null)
+            {
+                LocalPlanta item = dgPlanta.SelectedItem as LocalPlanta; // Reemplaza "YourModel" con tu tipo de modelo
+
+                // Sumar 2 al valor actual de la columna2 
+                if (item != null) 
+                {
+                    var locales = dgPlanta.ItemsSource as List<LocalPlanta>;
+                    locales.First(l =>l.Id == item.Id).AccionPrecio = item.AccionPrecio +2;
+                    dgPlanta.ItemsSource = locales;
+
+                   
+                }// Actualizar los cambios visuales en la interfaz gráfica
+            }
+        }
     }
 }

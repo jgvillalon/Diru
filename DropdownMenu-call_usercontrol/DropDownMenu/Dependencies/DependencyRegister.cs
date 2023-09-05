@@ -90,7 +90,6 @@ namespace DIRU.Dependencies
         public static IEstadoTecnicoService _estadoTecnicoService; 
         public static IAccionPrecioRepository _accionPrecioRepo;
         public static IAccionPrecioService _accionPrecioService;
-        //public static IEstadoTecnicoService _estadoTecnicoService;
         public static IRedRepository _redRepo;
         public static IRedService _redService;
         #endregion
@@ -164,8 +163,7 @@ namespace DIRU.Dependencies
             //_estadoTecnicoService = new EstadoTecnicoService(_estadoTecnicoRepo); 
             _accionPrecioRepo = new AccionPrecioRepository(session);
             _accionPrecioService = new AccionPrecioService(_accionPrecioRepo);
-            _estadoTecnicoService = new EstadoTecnicoService(_estadoTecnicoRepo);
-            _redRepo = new RedRepository(session);
+             _redRepo = new RedRepository(session);
             _redService = new RedService(_redRepo);
             #endregion
 

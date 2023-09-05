@@ -21,6 +21,7 @@ namespace Entity.Entitys.Proyectos.ClassMap
             Map(x => x.AccionPrecio).Precision(18).Scale(2);
             References(x => x.Planta).Not.Nullable().Cascade.None();
             Map(x => x.NoLocal);
+            Map(x => x.Libre);
             //References(x => x.Local).Not.Nullable().Cascade.SaveUpdate();
 
             Table("LocalPlanta");

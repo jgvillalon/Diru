@@ -14,7 +14,8 @@ namespace Entity.Entitys.Proyectos.InversionesLotes
         Restaurar,
         Apuntalar,
         Escombreo,
-        Demoler
+        Demoler,
+        ObraNueva
 
     }
 }
