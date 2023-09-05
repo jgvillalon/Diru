@@ -96,9 +96,9 @@
     <Compile Include="Entitys\Proyectos\AlineacionEdificacionRU.cs" />
     <Compile Include="Entitys\Proyectos\Capacidad.cs" />
     <Compile Include="Entitys\Proyectos\ClassMap\AlturaRUMap.cs" />
-    <Compile Include="Entitys\Proyectos\ClassMap\EstructuraMap.cs" />
     <Compile Include="Entitys\Proyectos\ClassMap\CapacidadMap.cs" />
     <Compile Include="Entitys\Proyectos\ClassMap\EstadoTecnicoProyectoMap.cs" />
+    <Compile Include="Entitys\Proyectos\ClassMap\EstructuraMap.cs" />
     <Compile Include="Entitys\Proyectos\ClassMap\InversionLoteMap.cs" />
     <Compile Include="Entitys\Proyectos\ClassMap\InversionMap.cs" />
     <Compile Include="Entitys\Proyectos\ClassMap\LocalPlantaMap.cs" />
@@ -109,8 +109,8 @@
     <Compile Include="Entitys\Proyectos\EstadoTecnicoProyecto.cs" />
     <Compile Include="Entitys\Proyectos\Inversion.cs" />
     <Compile Include="Entitys\Proyectos\InversionesLotes\AccionLocal.cs" />
-    <Compile Include="Entitys\Proyectos\InversionesLotes\InversionLoteRed.cs" />
     <Compile Include="Entitys\Proyectos\InversionesLotes\InversionLote.cs" />
+    <Compile Include="Entitys\Proyectos\InversionesLotes\InversionLoteRed.cs" />
     <Compile Include="Entitys\Proyectos\InversionesLotes\LocalPlanta.cs" />
     <Compile Include="Entitys\Proyectos\InversionesLotes\Planta.cs" />
     <Compile Include="Entitys\Proyectos\Permiso.cs" />

@@ -147,7 +147,7 @@ namespace DIRU.Views.RegulacionesUrbanas.NuevoDiseño
                 else
                 {
                   
-                    decimalUpDown.Value = (decimal)e.OldValue;
+                    decimalUpDown.Value = e.OldValue != null? (decimal)e.OldValue : 0;
                     new MessageBoxCustom("No puede exceder el área total", MessageType.Error, MessageButtons.Ok).ShowDialog();
                 }
 

@@ -7,13 +7,15 @@
         xmlns:v="clr-namespace:DIRU.ViewModel"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:converter="clr-namespace:DIRU.Converters"
         mc:Ignorable="d"
          WindowStartupLocation="CenterScreen"
         WindowStyle="None"
-        Title="MunicipioForm" Height="600" Width="800">
-    <Window.DataContext>
-        <v:RegistrationVM/>
-    </Window.DataContext>
+        Title="MunicipioForm" Height="600" Width="1000">
+    
+    <Window.Resources>
+        <converter:PrecioTotalConverter x:Key="PrecioTotalConverter" />
+    </Window.Resources>
     <Grid  Background="White">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="622*"/>
@@ -32,21 +34,25 @@
             <StackPanel Orientation="Horizontal">
                 <Label  Margin="10" FontSize="12"  Content="Área Ocupada (m2):" />
                 <xctk:DecimalUpDown x:Name="CantArea" IsReadOnly="True" Minimum="0" Increment="0.5"  BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,20,10"  VerticalAlignment="Top" Width="200"/>
+                <Label  Margin="30 10 0 10" FontSize="12"  Content="Altura (m2):" />
+                <xctk:DecimalUpDown x:Name="CantAltura" Minimum="0" Increment="0.5"  BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,20,10"  VerticalAlignment="Top" Width="200"/>
+
             </StackPanel>
             <StackPanel Margin="10">
                 <WrapPanel Orientation="Horizontal">
                     <Button Content="+ Local" Width="100" Margin="5" HorizontalAlignment="Left" Background="Gray" BorderBrush="Gray" Click="AddLocal_Click"/>
+                    <Button Content="+ Área Libre" Width="Auto" Margin="5" HorizontalAlignment="Left" Background="Gray" BorderBrush="Gray" Click="AddAreaLibre_Click"/>
                     <Button x:Name="DeleteLocal" Content="Eliminar" Width="100" Margin="5" HorizontalAlignment="Left" Background="Red" BorderBrush="Red" IsEnabled="False" Click="DeleteLocal_Click"/>
                    
                 </WrapPanel>
                 <TextBlock x:Name="txtAreaTotal" Margin="300 0" Text="Área Total (m2):"/>
                 <DataGrid Margin="10" 
                                   x:Name="dgPlanta"
+                                  CanUserAddRows="False"
                                   AutoGenerateColumns="False" 
-                                  CanUserAddRows="True"
                                   CanUserResizeColumns="True"
                                   CanUserResizeRows="False"
-                                   IsReadOnly ="False"  
+                                  IsReadOnly ="False"  
                           Height="300"
                           MaxHeight="350"
                           SelectionChanged="dgPlanta_SelectionChanged"
@@ -54,8 +60,8 @@
                                   >
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="No" Binding="{Binding NoLocal, Mode=TwoWay}"  Width="75"/>
-                         <DataGridTextColumn Header="Locales" Binding="{Binding Local, Mode=TwoWay}" Width="200"/>
-                        <DataGridTemplateColumn Header="Área">
+                        <DataGridTextColumn x:Name="textcolumn"   Header="Descripción" Binding="{Binding Local, Mode=TwoWay}" Width="200"/>
+                        <DataGridTemplateColumn Header="Área (m2)">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <xctk:DecimalUpDown  Value="{Binding AreaOcupada}" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left"  ValueChanged="Area_Changed"  VerticalAlignment="Top" Width="75"/>
@@ -63,11 +69,24 @@
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
                         <DataGridComboBoxColumn Width="150" x:Name="estadoColumn" Header="Estado" SelectedItemBinding="{Binding Estado}"/>
-                        <DataGridComboBoxColumn Width="150" x:Name="accionColumn" Header="Acción" SelectedItemBinding="{Binding Accion}"/>
-                        <DataGridTemplateColumn Header="Precio">
+                        <DataGridComboBoxColumn Width="150" x:Name="accionColumn"  Header="Acción" SelectedItemBinding="{Binding Accion}">
+                            <DataGridComboBoxColumn.ElementStyle>
+                                <Style TargetType="ComboBox">
+                                    <EventSetter Event="SelectionChanged" Handler="Accion_SelectionChanged"/>
+                                </Style>
+                            </DataGridComboBoxColumn.ElementStyle>
+                        </DataGridComboBoxColumn>
+                        <DataGridTemplateColumn Header="Precio ($/m2)">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <xctk:DecimalUpDown  Value="{Binding AccionPrecio}" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTemplateColumn Header="Precio Total ($)">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <xctk:DecimalUpDown   Value="{Binding Path=., Converter={StaticResource PrecioTotalConverter}}" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75"/>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
