@@ -1,9 +1,7 @@
-﻿using Entity.Entitys.Proyectos;
+﻿
 using Entity.Entitys.Proyectos.RegulacionesUrbanas;
 using NHibernate;
 using Repository.Common;
-using Repository.Proyectos.IRepository;
-using Repository.Proyectos.Options;
 using Repository.RegulacionesUrbanas.IRepository;
 using Repository.RegulacionesUrbanas.Options;
 using System;
