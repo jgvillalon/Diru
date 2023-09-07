@@ -64,7 +64,6 @@
                               />
                             </StackPanel>
                             <StackPanel>
-
                                 <Button Content="Observaciones" Margin="10 45 10 10" Click="ObservacionMinNiveles_Click"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal">

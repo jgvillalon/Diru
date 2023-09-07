@@ -114,6 +114,10 @@ namespace DIRU.Dependencies
         public static IEstructuraService _EstructuraService;
         public static IAlturaRURepository _AlturaRURepo;
         public static IAlturaRUService _AlturaRUService;
+        public static IDisposicionEdificacionRepository _DisposicionEdificacionRepo;
+        public static IDisposicionEdificacionService _DisposicionEdificacionService;
+        public static IAlineacionEdificacionRepository _AlineacionEdificacionRepo;
+        public static IAlineacionEdificacionService _AlineacionEdificacionService;
         #endregion
 
         #region Informes
@@ -160,7 +164,7 @@ namespace DIRU.Dependencies
             _plantaRepo = new PlantaRepository(session);
             _plantaService = new PlantaService(_plantaRepo);
             _estadoTecnicoRepo = new EstadoTecnicoRepository(session);
-            //_estadoTecnicoService = new EstadoTecnicoService(_estadoTecnicoRepo); 
+            _estadoTecnicoService = new EstadoTecnicoService(_estadoTecnicoRepo); 
             _accionPrecioRepo = new AccionPrecioRepository(session);
             _accionPrecioService = new AccionPrecioService(_accionPrecioRepo);
              _redRepo = new RedRepository(session);
@@ -181,6 +185,10 @@ namespace DIRU.Dependencies
             _EstructuraService = new EstructuraService(_EstructuraRepo);
             _AlturaRURepo = new AlturaRURepository(session);
             _AlturaRUService = new AlturaRUService(_AlturaRURepo);
+            _DisposicionEdificacionRepo = new DisposicionEdificacionRepository(session);
+            _DisposicionEdificacionService = new DisposicionEdificacionService(_DisposicionEdificacionRepo);
+            _AlineacionEdificacionRepo = new AlineacionEdificacionRepository(session);
+            _AlineacionEdificacionService = new AlineacionEdificacionService(_AlineacionEdificacionRepo);
             #endregion
 
             #region InversionLotes

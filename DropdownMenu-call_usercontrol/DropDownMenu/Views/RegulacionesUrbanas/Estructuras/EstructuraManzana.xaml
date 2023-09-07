@@ -35,8 +35,7 @@
                                 <Label   Margin="10 5" FontSize="12" Content="No:" />
                                 <TextBox Margin="10" x:Name="txtNoZona" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35"   VerticalAlignment="Top" Width="288"
                       Padding="2"  TextAlignment="Left" PreviewTextInput="NumericOnly"
-                                             Text="{Binding Textfield, ValidatesOnDataErrors=True,
-                UpdateSourceTrigger=PropertyChanged}"
+                                             Text="{Binding Textfield, ValidatesOnDataErrors=True}"
                      ToolTip="{Binding ErrorCollection[Textfield]}"/>
                             </StackPanel>
 
@@ -51,8 +50,7 @@
                                 <Label   Margin="10 5" FontSize="12" Content="Máxima Ocupación:" />
                                 <TextBox Margin="10" x:Name="txtMaxOcupacion" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35"   VerticalAlignment="Top" Width="288"
                       Padding="2"  TextAlignment="Left" PreviewTextInput="NumericOnly"
-                                             Text="{Binding Textfield3, ValidatesOnDataErrors=True,
-                UpdateSourceTrigger=PropertyChanged}"
+                                             Text="{Binding Textfield3, ValidatesOnDataErrors=True}"
                      ToolTip="{Binding ErrorCollection[Textfield3]}"/>
                             </StackPanel>
                             <StackPanel>
@@ -74,8 +72,7 @@
                                 <Label   Margin="10 5" FontSize="12" Content="Mínima Ocupación:" />
                                 <TextBox Margin="10" x:Name="txtMinOcupacion" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35"   VerticalAlignment="Top" Width="288"
                                 Padding="2"  TextAlignment="Left" PreviewTextInput="NumericOnly"
-                                             Text="{Binding Textfield3, ValidatesOnDataErrors=True,
-                                UpdateSourceTrigger=PropertyChanged}"
+                                             Text="{Binding Textfield3, ValidatesOnDataErrors=True}"
                                 ToolTip="{Binding ErrorCollection[Textfield3]}"/>
                             </StackPanel>
                             <StackPanel>

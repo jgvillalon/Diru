@@ -56,3 +56,12 @@ D:\Apis\felix\Diru\Diru Development\Repository\obj\Debug\Repository.csproj.CoreC
 D:\Apis\felix\Diru\Diru Development\Repository\obj\Debug\Repository.csproj.CopyComplete
 D:\Apis\felix\Diru\Diru Development\Repository\obj\Debug\Repository.dll
 D:\Apis\felix\Diru\Diru Development\Repository\obj\Debug\Repository.pdb
+D:\Works\Proyecto Felix GitHub\Diru\Repository\bin\Debug\Repository.dll
+D:\Works\Proyecto Felix GitHub\Diru\Repository\bin\Debug\Repository.pdb
+D:\Works\Proyecto Felix GitHub\Diru\Repository\bin\Debug\Entity.dll
+D:\Works\Proyecto Felix GitHub\Diru\Repository\bin\Debug\Entity.pdb
+D:\Works\Proyecto Felix GitHub\Diru\Repository\obj\Debug\Repository.csproj.AssemblyReference.cache
+D:\Works\Proyecto Felix GitHub\Diru\Repository\obj\Debug\Repository.csproj.CoreCompileInputs.cache
+D:\Works\Proyecto Felix GitHub\Diru\Repository\obj\Debug\Repository.csproj.CopyComplete
+D:\Works\Proyecto Felix GitHub\Diru\Repository\obj\Debug\Repository.dll
+D:\Works\Proyecto Felix GitHub\Diru\Repository\obj\Debug\Repository.pdb

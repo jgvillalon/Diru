@@ -112,3 +112,21 @@ D:\Apis\felix\Github\ApplicationService\obj\Debug\ApplicationService.csproj.Core
 D:\Apis\felix\Github\ApplicationService\obj\Debug\ApplicationService.csproj.CopyComplete
 D:\Apis\felix\Github\ApplicationService\obj\Debug\ApplicationService.dll
 D:\Apis\felix\Github\ApplicationService\obj\Debug\ApplicationService.pdb
+D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\bin\Debug\ApplicationService.dll.config
+D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\bin\Debug\ApplicationService.dll
+D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\bin\Debug\ApplicationService.pdb
+D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\bin\Debug\Entity.dll
+D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\bin\Debug\Repository.dll
+D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\bin\Debug\NHibernate.dll
+D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\bin\Debug\FluentNHibernate.dll
+D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\bin\Debug\Remotion.Linq.dll
+D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\bin\Debug\Remotion.Linq.EagerFetching.dll
+D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\bin\Debug\Antlr3.Runtime.dll
+D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\bin\Debug\Iesi.Collections.dll
+D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\bin\Debug\Entity.pdb
+D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\bin\Debug\Repository.pdb
+D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\obj\Debug\ApplicationService.csproj.AssemblyReference.cache
+D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\obj\Debug\ApplicationService.csproj.CoreCompileInputs.cache
+D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\obj\Debug\ApplicationService.csproj.CopyComplete
+D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\obj\Debug\ApplicationService.dll
+D:\Works\Proyecto Felix GitHub\Diru\ApplicationService\obj\Debug\ApplicationService.pdb

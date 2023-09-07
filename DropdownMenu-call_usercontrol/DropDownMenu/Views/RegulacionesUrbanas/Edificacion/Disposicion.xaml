@@ -34,51 +34,66 @@
                         <WrapPanel  Orientation="Horizontal">
                             <StackPanel>
                                 <Label   Margin="10 5" FontSize="12" Content="Abiertas:" />
-                                <ComboBox x:Name="comboPermisosAbiertas"  IsTextSearchEnabled="True" IsEditable="True" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,20,10"  VerticalAlignment="Top" Width="366"
-                            
-                              />
+                                <TextBox x:Name="comboPermisosAbiertas" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,20,10"  VerticalAlignment="Top" Width="288" TextAlignment="Left" PreviewTextInput="NumericOnly"
+                                             Text="{Binding Textfield, ValidatesOnDataErrors=True}"
+                                ToolTip="{Binding ErrorCollection[Textfield]}" />
                             </StackPanel>
                             <StackPanel>
 
                                 <Button Content="Observaciones" Margin="10 45 10 10" Click="ObservacionAbiertas_Click"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal">
-                                <Button FontSize="12" Margin="10 30 10 10" Foreground="Black" BorderBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Name = "BrowseMaxNiveles" Click = "Browse_Click"  HorizontalAlignment="Left" Width="200" Content="Cargar imagen ..."/>
+                                <Button FontSize="12" Margin="10 30 10 10" Foreground="Black" BorderBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Name = "BrowseMaxNiveles" Click = "BrowseAbiertas_Click"  HorizontalAlignment="Left" Width="200" Content="Cargar imagen ..."/>
                                 <Image Name = "ImageViewer1" Width="100" Height="100"/>
+                            </StackPanel>
+                            <StackPanel x:Name="ObservacionesAbiertas" Visibility="Hidden">
+                                <Label   Margin="10 5" FontSize="12" Content="Observaciones:" />
+                                <TextBox Margin="10" x:Name="AbiertasObservaciones" BorderThickness="2" AcceptsReturn="True"  TextWrapping="Wrap" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="50"   VerticalAlignment="Top" Width="288"
+                                Padding="2"  TextAlignment="Left" />
                             </StackPanel>
 
                         </WrapPanel>
                         <WrapPanel  Orientation="Horizontal">
                             <StackPanel>
                                 <Label   Margin="10 5" FontSize="12" Content="Compactas:" />
-                                <ComboBox x:Name="comboPermisosCompactas" IsTextSearchEnabled="True" IsEditable="True" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,20,10"  VerticalAlignment="Top" Width="366"
-                            
-                              />
+                                <TextBox x:Name="comboPermisosCompactas" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,20,10"  VerticalAlignment="Top" Width="288" TextAlignment="Left" PreviewTextInput="NumericOnly"
+                                             Text="{Binding Textfield, ValidatesOnDataErrors=True}"
+                                ToolTip="{Binding ErrorCollection[Textfield]}" />
                             </StackPanel>
                             <StackPanel>
 
                                 <Button Content="Observaciones" Margin="10 45 10 10" Click="ObservacionCompactas_Click"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal">
-                                <Button FontSize="12" Margin="10 30 10 10" Foreground="Black" BorderBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Name = "BrowseMinNiveles" Click = "Browse_Click"  HorizontalAlignment="Left" Width="200" Content="Cargar imagen ..."/>
+                                <Button FontSize="12" Margin="10 30 10 10" Foreground="Black" BorderBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Name = "BrowseMinNiveles" Click = "BrowseCompactas_Click"  HorizontalAlignment="Left" Width="200" Content="Cargar imagen ..."/>
                                 <Image Name = "ImageViewer2" Width="100" Height="100"/>
+                            </StackPanel>
+                            <StackPanel x:Name="ObservacionesCompactas" Visibility="Hidden">
+                                <Label   Margin="10 5" FontSize="12" Content="Observaciones:" />
+                                <TextBox Margin="10" x:Name="CompactasObservaciones" BorderThickness="2" AcceptsReturn="True"  TextWrapping="Wrap" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="50"   VerticalAlignment="Top" Width="288"
+                                Padding="2"  TextAlignment="Left" />
                             </StackPanel>
 
                         </WrapPanel>
                         <WrapPanel  Orientation="Horizontal">
                             <StackPanel>
                                 <Label   Margin="10 5" FontSize="12" Content="Semi-Compactas:" />
-                                <ComboBox x:Name="comboPermisosSemiComp"  IsTextSearchEnabled="True" IsEditable="True" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,20,10" Width="366"
-                              
-                              />
+                                <TextBox x:Name="comboPermisosSemiComp" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="12" HorizontalAlignment="Left" Height="35" Margin="20,5,20,10"  VerticalAlignment="Top" Width="288" TextAlignment="Left" PreviewTextInput="NumericOnly"
+                                             Text="{Binding Textfield, ValidatesOnDataErrors=True}"
+                                ToolTip="{Binding ErrorCollection[Textfield]}" />
                             </StackPanel>
                             <StackPanel>
 
                                 <Button Content="Observaciones" Margin="10 45 10 10" Click="ObservacionSemiCompacta_Click"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal">
-                                <Button FontSize="12" Margin="10 30 10 10" Foreground="Black" BorderBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Name = "BrowseSemiCompacta" Click = "Browse_Click"  HorizontalAlignment="Left" Width="200" Content="Cargar imagen ..."/>
+                                <Button FontSize="12" Margin="10 30 10 10" Foreground="Black" BorderBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Name = "BrowseSemiCompacta" Click = "BrowseSemiComp_Click"  HorizontalAlignment="Left" Width="200" Content="Cargar imagen ..."/>
                                 <Image Name = "ImageViewer3" Width="100" Height="100"/>
+                            </StackPanel>
+                            <StackPanel x:Name="ObservacionesSemiCompacta" Visibility="Hidden">
+                                <Label   Margin="10 5" FontSize="12" Content="Observaciones:" />
+                                <TextBox Margin="10" x:Name="SemiCompactaObservaciones" BorderThickness="2" AcceptsReturn="True"  TextWrapping="Wrap" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="50"   VerticalAlignment="Top" Width="288"
+                                Padding="2"  TextAlignment="Left" />
                             </StackPanel>
 
                         </WrapPanel>
