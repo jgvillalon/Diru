@@ -385,6 +385,9 @@
     <Compile Include="Views\RegulacionesUrbanas\Fachada\FachadaPrincipal.xaml.cs">
       <DependentUpon>FachadaPrincipal.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\RegulacionesUrbanas\Funciones\UsosFunciones.xaml.cs">
+      <DependentUpon>UsosFunciones.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\RegulacionesUrbanas\Indicadores\IndicadoresForm.xaml.cs">
       <DependentUpon>IndicadoresForm.xaml</DependentUpon>
     </Compile>
@@ -635,6 +638,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\RegulacionesUrbanas\Funciones\UsosFunciones.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\RegulacionesUrbanas\Indicadores\IndicadoresForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -728,7 +735,6 @@
     <Folder Include="Views\Nomencladores\Generales\Pais\" />
     <Folder Include="Views\RegulacionesUrbanas\AreasParques\" />
     <Folder Include="Views\RegulacionesUrbanas\Comercio\" />
-    <Folder Include="Views\RegulacionesUrbanas\UsosFunciones\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\logoDIRU.png" />

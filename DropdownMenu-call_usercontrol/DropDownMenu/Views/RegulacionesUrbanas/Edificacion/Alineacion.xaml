@@ -35,7 +35,7 @@
                                     <Label   Margin="10 5" FontSize="12" Content="Patio:" />
                                     <TextBox Margin="10" x:Name="txtPatio" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35"   VerticalAlignment="Top" Width="288"
                       Padding="2"  TextAlignment="Left" PreviewTextInput="NumericOnly"
-                                             Text="{Binding Textfield3, ValidatesOnDataErrors=True,
+                                             Text="{Binding Textfield1, ValidatesOnDataErrors=True,
                 UpdateSourceTrigger=PropertyChanged}"
                      ToolTip="{Binding ErrorCollection[Textfield3]}"/>
                                 </StackPanel>
@@ -60,7 +60,7 @@
                                     <Label   Margin="10 5" FontSize="12" Content="Franja de jardín:" />
                                     <TextBox Margin="10" x:Name="txtFranjaJardin" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35"   VerticalAlignment="Top" Width="288"
                       Padding="2"  TextAlignment="Left" PreviewTextInput="NumericOnly"
-                                             Text="{Binding Textfield3, ValidatesOnDataErrors=True,
+                                             Text="{Binding Textfield2, ValidatesOnDataErrors=True,
                 UpdateSourceTrigger=PropertyChanged}"
                      ToolTip="{Binding ErrorCollection[Textfield3]}"/>
                                 </StackPanel>
@@ -109,7 +109,7 @@
                                     <Label   Margin="10 5" FontSize="12" Content="Portal y Medio Portal:" />
                                     <TextBox Margin="10" x:Name="txtPortal" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35"   VerticalAlignment="Top" Width="288"
                       Padding="2"  TextAlignment="Left" PreviewTextInput="NumericOnly"
-                                             Text="{Binding Textfield3, ValidatesOnDataErrors=True,
+                                             Text="{Binding Textfield4, ValidatesOnDataErrors=True,
                 UpdateSourceTrigger=PropertyChanged}"
                      ToolTip="{Binding ErrorCollection[Textfield3]}"/>
                                 </StackPanel>
@@ -132,7 +132,7 @@
                                     <Label   Margin="10 5" FontSize="12" Content="Portal Corrido:" />
                                     <TextBox Margin="10" x:Name="txtPortalCorrido" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35"   VerticalAlignment="Top" Width="288"
                       Padding="2"  TextAlignment="Left" PreviewTextInput="NumericOnly"
-                                             Text="{Binding Textfield3, ValidatesOnDataErrors=True,
+                                             Text="{Binding Textfield5, ValidatesOnDataErrors=True,
                 UpdateSourceTrigger=PropertyChanged}"
                      ToolTip="{Binding ErrorCollection[Textfield3]}"/>
                                 </StackPanel>
@@ -156,7 +156,7 @@
                                     <Label   Margin="10 5" FontSize="12" Content="Pasillo Lateral:" />
                                     <TextBox Margin="10" x:Name="txtPasilloLateral" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35"   VerticalAlignment="Top" Width="288"
                       Padding="2"  TextAlignment="Left" PreviewTextInput="NumericOnly"
-                                             Text="{Binding Textfield3, ValidatesOnDataErrors=True,
+                                             Text="{Binding Textfield6, ValidatesOnDataErrors=True,
                 UpdateSourceTrigger=PropertyChanged}"
                      ToolTip="{Binding ErrorCollection[Textfield3]}"/>
                                 </StackPanel>
@@ -180,7 +180,7 @@
                                     <Label   Margin="10 5" FontSize="12" Content="Pasillo de Fondo Mío:" />
                                     <TextBox Margin="10" x:Name="txtPasilloFondo" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35"   VerticalAlignment="Top" Width="288"
                       Padding="2"  TextAlignment="Left" PreviewTextInput="NumericOnly"
-                                             Text="{Binding Textfield3, ValidatesOnDataErrors=True,
+                                             Text="{Binding Textfield7, ValidatesOnDataErrors=True,
                 UpdateSourceTrigger=PropertyChanged}"
                      ToolTip="{Binding ErrorCollection[Textfield3]}"/>
                                 </StackPanel>
@@ -204,7 +204,7 @@
                                     <Label   Margin="10 5" FontSize="12" Content="Rectangulos:" />
                                     <TextBox Margin="10" x:Name="txtRectangulo" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35"   VerticalAlignment="Top" Width="288"
                       Padding="2"  TextAlignment="Left" PreviewTextInput="NumericOnly"
-                                             Text="{Binding Textfield3, ValidatesOnDataErrors=True,
+                                             Text="{Binding Textfield8, ValidatesOnDataErrors=True,
                 UpdateSourceTrigger=PropertyChanged}"
                      ToolTip="{Binding ErrorCollection[Textfield3]}"/>
                                 </StackPanel>
@@ -228,7 +228,7 @@
                                     <Label   Margin="10 5" FontSize="12" Content="Patios Interiores:" />
                                     <TextBox Margin="10" x:Name="txtPatioInterior" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35"   VerticalAlignment="Top" Width="288"
                       Padding="2"  TextAlignment="Left" PreviewTextInput="NumericOnly"
-                                             Text="{Binding Textfield3, ValidatesOnDataErrors=True,
+                                             Text="{Binding Textfield9, ValidatesOnDataErrors=True,
                 UpdateSourceTrigger=PropertyChanged}"
                      ToolTip="{Binding ErrorCollection[Textfield3]}"/>
                                 </StackPanel>
@@ -252,7 +252,7 @@
                                     <Label   Margin="10 5" FontSize="12" Content="Cercado:" />
                                     <TextBox Margin="10" x:Name="txtCercado" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35"   VerticalAlignment="Top" Width="288"
                       Padding="2"  TextAlignment="Left" PreviewTextInput="NumericOnly"
-                                             Text="{Binding Textfield3, ValidatesOnDataErrors=True,
+                                             Text="{Binding Textfield10, ValidatesOnDataErrors=True,
                 UpdateSourceTrigger=PropertyChanged}"
                      ToolTip="{Binding ErrorCollection[Textfield3]}"/>
                                 </StackPanel>

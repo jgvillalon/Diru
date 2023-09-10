@@ -118,6 +118,8 @@ namespace DIRU.Dependencies
         public static IDisposicionEdificacionService _DisposicionEdificacionService;
         public static IAlineacionEdificacionRepository _AlineacionEdificacionRepo;
         public static IAlineacionEdificacionService _AlineacionEdificacionService;
+        public static IFachadaPrincipalRepository _FachadaPrincipalRepo;
+        public static IFachadaPrincipalService _FachadaPrincipalService;
         #endregion
 
         #region Informes
@@ -189,6 +191,8 @@ namespace DIRU.Dependencies
             _DisposicionEdificacionService = new DisposicionEdificacionService(_DisposicionEdificacionRepo);
             _AlineacionEdificacionRepo = new AlineacionEdificacionRepository(session);
             _AlineacionEdificacionService = new AlineacionEdificacionService(_AlineacionEdificacionRepo);
+            _FachadaPrincipalRepo = new FachadaPrincipalRepository(session);
+            _FachadaPrincipalService = new FachadaPrincipalService(_FachadaPrincipalRepo);
             #endregion
 
             #region InversionLotes
