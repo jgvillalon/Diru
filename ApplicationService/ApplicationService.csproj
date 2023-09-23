@@ -130,12 +130,14 @@
     <Compile Include="Proyectos\Service\CapacidadService.cs" />
     <Compile Include="Proyectos\Service\InversionService.cs" />
     <Compile Include="Proyectos\Service\ProyectoService.cs" />
+    <Compile Include="RegulacionesUrbanas\IService\IAreasParquesService.cs" />
     <Compile Include="RegulacionesUrbanas\IService\IUsosFuncionesService.cs" />
     <Compile Include="RegulacionesUrbanas\IService\IFachadaPrincipalService.cs" />
     <Compile Include="RegulacionesUrbanas\IService\IAlineacionEdificacionService.cs" />
     <Compile Include="RegulacionesUrbanas\IService\IAlturaRUService.cs" />
     <Compile Include="RegulacionesUrbanas\IService\IDisposicionEdificacionService.cs" />
     <Compile Include="RegulacionesUrbanas\IService\IEstructuraService.cs" />
+    <Compile Include="RegulacionesUrbanas\Service\AreasParquesService.cs" />
     <Compile Include="RegulacionesUrbanas\Service\UsosFuncionesService.cs" />
     <Compile Include="RegulacionesUrbanas\Service\FachadaPrincipalService.cs" />
     <Compile Include="RegulacionesUrbanas\Service\AlineacionEdificacionService.cs" />

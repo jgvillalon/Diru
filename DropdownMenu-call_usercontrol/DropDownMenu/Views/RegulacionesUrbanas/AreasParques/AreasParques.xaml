@@ -1,0 +1,207 @@
+﻿<UserControl x:Class="DIRU.Views.RegulacionesUrbanas.AreasParques.AreasParques"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DIRU.Views.RegulacionesUrbanas.AreasParques"
+      mc:Ignorable="d" 
+      xmlns:v="clr-namespace:DIRU.ViewModel"
+      Height="700" Width="1200">
+    <UserControl.DataContext>
+        <v:RegistrationVM/>
+    </UserControl.DataContext>
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/Common.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <BooleanToVisibilityConverter x:Key="BoolToVis"/>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid Background="White"  >
+
+        <StackPanel>
+            <Grid Margin="10,10,10,0" Background="#1565c0">
+                <TextBlock x:Name="Title" Margin="10" Text="Áreas Verdes Y Espacios Públicos" FontSize="20" FontFamily="Open Sans" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"  />
+            </Grid>
+            <ScrollViewer VerticalScrollBarVisibility="Visible"  Height="470">
+                <StackPanel Height="1000">
+
+
+                    <StackPanel Margin="0.2,0.2,0.4,-113.2">
+                        <WrapPanel  Orientation="Horizontal">
+                            <StackPanel>
+                                <Label   Margin="10 5" FontSize="12" Content="Parques urbanos:" />
+                                <TextBox Margin="10" x:Name="txtParquesUrbanos" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35"   VerticalAlignment="Top" Width="288"
+                      Padding="2"  TextAlignment="Left" PreviewTextInput="NumericOnly"
+                                             Text="{Binding Textfield1, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                     ToolTip="{Binding ErrorCollection[Textfield3]}"/>
+                            </StackPanel>
+                            <StackPanel>
+
+                                <Button Content="Observaciones" Margin="10 45 10 10" Click="ObservacionParquesUrbanos_Click"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Button FontSize="12" Margin="10 30 10 10" Foreground="Black" BorderBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" x:Name = "BrowseParquesUrbanos" Click = "BrowseParquesUrbanos_Click"  HorizontalAlignment="Left" Width="200" Content="Cargar imagen ..."/>
+                                <Image x:Name = "ImageViewer1" Width="100" Height="100"/>
+                            </StackPanel>
+
+                            <StackPanel x:Name="ObservacionesParquesUrbanos" Visibility="Hidden">
+                                <Label   Margin="10 5" FontSize="12" Content="Observaciones:" />
+                                <TextBox Margin="10" x:Name="ParquesUrbanosObservaciones" BorderThickness="2" AcceptsReturn="True"  TextWrapping="Wrap" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="50"   VerticalAlignment="Top" Width="288"
+                                Padding="2"  TextAlignment="Left" />
+                            </StackPanel>
+
+                        </WrapPanel>
+                        <WrapPanel  Orientation="Horizontal">
+                            <StackPanel>
+                                <Label   Margin="10 5" FontSize="12" Content="Microparques:" />
+                                <TextBox Margin="10" x:Name="txtMicroparques" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35"   VerticalAlignment="Top" Width="288"
+                      Padding="2"  TextAlignment="Left" PreviewTextInput="NumericOnly"
+                                             Text="{Binding Textfield2, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                     ToolTip="{Binding ErrorCollection[Textfield3]}"/>
+                            </StackPanel>
+                            <StackPanel>
+
+                                <Button Content="Observaciones" Margin="10 45 10 10" Click="ObservacionMicroparques_Click"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Button FontSize="12" Margin="10 30 10 10" Foreground="Black" BorderBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" x:Name = "BrowseMicroparques" Click = "BrowseMicroparques_Click"  HorizontalAlignment="Left" Width="200" Content="Cargar imagen ..."/>
+                                <Image x:Name = "ImageViewer2" Width="100" Height="100"/>
+                            </StackPanel>
+
+                            <StackPanel x:Name="ObservacionesMicroparques" Visibility="Hidden">
+                                <Label   Margin="10 5" FontSize="12" Content="Observaciones:" />
+                                <TextBox Margin="10" x:Name="MicroparquesObservaciones" BorderThickness="2" AcceptsReturn="True"  TextWrapping="Wrap" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="50"   VerticalAlignment="Top" Width="288"
+                                Padding="2"  TextAlignment="Left" />
+                            </StackPanel>
+                        </WrapPanel>
+                        <WrapPanel  Orientation="Horizontal">
+                            <StackPanel>
+                                <Label   Margin="10 5" FontSize="12" Content="Plazas:" />
+                                <TextBox Margin="10" x:Name="txtPlazas" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35"   VerticalAlignment="Top" Width="288"
+                      Padding="2"  TextAlignment="Left" PreviewTextInput="NumericOnly"
+                                             Text="{Binding Textfield3, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                     ToolTip="{Binding ErrorCollection[Textfield3]}"/>
+                            </StackPanel>
+                            <StackPanel>
+
+                                <Button Content="Observaciones" Margin="10 45 10 10" Click="ObservacionPlazas_Click"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Button FontSize="12" Margin="10 30 10 10" Foreground="Black" BorderBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" x:Name = "BrowsePlazas" Click = "BrowsePlazas_Click"  HorizontalAlignment="Left" Width="200" Content="Cargar imagen ..."/>
+                                <Image x:Name = "ImageViewer3" Width="100" Height="100"/>
+                            </StackPanel>
+
+                            <StackPanel x:Name="ObservacionesPlazas" Visibility="Hidden">
+                                <Label   Margin="10 5" FontSize="12" Content="Observaciones:" />
+                                <TextBox Margin="10" x:Name="PlazasObservaciones" BorderThickness="2" AcceptsReturn="True"  TextWrapping="Wrap" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="50"   VerticalAlignment="Top" Width="288"
+                                Padding="2"  TextAlignment="Left" />
+                            </StackPanel>
+                        </WrapPanel>
+
+                        <WrapPanel  Orientation="Horizontal">
+                            <StackPanel>
+                                <Label   Margin="10 5" FontSize="12" Content="Paseos arbolados, calles y avenidas:" />
+                                <TextBox Margin="10" x:Name="txtArboladosAvenidas" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35"   VerticalAlignment="Top" Width="288"
+                      Padding="2"  TextAlignment="Left" PreviewTextInput="NumericOnly"
+                                             Text="{Binding Textfield4, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                     ToolTip="{Binding ErrorCollection[Textfield3]}"/>
+                            </StackPanel>
+                            <StackPanel>
+
+                                <Button Content="Observaciones" Margin="10 45 10 10" Click="ObservacionArboladosAvenidas_Click"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Button FontSize="12" Margin="10 30 10 10" Foreground="Black" BorderBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" x:Name = "BrowseArboladosAvenidas" Click = "BrowseArboladosAvenidas_Click"  HorizontalAlignment="Left" Width="200" Content="Cargar imagen ..."/>
+                                <Image x:Name = "ImageViewer4" Width="100" Height="100"/>
+                            </StackPanel>
+                            <StackPanel x:Name="ObservacionesArboladosAvenidas" Visibility="Hidden">
+                                <Label   Margin="10 5" FontSize="12" Content="Observaciones:" />
+                                <TextBox Margin="10" x:Name="ArboladosAvenidasObservaciones" BorderThickness="2" AcceptsReturn="True"  TextWrapping="Wrap" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="50"   VerticalAlignment="Top" Width="288"
+                                Padding="2"  TextAlignment="Left" />
+                            </StackPanel>
+                        </WrapPanel>
+                        <WrapPanel  Orientation="Horizontal">
+                            <StackPanel>
+                                <Label   Margin="10 5" FontSize="12" Content="Parques recreativos:" />
+                                <TextBox Margin="10" x:Name="txtParquesRecreativos" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35"   VerticalAlignment="Top" Width="288"
+                      Padding="2"  TextAlignment="Left" PreviewTextInput="NumericOnly"
+                                             Text="{Binding Textfield5, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                     ToolTip="{Binding ErrorCollection[Textfield3]}"/>
+                            </StackPanel>
+                            <StackPanel>
+
+                                <Button Content="Observaciones" Margin="10 45 10 10" Click="ObservacionParquesRecreativos_Click"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Button FontSize="12" Margin="10 30 10 10" Foreground="Black" BorderBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" x:Name = "BrowseParquesRecreativos" Click = "BrowseParquesRecreativos_Click"  HorizontalAlignment="Left" Width="200" Content="Cargar imagen ..."/>
+                                <Image x:Name = "ImageViewer5" Width="100" Height="100"/>
+                            </StackPanel>
+
+                            <StackPanel x:Name="ObservacionesParquesRecreativos" Visibility="Hidden">
+                                <Label   Margin="10 5" FontSize="12" Content="Observaciones:" />
+                                <TextBox Margin="10" x:Name="ParquesRecreativosObservaciones" BorderThickness="2" AcceptsReturn="True"  TextWrapping="Wrap" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="50"   VerticalAlignment="Top" Width="288"
+                                Padding="2"  TextAlignment="Left" />
+                            </StackPanel>
+                        </WrapPanel>
+                        <WrapPanel  Orientation="Horizontal">
+                            <StackPanel>
+                                <Label   Margin="10 5" FontSize="12" Content="Parques infantiles:" />
+                                <TextBox Margin="10" x:Name="txtParquesInfantiles" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35"   VerticalAlignment="Top" Width="288"
+                      Padding="2"  TextAlignment="Left" PreviewTextInput="NumericOnly"
+                                             Text="{Binding Textfield6, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                     ToolTip="{Binding ErrorCollection[Textfield3]}"/>
+                            </StackPanel>
+                            <StackPanel>
+
+                                <Button Content="Observaciones" Margin="10 45 10 10" Click="ObservacionParquesInfantiles_Click"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Button FontSize="12" Margin="10 30 10 10" Foreground="Black" BorderBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" x:Name = "BrowseParquesInfantiles" Click = "BrowseParquesInfantiles_Click"  HorizontalAlignment="Left" Width="200" Content="Cargar imagen ..."/>
+                                <Image x:Name = "ImageViewer6" Width="100" Height="100"/>
+                            </StackPanel>
+
+                            <StackPanel x:Name="ObservacionesParquesInfantiles" Visibility="Hidden">
+                                <Label   Margin="10 5" FontSize="12" Content="Observaciones:" />
+                                <TextBox Margin="10" x:Name="ParquesInfantilesObservaciones" BorderThickness="2" AcceptsReturn="True"  TextWrapping="Wrap" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="50"   VerticalAlignment="Top" Width="288"
+                                Padding="2"  TextAlignment="Left" />
+                            </StackPanel>
+                        </WrapPanel>
+                        <WrapPanel  Orientation="Horizontal">
+                            <StackPanel>
+                                <Label   Margin="10 5" FontSize="12" Content="Espacios abiertos naturales:" />
+                                <TextBox Margin="10" x:Name="txtEspaciosAbiertosNaturales" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="35"   VerticalAlignment="Top" Width="288"
+                      Padding="2"  TextAlignment="Left" PreviewTextInput="NumericOnly"
+                                             Text="{Binding Textfield7, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                     ToolTip="{Binding ErrorCollection[Textfield3]}"/>
+                            </StackPanel>
+                            <StackPanel>
+
+                                <Button Content="Observaciones" Margin="10 45 10 10" Click="ObservacionEspaciosAbiertosNaturales_Click"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Button FontSize="12" Margin="10 30 10 10" Foreground="Black" BorderBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" x:Name = "BrowseEspaciosAbiertosNaturales" Click = "BrowseEspaciosAbiertosNaturales_Click"  HorizontalAlignment="Left" Width="200" Content="Cargar imagen ..."/>
+                                <Image x:Name = "ImageViewer7" Width="100" Height="100"/>
+                            </StackPanel>
+
+                            <StackPanel x:Name="ObservacionesEspaciosAbiertosNaturales" Visibility="Hidden">
+                                <Label   Margin="10 5" FontSize="12" Content="Observaciones:" />
+                                <TextBox Margin="10" x:Name="EspaciosAbiertosNaturalesObservaciones" BorderThickness="2" AcceptsReturn="True"  TextWrapping="Wrap" BorderBrush="{DynamicResource MaterialDesignDivider}"  FontSize="12" HorizontalAlignment="Left" Height="50"   VerticalAlignment="Top" Width="288"
+                                Padding="2"  TextAlignment="Left" />
+                            </StackPanel>
+                        </WrapPanel>
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+            <Grid  Margin="10,10,10,0" Background="LightGray" VerticalAlignment="Bottom">
+
+                <Button x:Name="BtnSave" FontSize="12" Margin="0,10,100,10" Content="Aceptar" HorizontalAlignment="Right" VerticalAlignment="Center" Click="BtnSave_Click" />
+                <Button x:Name="BtnCancel" FontSize="12" Margin="1091,0,0,10" Background="Red" Foreground="White" Content="Cancelar" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="BtnCancel_Click"  />
+
+            </Grid>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

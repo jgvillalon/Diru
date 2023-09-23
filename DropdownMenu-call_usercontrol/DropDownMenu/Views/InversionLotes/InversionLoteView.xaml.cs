@@ -37,6 +37,7 @@ using Entity.Entitys.Proyectos.InversionesLotes;
 using System.Drawing;
 using Image = iTextSharp.text.Image;
 using DIRU.Views.RegulacionesUrbanas.Funciones;
+using DIRU.Views.RegulacionesUrbanas.AreasParques;
 
 namespace DropDownMenu.Views.InversionLotes
 {
@@ -156,7 +157,8 @@ namespace DropDownMenu.Views.InversionLotes
 
         private void Areas_Click(object sender, RoutedEventArgs e)
         {
-
+            Main.Children.Clear();
+            Main.Children.Add(new AreasParques());
         }
 
         private void Plantas_Click(object sender, RoutedEventArgs e)

@@ -122,6 +122,8 @@ namespace DIRU.Dependencies
         public static IFachadaPrincipalService _FachadaPrincipalService;
         public static IUsosFuncionesRepository _UsosFuncionesRepo;
         public static IUsosFuncionesService _UsosFuncionesService;
+        public static IAreasParquesRepository _AreasParquesRepo;
+        public static IAreasParquesService _AreasParquesService;
         #endregion
 
         #region Informes
@@ -197,6 +199,8 @@ namespace DIRU.Dependencies
             _FachadaPrincipalService = new FachadaPrincipalService(_FachadaPrincipalRepo);
             _UsosFuncionesRepo = new UsosFuncionesRepository(session);
             _UsosFuncionesService = new UsosFuncionesService(_UsosFuncionesRepo);
+            _AreasParquesRepo = new AreasParquesRepository(session);
+            _AreasParquesService = new AreasParquesService(_AreasParquesRepo);
             #endregion
 
             #region InversionLotes

@@ -364,6 +364,12 @@
     <Compile Include="Views\RegulacionesUrbanas\Alturas\Altura.xaml.cs">
       <DependentUpon>Altura.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\RegulacionesUrbanas\AreasParques\AreasParques.xaml.cs">
+      <DependentUpon>AreasParques.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RegulacionesUrbanas\Comercio\Comercio.xaml.cs">
+      <DependentUpon>Comercio.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\RegulacionesUrbanas\DatosEntradaDiseño\DatosEntradaDiseño.xaml.cs">
       <DependentUpon>DatosEntradaDiseño.xaml</DependentUpon>
     </Compile>
@@ -610,6 +616,14 @@
       <SubType>Designer</SubType>
       <Generator>XamlIntelliSenseFileGenerator</Generator>
     </Page>
+    <Page Include="Views\RegulacionesUrbanas\AreasParques\AreasParques.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RegulacionesUrbanas\Comercio\Comercio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\RegulacionesUrbanas\DatosEntradaDiseño\DatosEntradaDiseño.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -733,8 +747,6 @@
     <Folder Include="Views\Nomencladores\Generales\Inmuebles\" />
     <Folder Include="Views\Nomencladores\Generales\Locales\" />
     <Folder Include="Views\Nomencladores\Generales\Pais\" />
-    <Folder Include="Views\RegulacionesUrbanas\AreasParques\" />
-    <Folder Include="Views\RegulacionesUrbanas\Comercio\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\logoDIRU.png" />
